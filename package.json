@@ -1,7 +1,8 @@
 {
   "name": "@ziloen/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
+  "author": "ziloen",
   "license": "ISC",
   "scripts": {
     "lint": "eslint .",
