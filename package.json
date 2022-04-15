@@ -1,12 +1,12 @@
 {
   "name": "@ziloen/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "ISC",
   "scripts": {
     "lint": "eslint .",
     "prepare": "pnpm -r run stub",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+    "release": "bumpp package.json packages/*/package.json --commit && pnpm -r publish --access public"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.1",
