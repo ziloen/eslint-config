@@ -1,8 +1,7 @@
 {
   "name": "@ziloen/eslint-config-vue",
-  "version": "0.0.3",
-  "description": "",
-  "keywords": [],
+  "version": "0.0.4",
+  "author": "ziloen",
   "license": "MIT",
   "main": "index.js",
   "files": [
