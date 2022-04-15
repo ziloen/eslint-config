@@ -1,6 +1,6 @@
 {
   "name": "@ziloen/eslint-config",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "keywords": [],
   "license": "MIT",
@@ -13,7 +13,7 @@
     "eslint": ">=8.13.0"
   },
   "dependencies": {
-    "@antfu/eslint-config-vue": "workspace:*",
+    "@ziloen/eslint-config-vue": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
