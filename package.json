@@ -1,9 +1,9 @@
 {
-  "name": "@ziloen/eslint-config",
-  "version": "0.0.5",
-  "main": "index.js",
+  "name": "@ziloen/eslint-config-monorepo",
+  "version": "0.0.6",
+  "private": true,
   "author": "ziloen",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "prepare": "pnpm -r run stub",
