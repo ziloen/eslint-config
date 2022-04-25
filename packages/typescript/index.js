@@ -4,6 +4,7 @@ module.exports = {
       allowNumber: true,
       allowBoolean: true,
     }],
+    '@typescript-eslint/no-empty-function': 'off',
     'no-console': ['warn', {
       allow: ['warn', 'error']
     }],
