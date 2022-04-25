@@ -29,6 +29,6 @@ module.exports = {
     /** 不要嵌套 promise */
     'no-async-promise-executor': 'warn',
     /** 同步发方法会阻塞线程，使用异步方法代替 */
-    'node/no-sync': 'warn',
+    // 'node/no-sync': 'warn',
   }
 }
