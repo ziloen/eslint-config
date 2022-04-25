@@ -31,6 +31,6 @@ module.exports = {
     /** 同步发方法会阻塞线程，使用异步方法代替 */
     // 'node/no-sync': 'warn',
     /** 允许显示 any */
-    'no-explicit-any': 'off'
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 }
