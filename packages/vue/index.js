@@ -18,6 +18,7 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'plugin:vue/vue3-strongly-recommended',
     'plugin:@typescript-eslint/recommended',
+    '@ziloen/eslint-config-typescript'
   ],
   rules: {
     'vue/max-attributes-per-line': 'off',
