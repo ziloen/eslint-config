@@ -1,6 +1,6 @@
 {
   "name": "@ziloen/eslint-config",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "",
   "keywords": [],
   "license": "MIT",
@@ -10,7 +10,7 @@
     "index.js"
   ],
   "peerDependencies": {
-    "eslint": ">=8.13.0"
+    "eslint": ">=8.14.0"
   },
   "dependencies": {
     "@ziloen/eslint-config-vue": "workspace:*",

@@ -1,18 +1,17 @@
 {
   "name": "@ziloen/eslint-config-monorepo",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "private": true,
   "author": "ziloen",
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "prepare": "pnpm -r run stub",
     "release": "bumpp package.json packages/*/package.json --commit && pnpm -r publish --access public"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.1",
     "bumpp": "^7.1.1",
-    "eslint": "^8.13.0",
+    "eslint": "^8.14.0",
     "typescript": "^4.6.3"
   }
 }
