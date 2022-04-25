@@ -14,8 +14,10 @@ module.exports = {
     },
   ],
   extends: [
-    'plugin:vue/vue3-recommended',
-    // '@antfu/eslint-config-ts',
+    'eslint:recommended',
+    'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-strongly-recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   rules: {
     'vue/max-attributes-per-line': 'off',
@@ -26,9 +28,13 @@ module.exports = {
 
     // reactivity transform
     'vue/no-setup-props-destructure': 'off',
-
-    'vue/component-tags-order': ['error', {
-      order: ['script', 'template', 'style'],
+    'no-console': ['warn', {
+      allow: ['warn', 'error']
+    }],
+    'prefer-const': 'warn',
+    '@typescript-eslint/restrict-template-expressions': ['warn', {
+      allowNumber: true,
+      allowBoolean: true,
     }],
   },
 }
