@@ -1,5 +1,10 @@
 module.exports = {
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
   rules: {
+    'prefer-const': 'warn',
     /** 模板字符串只允许数字字符串 */
     '@typescript-eslint/restrict-template-expressions': ['error', {
       allowNumber: true,
@@ -30,7 +35,9 @@ module.exports = {
     'no-async-promise-executor': 'warn',
     /** 同步发方法会阻塞线程，使用异步方法代替 */
     // 'node/no-sync': 'warn',
-    /** 允许显示 any */
-    '@typescript-eslint/no-explicit-any': 'off'
+    /** 允许显式 any */
+    '@typescript-eslint/no-explicit-any': 'off',
+    /** 允许不适用变量 */
+    '@typescript-eslint/no-unused-vars': 'off'
   }
 }

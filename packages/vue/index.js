@@ -5,19 +5,12 @@ module.exports = {
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
-      },
-      rules: {
-        'no-unused-vars': 'off',
-        'no-undef': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-      },
+      }
     },
   ],
   extends: [
-    'eslint:recommended',
     'plugin:vue/vue3-essential',
     'plugin:vue/vue3-strongly-recommended',
-    'plugin:@typescript-eslint/recommended',
     '@ziloen/eslint-config-typescript'
   ],
   rules: {
@@ -29,13 +22,6 @@ module.exports = {
 
     // reactivity transform
     'vue/no-setup-props-destructure': 'off',
-    'no-console': ['warn', {
-      allow: ['warn', 'error']
-    }],
-    'prefer-const': 'warn',
-    '@typescript-eslint/restrict-template-expressions': ['warn', {
-      allowNumber: true,
-      allowBoolean: true,
-    }],
+
   },
 }
