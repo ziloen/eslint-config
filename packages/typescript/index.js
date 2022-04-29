@@ -2,9 +2,10 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    '@ziloen/eslint-config-basic'
   ],
   rules: {
-    
+
     /** 模板字符串只允许数字字符串 */
     '@typescript-eslint/restrict-template-expressions': ['error', {
       allowNumber: true,

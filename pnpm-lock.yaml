@@ -53,9 +53,11 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': ^5.20.0
       '@typescript-eslint/parser': ^5.20.0
+      '@ziloen/eslint-config-basic': workspace:*
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.20.0_81f0d1a74f014d44d273bd1612c85fd9
       '@typescript-eslint/parser': 5.20.0_eslint@8.14.0+typescript@4.6.3
+      '@ziloen/eslint-config-basic': link:../basic
 
   packages/vue:
     specifiers:
