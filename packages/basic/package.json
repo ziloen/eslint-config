@@ -1,0 +1,20 @@
+{
+  "name": "@ziloen/eslint-config-basic",
+  "version": "0.0.21",
+  "author": "ziloen",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=8.14.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^42.0.0"
+  }
+}
