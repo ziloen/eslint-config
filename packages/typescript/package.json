@@ -1,6 +1,6 @@
 {
   "name": "@ziloen/eslint-config-typescript",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "author": "ziloen",
   "license": "MIT",
   "main": "index.js",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@typescript-eslint/parser": "^5.20.0",
-    "@typescript-eslint/eslint-plugin": "^5.20.0"
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@ziloen/eslint-config-basic": "workspace:*"
   }
 }
