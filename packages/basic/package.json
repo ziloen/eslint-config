@@ -7,14 +7,12 @@
   "files": [
     "index.js"
   ],
-  "peerDependencies": {
-    "eslint": ">=8.14.0"
-  },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-unicorn": "^42.0.0"
+    "eslint": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-unicorn": "*"
   }
 }

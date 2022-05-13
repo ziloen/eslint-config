@@ -8,10 +8,10 @@
     "lint": "eslint .",
     "release": "bumpp package.json packages/*/package.json --commit && pnpm -r publish --access public"
   },
-  "devDependencies": {
-    "@types/eslint": "^8.4.1",
-    "bumpp": "^7.1.1",
-    "eslint": "^8.14.0",
-    "typescript": "^4.6.3"
+  "dependencies": {
+    "@types/eslint": "*",
+    "bumpp": "*",
+    "eslint": "*",
+    "typescript": "*"
   }
 }
