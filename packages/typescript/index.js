@@ -4,6 +4,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     '@ziloen/eslint-config-basic'
   ],
+  parser: '@typescript-eslint/parser',
   rules: {
 
     /** 模板字符串只允许数字字符串 */
