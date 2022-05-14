@@ -16,9 +16,14 @@ module.exports = {
       destructuring: 'all',
       ignoreReadBeforeAssign: true
     }],
+    'prefer-exponentiation-operator': 'warn',
+    'prefer-object-has-own': 'warn',
+
 
 
     // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
     'unicorn/better-regex': 'warn',
+    'unicorn/no-instanceof-array': 'warn',
+    'unicorn/no-invalid-remove-event-listener': 'error',
   }
 }
