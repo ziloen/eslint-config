@@ -8,9 +8,11 @@ module.exports = {
       }
     },
   ],
+  env: {
+    'vue/setup-compiler-macros': true
+  },
   extends: [
-    'plugin:vue/vue3-essential',
-    'plugin:vue/vue3-strongly-recommended',
+    'plugin:vue/vue3-recommended',
     '@ziloen/eslint-config-typescript'
   ],
   rules: {
@@ -21,6 +23,7 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'vue/require-prop-types': 'off',
     'vue/singleline-html-element-content-newline': 'off',
+    'vue/no-async-in-computed-properties': 'error',
 
     // reactivity transform
     'vue/no-setup-props-destructure': 'off',
