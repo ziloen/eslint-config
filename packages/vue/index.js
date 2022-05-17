@@ -23,7 +23,6 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'vue/require-prop-types': 'off',
     'vue/singleline-html-element-content-newline': 'off',
-    'vue/no-async-in-computed-properties': 'error',
 
     // reactivity transform
     'vue/no-setup-props-destructure': 'off',
