@@ -40,6 +40,9 @@ module.exports = {
     /** 允许显式 any */
     '@typescript-eslint/no-explicit-any': 'off',
     /** 允许不适用变量 */
-    '@typescript-eslint/no-unused-vars': 'off'
+    '@typescript-eslint/no-unused-vars': 'off',
+
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": ["error"]
   }
 }
