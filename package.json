@@ -1,6 +1,6 @@
 {
   "name": "@ziloen/eslint-config-monorepo",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "private": true,
   "author": "ziloen",
   "license": "MIT",
