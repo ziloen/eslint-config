@@ -42,7 +42,9 @@ module.exports = {
     /** 允许不适用变量 */
     '@typescript-eslint/no-unused-vars': 'off',
 
+    // 允许重载声明
     "no-redeclare": "off",
-    "@typescript-eslint/no-redeclare": ["error"]
+    "@typescript-eslint/no-redeclare": ["error"],
+    '@typescript-eslint/no-non-null-assertion': 'off'
   }
 }
