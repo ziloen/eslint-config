@@ -22,7 +22,9 @@ module.exports = {
 
 
     // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
-    'unicorn/better-regex': 'warn',
+    'unicorn/better-regex': ['warn', {
+      sortCharacterClasses: false
+    }],
     'unicorn/no-instanceof-array': 'warn',
     'unicorn/no-invalid-remove-event-listener': 'error',
   }
