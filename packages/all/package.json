@@ -4,6 +4,7 @@
   "description": "我的 eslint config",
   "license": "MIT",
   "author": "ziloen",
+  "homepage": "https://github.com/ziloen/eslint-config",
   "main": "index.js",
   "files": [
     "index.js"

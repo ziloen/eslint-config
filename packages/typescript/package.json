@@ -3,6 +3,7 @@
   "version": "0.0.34",
   "author": "ziloen",
   "license": "MIT",
+  "homepage": "https://github.com/ziloen/eslint-config",
   "main": "index.js",
   "files": [
     "index.js"
