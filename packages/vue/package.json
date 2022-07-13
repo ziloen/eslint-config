@@ -12,8 +12,8 @@
     "access": "public"
   },
   "dependencies": {
+    "@ziloen/eslint-config-typescript": "workspace:^0.0.34",
     "eslint": "*",
-    "eslint-plugin-vue": "*",
-    "@ziloen/eslint-config-typescript": "workspace:*"
+    "eslint-plugin-vue": "*"
   }
 }

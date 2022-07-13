@@ -13,16 +13,16 @@
     "access": "public"
   },
   "dependencies": {
-    "eslint": "*",
-    "typescript": "*",
-    "@ziloen/eslint-config-vue": "workspace:*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "@ziloen/eslint-config-vue": "workspace:^0.0.34",
+    "eslint": "*",
     "eslint-plugin-eslint-comments": "*",
     "eslint-plugin-html": "*",
     "eslint-plugin-import": "*",
     "eslint-plugin-promise": "*",
     "eslint-plugin-unicorn": "*",
-    "eslint-plugin-vue": "*"
+    "eslint-plugin-vue": "*",
+    "typescript": "*"
   }
 }
