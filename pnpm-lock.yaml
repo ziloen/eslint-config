@@ -18,7 +18,7 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': '*'
       '@typescript-eslint/parser': '*'
-      '@ziloen/eslint-config-vue': workspace:^0.0.36
+      '@ziloen/eslint-config-vue': workspace:^0.0.37
       eslint: '*'
       eslint-plugin-eslint-comments: '*'
       eslint-plugin-html: '*'
@@ -54,7 +54,7 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': '*'
       '@typescript-eslint/parser': '*'
-      '@ziloen/eslint-config-basic': workspace:^0.0.36
+      '@ziloen/eslint-config-basic': workspace:^0.0.37
       eslint: '*'
       typescript: '*'
     dependencies:
@@ -66,7 +66,7 @@ importers:
 
   packages/vue:
     specifiers:
-      '@ziloen/eslint-config-typescript': workspace:^0.0.36
+      '@ziloen/eslint-config-typescript': workspace:^0.0.37
       eslint: '*'
       eslint-plugin-vue: '*'
     dependencies:
