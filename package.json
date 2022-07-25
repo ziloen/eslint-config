@@ -8,9 +8,9 @@
     "release": "bumpp package.json packages/*/package.json --commit --no-push && pnpm -r publish --access public"
   },
   "dependencies": {
-    "@types/eslint": "*",
-    "bumpp": "*",
-    "eslint": "*",
-    "typescript": "*"
+    "@types/eslint": "latest",
+    "bumpp": "latest",
+    "eslint": "latest",
+    "typescript": "latest"
   }
 }

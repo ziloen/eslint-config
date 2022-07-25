@@ -13,16 +13,16 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
     "@ziloen/eslint-config-vue": "workspace:^0.0.37",
-    "eslint": "*",
-    "eslint-plugin-eslint-comments": "*",
-    "eslint-plugin-html": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-promise": "*",
-    "eslint-plugin-unicorn": "*",
-    "eslint-plugin-vue": "*",
-    "typescript": "*"
+    "eslint": "latest",
+    "eslint-plugin-eslint-comments": "latest",
+    "eslint-plugin-html": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-promise": "latest",
+    "eslint-plugin-unicorn": "latest",
+    "eslint-plugin-vue": "latest",
+    "typescript": "latest"
   }
 }

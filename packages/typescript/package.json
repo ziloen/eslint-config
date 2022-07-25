@@ -12,10 +12,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
     "@ziloen/eslint-config-basic": "workspace:^0.0.37",
-    "eslint": "*",
-    "typescript": "*"
+    "eslint": "latest",
+    "typescript": "latest"
   }
 }

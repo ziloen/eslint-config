@@ -12,8 +12,8 @@
     "access": "public"
   },
   "dependencies": {
-    "eslint": "*",
-    "eslint-plugin-promise": "*",
-    "eslint-plugin-unicorn": "*"
+    "eslint": "latest",
+    "eslint-plugin-promise": "latest",
+    "eslint-plugin-unicorn": "latest"
   }
 }
