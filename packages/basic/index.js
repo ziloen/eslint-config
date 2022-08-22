@@ -1,4 +1,4 @@
-/** @type import('@types/eslint').Linter.Config */
+/** @type { import('eslint').Linter.Config } */
 module.exports = {
   plugins: [
     'unicorn',
@@ -19,8 +19,6 @@ module.exports = {
     }],
     'prefer-exponentiation-operator': 'warn',
     'prefer-object-has-own': 'warn',
-
-
 
     // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
     'unicorn/better-regex': ['warn', {
