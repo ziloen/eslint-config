@@ -37,7 +37,7 @@ importers:
       eslint-plugin-import: 2.26.0_7brzdshgayqbw436k7te6ew6oy
       eslint-plugin-promise: 6.0.0_eslint@8.22.0
       eslint-plugin-unicorn: 43.0.2_eslint@8.22.0
-      eslint-plugin-vue: 9.3.0_eslint@8.22.0
+      eslint-plugin-vue: 9.4.0_eslint@8.22.0
       typescript: 4.7.4
 
   packages/basic:
@@ -54,7 +54,7 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': latest
       '@typescript-eslint/parser': latest
-      '@ziloen/eslint-config-basic': workspace:^0.0.44
+      '@ziloen/eslint-config-basic': workspace:*
       eslint: latest
       typescript: latest
     dependencies:
@@ -66,13 +66,13 @@ importers:
 
   packages/vue:
     specifiers:
-      '@ziloen/eslint-config-typescript': workspace:^0.0.44
+      '@ziloen/eslint-config-typescript': workspace:*
       eslint: latest
       eslint-plugin-vue: latest
     dependencies:
       '@ziloen/eslint-config-typescript': link:../typescript
       eslint: 8.22.0
-      eslint-plugin-vue: 9.3.0_eslint@8.22.0
+      eslint-plugin-vue: 9.4.0_eslint@8.22.0
 
 packages:
 
@@ -791,8 +791,8 @@ packages:
       strip-indent: 3.0.0
     dev: false
 
-  /eslint-plugin-vue/9.3.0_eslint@8.22.0:
-    resolution: {integrity: sha512-iscKKkBZgm6fGZwFt6poRoWC0Wy2dQOlwUPW++CiPoQiw1enctV2Hj5DBzzjJZfyqs+FAXhgzL4q0Ww03AgSmQ==}
+  /eslint-plugin-vue/9.4.0_eslint@8.22.0:
+    resolution: {integrity: sha512-Nzz2QIJ8FG+rtJaqT/7/ru5ie2XgT9KCudkbN0y3uFYhQ41nuHEaboLAiqwMcK006hZPQv/rVMRhUIwEGhIvfQ==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
