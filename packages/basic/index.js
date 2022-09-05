@@ -28,7 +28,7 @@ module.exports = {
     }],
     'prefer-exponentiation-operator': 'warn',
     'prefer-object-has-own': 'warn',
-
+    /** 令人混淆的 window 上的变量 */
     'no-restricted-globals': [
       'error',
       'event',
