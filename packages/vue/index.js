@@ -13,6 +13,9 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     '@ziloen/eslint-config-typescript'
   ],
+  // env: {
+  //   'vue/setup-compiler-macros': true
+  // },
   rules: {
     'vue/no-unused-vars': 'off',
     'vue/html-self-closing': 'off',

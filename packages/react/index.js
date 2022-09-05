@@ -4,6 +4,7 @@ module.exports = {
   // ],
   extends: [
     '@ziloen/eslint-config-typescript',
+    'plugin:react/jsx-runtime',
     'plugin:react/recommended',
   ],
   parserOptions: {
@@ -12,6 +13,6 @@ module.exports = {
     }
   },
   rules: {
-
+    'react/react-in-jsx-scope': 'off',
   },
 }

@@ -9,8 +9,18 @@
   },
   "dependencies": {
     "@types/eslint": "latest",
+    "@ziloen/eslint-config-basic": "workspace:*",
+    "@ziloen/eslint-config-react": "workspace:*",
+    "@ziloen/eslint-config-typescript": "workspace:*",
+    "@ziloen/eslint-config-vue": "workspace:*",
+    "@ziloen/eslint-config": "workspace:*",
     "bumpp": "latest",
     "eslint": "latest",
+    "react": "^18.2.0",
     "typescript": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.15",
+    "@types/react": "^18.0.18"
   }
 }
