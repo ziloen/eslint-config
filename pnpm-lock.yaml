@@ -35,24 +35,30 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': latest
       '@typescript-eslint/parser': latest
-      '@ziloen/eslint-config-vue': workspace:^0.0.54
+      '@ziloen/eslint-config-react': workspace:0.0.54
+      '@ziloen/eslint-config-typescript': workspace:0.0.54
+      '@ziloen/eslint-config-vue': workspace:0.0.54
       eslint: latest
       eslint-plugin-eslint-comments: latest
       eslint-plugin-html: latest
       eslint-plugin-import: latest
       eslint-plugin-promise: latest
+      eslint-plugin-react: latest
       eslint-plugin-unicorn: latest
       eslint-plugin-vue: latest
       typescript: latest
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.36.1_lbwfnm54o3pmr3ypeqp3btnera
       '@typescript-eslint/parser': 5.36.1_yqf6kl63nyoq5megxukfnom5rm
+      '@ziloen/eslint-config-react': link:../react
+      '@ziloen/eslint-config-typescript': link:../typescript
       '@ziloen/eslint-config-vue': link:../vue
       eslint: 8.23.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.23.0
       eslint-plugin-html: 7.1.0
       eslint-plugin-import: 2.26.0_wyxuyzvlfep3lsyoibc4fosfq4
       eslint-plugin-promise: 6.0.1_eslint@8.23.0
+      eslint-plugin-react: 7.31.6_eslint@8.23.0
       eslint-plugin-unicorn: 43.0.2_eslint@8.23.0
       eslint-plugin-vue: 9.4.0_eslint@8.23.0
       typescript: 4.8.2

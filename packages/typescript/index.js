@@ -1,7 +1,12 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.js'],
+      parser: '@typescript-eslint/parser',
+    },
+  ],
   extends: [
-    // 'eslint:recommended',
     '@ziloen/eslint-config-basic',
     'plugin:@typescript-eslint/recommended',
   ],
