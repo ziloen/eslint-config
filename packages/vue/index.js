@@ -9,9 +9,6 @@ module.exports = {
       }
     },
   ],
-  env: {
-    'vue/setup-compiler-macros': true
-  },
   extends: [
     'plugin:vue/vue3-recommended',
     '@ziloen/eslint-config-typescript'
@@ -28,6 +25,5 @@ module.exports = {
 
     // reactivity transform
     'vue/no-setup-props-destructure': 'off',
-
   },
 }

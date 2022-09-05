@@ -12,7 +12,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@ziloen/eslint-config-typescript": "workspace:0.0.46",
+    "@ziloen/eslint-config-typescript": "workspace:0.0.47",
     "eslint": "latest",
     "eslint-plugin-vue": "latest"
   }

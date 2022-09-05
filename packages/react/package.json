@@ -1,5 +1,5 @@
 {
-  "name": "@ziloen/eslint-config-typescript",
+  "name": "@ziloen/eslint-config-react",
   "version": "0.0.47",
   "author": "ziloen",
   "license": "MIT",
@@ -12,10 +12,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
-    "@ziloen/eslint-config-basic": "workspace:0.0.47",
+    "@ziloen/eslint-config-typescript": "workspace:0.0.47",
     "eslint": "latest",
-    "typescript": "latest"
+    "eslint-plugin-react": "latest"
   }
 }
