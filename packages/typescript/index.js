@@ -7,12 +7,12 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   rules: {
-
     /** 模板字符串只允许数字字符串 */
     '@typescript-eslint/restrict-template-expressions': ['error', {
       allowNumber: true,
       // allowBoolean: true,
     }],
+    /** 允许空函数 */
     '@typescript-eslint/no-empty-function': 'off',
     /** console.log使用后删除 */
     'no-console': ['warn', {
@@ -46,6 +46,7 @@ module.exports = {
     // 允许重载声明
     "no-redeclare": "off",
     "@typescript-eslint/no-redeclare": ["error"],
+    /** 允许非空断言 */
     '@typescript-eslint/no-non-null-assertion': 'off'
   }
 }
