@@ -1,5 +1,9 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
+  parserOptions: {
+    extraFileExtensions: ['.vue']
+  },
+
   overrides: [
     {
       files: ['*.vue'],
@@ -7,17 +11,15 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
         ecmaVersion: 'latest',
-        extraFileExtensions: ['.vue']
       }
     },
   ],
+
   extends: [
     'plugin:vue/vue3-recommended',
     '@ziloen/eslint-config-typescript'
   ],
-  // env: {
-  //   'vue/setup-compiler-macros': true
-  // },
+
   rules: {
     'vue/no-unused-vars': 'off',
     'vue/html-self-closing': 'off',

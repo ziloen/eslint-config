@@ -7,8 +7,8 @@ module.exports = {
     },
   ],
   extends: [
-    '@ziloen/eslint-config-basic',
     'plugin:@typescript-eslint/recommended',
+    '@ziloen/eslint-config-basic',
   ],
   parser: '@typescript-eslint/parser',
   rules: {
