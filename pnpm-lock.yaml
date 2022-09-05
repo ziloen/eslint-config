@@ -7,11 +7,11 @@ importers:
       '@types/eslint': latest
       '@types/node': ^18.7.15
       '@types/react': ^18.0.18
-      '@ziloen/eslint-config': workspace:0.0.54
-      '@ziloen/eslint-config-basic': workspace:0.0.54
-      '@ziloen/eslint-config-react': workspace:0.0.54
-      '@ziloen/eslint-config-typescript': workspace:0.0.54
-      '@ziloen/eslint-config-vue': workspace:0.0.54
+      '@ziloen/eslint-config': workspace:0.0.56
+      '@ziloen/eslint-config-basic': workspace:0.0.56
+      '@ziloen/eslint-config-react': workspace:0.0.56
+      '@ziloen/eslint-config-typescript': workspace:0.0.56
+      '@ziloen/eslint-config-vue': workspace:0.0.56
       bumpp: latest
       eslint: latest
       react: ^18.2.0
@@ -35,9 +35,9 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': latest
       '@typescript-eslint/parser': latest
-      '@ziloen/eslint-config-react': workspace:0.0.54
-      '@ziloen/eslint-config-typescript': workspace:0.0.54
-      '@ziloen/eslint-config-vue': workspace:0.0.54
+      '@ziloen/eslint-config-react': workspace:0.0.56
+      '@ziloen/eslint-config-typescript': workspace:0.0.56
+      '@ziloen/eslint-config-vue': workspace:0.0.56
       eslint: latest
       eslint-plugin-eslint-comments: latest
       eslint-plugin-html: latest
@@ -75,7 +75,7 @@ importers:
 
   packages/react:
     specifiers:
-      '@ziloen/eslint-config-typescript': workspace:0.0.54
+      '@ziloen/eslint-config-typescript': workspace:0.0.56
       eslint: latest
       eslint-plugin-react: latest
     dependencies:
@@ -87,7 +87,7 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': latest
       '@typescript-eslint/parser': latest
-      '@ziloen/eslint-config-basic': workspace:0.0.54
+      '@ziloen/eslint-config-basic': workspace:0.0.56
       eslint: latest
       typescript: latest
     dependencies:
@@ -99,7 +99,7 @@ importers:
 
   packages/vue:
     specifiers:
-      '@ziloen/eslint-config-typescript': workspace:0.0.54
+      '@ziloen/eslint-config-typescript': workspace:0.0.56
       eslint: latest
       eslint-plugin-vue: latest
     dependencies:
