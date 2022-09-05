@@ -1,7 +1,7 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
   extends: [
-    'eslint:recommended',
+    // 'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     '@ziloen/eslint-config-basic'
   ],
