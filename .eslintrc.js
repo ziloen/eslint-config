@@ -1,9 +1,9 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
   env: {
-    node: true,
-    es2022: true,
     browser: true,
+    es2022: true,
+    node: true
   },
   parserOptions: {
     project: './tsconfig.json',
