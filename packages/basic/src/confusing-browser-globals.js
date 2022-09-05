@@ -5,6 +5,7 @@
  */
 
 export default [
+  'error',
   'event',
   'name',
   'length',
