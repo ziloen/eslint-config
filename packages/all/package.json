@@ -15,7 +15,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "@ziloen/eslint-config-vue": "workspace:^0.0.52",
+    "@ziloen/eslint-config-vue": "workspace:^0.0.54",
     "eslint": "latest",
     "eslint-plugin-eslint-comments": "latest",
     "eslint-plugin-html": "latest",
