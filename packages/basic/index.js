@@ -4,6 +4,15 @@ module.exports = {
     'unicorn',
   ],
   extends: "eslint:recommended",
+  ignorePatterns: [
+    '*.min.*',
+    '*.d.ts',
+    'package-lock.json',
+    'pnpm-lock.yaml',
+    'yarn.lock',
+    '.*',
+    '/node_modules/**/*.*'
+  ],
   rules: {
     'eqeqeq': ['warn', 'smart'],
     'no-caller': 'error',
