@@ -1,5 +1,3 @@
-const restrictedGlobals = require('./src/confusing-browser-globals')
-
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
   plugins: [
@@ -22,7 +20,13 @@ module.exports = {
     'prefer-exponentiation-operator': 'warn',
     'prefer-object-has-own': 'warn',
 
-    'no-restricted-globals': restrictedGlobals,
+    'no-restricted-globals': [
+      'error',
+      'event',
+      'name',
+      'length',
+      'status'
+    ],
 
     // -------------------------------------------------------------
     // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
