@@ -46,9 +46,9 @@ module.exports = {
     }],
     'unicorn/no-instanceof-array': 'warn',
     'unicorn/no-invalid-remove-event-listener': 'error',
-    'unicorn/consistent-function-scoping': ['warn', {
-      checkArrowFunctions: false
-    }],
+    // 'unicorn/consistent-function-scoping': ['warn', {
+    //   checkArrowFunctions: false
+    // }],
     'unicorn/error-message': 'warn',
     'unicorn/expiring-todo-comments': 'warn',
     'unicorn/no-document-cookie': 'warn',
