@@ -18,6 +18,7 @@ module.exports = {
     'no-caller': 'error',
     'no-constant-binary-expression': 'error',
     'no-constructor-return': 'warn',
+    'no-empty': 'off',
     'no-eval': 'warn',
     'no-unused-vars': 'off',
     'no-useless-rename': 'warn',
