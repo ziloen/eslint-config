@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@types/eslint': latest
       '@types/node': ^18.7.16
-      '@types/react': ^18.0.18
+      '@types/react': ^18.0.19
       '@ziloen/eslint-config': workspace:0.0.61
       '@ziloen/eslint-config-basic': workspace:0.0.61
       '@ziloen/eslint-config-react': workspace:0.0.61
@@ -29,7 +29,7 @@ importers:
       typescript: 4.8.3
     devDependencies:
       '@types/node': 18.7.16
-      '@types/react': 18.0.18
+      '@types/react': 18.0.19
 
   packages/all:
     specifiers:
@@ -233,8 +233,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react/18.0.18:
-    resolution: {integrity: sha512-6hI08umYs6NaiHFEEGioXnxJ+oEhY3eRz8VCUaudZmGdtvPviCJB8mgaMxaDWAdPSYd4eFavrPk2QIolwbLYrg==}
+  /@types/react/18.0.19:
+    resolution: {integrity: sha512-BDc3Q+4Q3zsn7k9xZrKfjWyJsSlEDMs38gD1qp2eDazLCdcPqAT+vq1ND+Z8AGel/UiwzNUk8ptpywgNQcJ1MQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -565,7 +565,7 @@ packages:
     dev: false
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: false
 
   /cross-spawn/7.0.3:
