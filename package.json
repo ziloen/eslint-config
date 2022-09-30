@@ -8,11 +8,11 @@
     "release": "bumpp package.json packages/*/package.json --commit --no-push && pnpm -r publish --access public"
   },
   "dependencies": {
-    "@ziloen/eslint-config": "workspace:0.0.62",
-    "@ziloen/eslint-config-basic": "workspace:0.0.62",
-    "@ziloen/eslint-config-react": "workspace:0.0.62",
-    "@ziloen/eslint-config-typescript": "workspace:0.0.62",
-    "@ziloen/eslint-config-vue": "workspace:0.0.62",
+    "@ziloen/eslint-config": "workspace:0.0.63",
+    "@ziloen/eslint-config-basic": "workspace:0.0.63",
+    "@ziloen/eslint-config-react": "workspace:0.0.63",
+    "@ziloen/eslint-config-typescript": "workspace:0.0.63",
+    "@ziloen/eslint-config-vue": "workspace:0.0.63",
     "bumpp": "latest",
     "eslint": "latest",
     "react": "^18.2.0",
