@@ -8,7 +8,6 @@
     "release": "bumpp package.json packages/*/package.json --commit --no-push && pnpm -r publish --access public"
   },
   "dependencies": {
-    "@types/eslint": "latest",
     "@ziloen/eslint-config": "workspace:0.0.61",
     "@ziloen/eslint-config-basic": "workspace:0.0.61",
     "@ziloen/eslint-config-react": "workspace:0.0.61",
