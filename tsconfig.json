@@ -3,10 +3,12 @@
     "baseUrl": ".",
     "strict": true,
     "module": "ESNext",
+    "moduleResolution": "Node",
     "jsx": "preserve",
     "lib": [
       "DOM",
-      "ESNext"
+      "ESNext",
+      "DOM.Iterable"
     ]
   },
   "exclude": [
