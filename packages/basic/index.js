@@ -82,10 +82,10 @@ module.exports = {
     'unicorn/better-regex': ['warn', {
       sortCharacterClasses: false
     }],
-    'unicorn/no-instanceof-array': 'warn',
-    'unicorn/no-invalid-remove-event-listener': 'error',
     'unicorn/error-message': 'warn',
     'unicorn/expiring-todo-comments': 'warn',
+    'unicorn/no-instanceof-array': 'warn',
+    'unicorn/no-invalid-remove-event-listener': 'error',
     'unicorn/no-document-cookie': 'warn',
 
     /** 警告嵌套三元运算符 */
