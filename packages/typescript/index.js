@@ -3,12 +3,12 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts', '**/*.js'],
-      parser: '@typescript-eslint/parser',
-    },
+      parser: '@typescript-eslint/parser'
+    }
   ],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    '@ziloen/eslint-config-basic',
+    '@ziloen/eslint-config-basic'
   ],
   parser: '@typescript-eslint/parser',
   rules: {
@@ -32,12 +32,12 @@ module.exports = {
     '@typescript-eslint/prefer-optional-chain': 'warn',
     /** 返回 promise 的函数必须有 async 关键字 */
     '@typescript-eslint/promise-function-async': ['warn', {
-      checkArrowFunctions: false,
+      checkArrowFunctions: false
     }],
     /** 模板字符串只允许数字字符串 */
     '@typescript-eslint/restrict-template-expressions': ['error', {
-      allowNumber: true,
+      allowNumber: true
       // allowBoolean: true,
-    }],
+    }]
   }
 }

@@ -10,9 +10,9 @@ module.exports = {
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
-        ecmaVersion: 'latest',
+        ecmaVersion: 'latest'
       }
-    },
+    }
   ],
 
   extends: [
@@ -31,6 +31,6 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
 
     // reactivity transform
-    'vue/no-setup-props-destructure': 'off',
-  },
+    'vue/no-setup-props-destructure': 'off'
+  }
 }

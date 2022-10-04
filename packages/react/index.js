@@ -3,13 +3,13 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.jsx', '**/*.tsx'],
-      parser: '@typescript-eslint/parser',
+      parser: '@typescript-eslint/parser'
     }
   ],
   extends: [
     '@ziloen/eslint-config-typescript',
     'plugin:react/jsx-runtime',
-    'plugin:react/recommended',
+    'plugin:react/recommended'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -17,6 +17,6 @@ module.exports = {
     }
   },
   rules: {
-    'react/react-in-jsx-scope': 'off',
-  },
+    'react/react-in-jsx-scope': 'off'
+  }
 }
