@@ -5,7 +5,8 @@
   "author": "ziloen",
   "license": "MIT",
   "scripts": {
-    "release": "bumpp package.json packages/*/package.json --commit --no-push && pnpm -r publish --access public"
+    "release": "bumpp package.json packages/*/package.json --commit --no-push && pnpm -r publish --access public",
+    "lint": "eslint . --ignore-pattern test --fix"
   },
   "packageManager": "pnpm@7.13.0",
   "dependencies": {
