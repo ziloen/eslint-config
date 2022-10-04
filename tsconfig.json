@@ -3,15 +3,18 @@
     "baseUrl": ".",
     "strict": true,
     "module": "ESNext",
+    "target": "ESNext",
+    "checkJs": true,
+    "allowJs": true,
+    "outDir": "./dist",
     "moduleResolution": "Node",
-    "jsx": "preserve",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "DOM",
       "ESNext",
       "DOM.Iterable"
     ]
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "@ziloen/eslint-config-format",
+  "version": "0.0.63",
+  "author": "ziloen",
+  "license": "MIT",
+  "homepage": "https://github.com/ziloen/eslint-config",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "eslint": "latest"
+  }
+}
