@@ -1,0 +1,131 @@
+{
+  // 使用 eslint 作为 formatter
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  // 关闭 eslint style 警告（只修复，不警告）
+  "eslint.rules.customizations": [
+    {
+      "rule": "array-bracket-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "arrow-parens",
+      "severity": "off"
+    },
+    {
+      "rule": "block-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "comma-dangle",
+      "severity": "off"
+    },
+    {
+      "rule": "computed-property-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "dot-location",
+      "severity": "off"
+    },
+    {
+      "rule": "generator-star-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "key-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "max-len",
+      "severity": "off"
+    },
+    {
+      "rule": "no-extra-parens",
+      "severity": "off"
+    },
+    {
+      "rule": "no-extra-semi",
+      "severity": "off"
+    },
+    {
+      "rule": "no-multiple-empty-lines",
+      "severity": "off"
+    },
+    {
+      "rule": "no-multi-spaces",
+      "severity": "off"
+    },
+    {
+      "rule": "no-trailing-spaces",
+      "severity": "off"
+    },
+    {
+      "rule": "no-whitespace-before-property",
+      "severity": "off"
+    },
+    {
+      "rule": "quotes",
+      "severity": "off"
+    },
+    {
+      "rule": "rest-spread-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "semi",
+      "severity": "off"
+    },
+    {
+      "rule": "yield-star-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/?indent",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/?comma-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/?func-call-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/?keyword-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/?object-curly-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/?space-before-blocks",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/?space-before-function-paren",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/type-annotation-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "@typescript-eslint/?space-infix-ops",
+      "severity": "off"
+    },
+  ],
+}

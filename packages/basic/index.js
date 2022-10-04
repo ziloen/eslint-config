@@ -1,7 +1,7 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
   plugins: [
-    'unicorn',
+    'unicorn'
   ],
   extends: 'eslint:recommended',
   ignorePatterns: [
@@ -88,9 +88,9 @@ module.exports = {
     'unicorn/no-invalid-remove-event-listener': 'error',
     'unicorn/no-document-cookie': 'warn',
 
-    /** 警告嵌套三元运算符 */
-    'no-nested-ternary': 'off',
-    'unicorn/no-nested-ternary': 'warn',
+    /** 警告嵌套三元运算符 (可以通过对齐来表示，取消警告) */
+    // 'no-nested-ternary': 'off',
+    // 'unicorn/no-nested-ternary': 'warn',
 
     'unicorn/no-new-buffer': 'error',
     /** 禁止声明`then`属性，以免和`Promsie`混淆 */
@@ -115,6 +115,6 @@ module.exports = {
     'unicorn/prefer-modern-dom-apis': 'warn',
     'unicorn/prefer-node-protocol': 'warn',
     'unicorn/prefer-query-selector': 'warn',
-    'unicorn/prefer-string-slice': 'warn',
+    'unicorn/prefer-string-slice': 'warn'
   }
 }

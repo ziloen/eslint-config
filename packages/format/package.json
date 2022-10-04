@@ -12,6 +12,9 @@
     "access": "public"
   },
   "dependencies": {
-    "eslint": "latest"
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "typescript": "latest"
   }
 }
