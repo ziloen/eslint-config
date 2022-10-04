@@ -14,7 +14,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "@ziloen/eslint-config-basic": "workspace:*",
+    "@ziloen/eslint-config-basic": "workspace:0.0.64",
     "eslint": "latest",
     "typescript": "latest"
   }
