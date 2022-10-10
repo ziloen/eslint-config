@@ -12,7 +12,7 @@ module.exports = {
     // lock files
     'package-lock.json',
     'pnpm-lock.yaml',
-    'yarn.lock',
+    'yarn.lock'
   ],
   rules: {
     /** 检查数组方法返回值 */
