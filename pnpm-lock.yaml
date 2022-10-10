@@ -7,12 +7,12 @@ importers:
       '@types/eslint': ^8.4.6
       '@types/node': ^18.8.3
       '@types/react': ^18.0.21
-      '@ziloen/eslint-config': workspace:0.0.65
-      '@ziloen/eslint-config-basic': workspace:0.0.65
-      '@ziloen/eslint-config-format': workspace:0.0.65
-      '@ziloen/eslint-config-react': workspace:0.0.65
-      '@ziloen/eslint-config-typescript': workspace:0.0.65
-      '@ziloen/eslint-config-vue': workspace:0.0.65
+      '@ziloen/eslint-config': workspace:0.0.67
+      '@ziloen/eslint-config-basic': workspace:0.0.67
+      '@ziloen/eslint-config-format': workspace:0.0.67
+      '@ziloen/eslint-config-react': workspace:0.0.67
+      '@ziloen/eslint-config-typescript': workspace:0.0.67
+      '@ziloen/eslint-config-vue': workspace:0.0.67
       bumpp: latest
       eslint: ^8.25.0
       react: ^18.2.0
@@ -37,9 +37,9 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': latest
       '@typescript-eslint/parser': latest
-      '@ziloen/eslint-config-react': workspace:0.0.65
-      '@ziloen/eslint-config-typescript': workspace:0.0.65
-      '@ziloen/eslint-config-vue': workspace:0.0.65
+      '@ziloen/eslint-config-react': workspace:0.0.67
+      '@ziloen/eslint-config-typescript': workspace:0.0.67
+      '@ziloen/eslint-config-vue': workspace:0.0.67
       eslint: ^8.25.0
       eslint-plugin-eslint-comments: latest
       eslint-plugin-html: latest
@@ -89,7 +89,7 @@ importers:
 
   packages/react:
     specifiers:
-      '@ziloen/eslint-config-typescript': workspace:0.0.65
+      '@ziloen/eslint-config-typescript': workspace:0.0.67
       eslint: ^8.25.0
       eslint-plugin-react: ^7.31.9
     dependencies:
@@ -101,7 +101,7 @@ importers:
     specifiers:
       '@typescript-eslint/eslint-plugin': latest
       '@typescript-eslint/parser': latest
-      '@ziloen/eslint-config-basic': workspace:0.0.65
+      '@ziloen/eslint-config-basic': workspace:0.0.67
       eslint: ^8.25.0
       typescript: latest
     dependencies:
@@ -113,7 +113,7 @@ importers:
 
   packages/vue:
     specifiers:
-      '@ziloen/eslint-config-typescript': workspace:0.0.65
+      '@ziloen/eslint-config-typescript': workspace:0.0.67
       eslint: ^8.25.0
       eslint-plugin-vue: latest
     dependencies:
