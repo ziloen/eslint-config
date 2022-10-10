@@ -7,11 +7,12 @@ module.exports = {
   ignorePatterns: [
     '*.min.*',
     '*.d.ts',
+    'CHANGELOG.md',
+    'LICENSE*',
+    // lock files
     'package-lock.json',
     'pnpm-lock.yaml',
     'yarn.lock',
-    '.*',
-    '/node_modules/**/*.*'
   ],
   rules: {
     /** 检查数组方法返回值 */
