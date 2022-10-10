@@ -79,19 +79,22 @@ module.exports = {
     // -------------------------------------------------------------
     // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
     // -------------------------------------------------------------
+    /** 🔧更好的正则 */
     'unicorn/better-regex': ['warn', {
       sortCharacterClasses: false
     }],
+    /** Error 应有错误信息 */
     'unicorn/error-message': 'warn',
     'unicorn/expiring-todo-comments': 'warn',
+    /** 🔧不要使用 instanceof Array 判断数组 */
     'unicorn/no-instanceof-array': 'warn',
     'unicorn/no-invalid-remove-event-listener': 'error',
+    /** 手动操作原生 Cookie 很麻烦 */
     'unicorn/no-document-cookie': 'warn',
-
     /** 警告嵌套三元运算符 (可以通过对齐来表示，取消警告) */
     // 'no-nested-ternary': 'off',
     // 'unicorn/no-nested-ternary': 'warn',
-
+    /** 🔧使用 Buffer.from() 或 Buffer.alloc() 代替 */
     'unicorn/no-new-buffer': 'error',
     /** 禁止声明`then`属性，以免和`Promsie`混淆 */
     'unicorn/no-thenable': 'error',
@@ -112,8 +115,11 @@ module.exports = {
       ignoreUsedVariables: true
     }],
     'unicorn/prefer-keyboard-event-key': 'warn',
+    /** 🔧使用更现代的 DOM API */
     'unicorn/prefer-modern-dom-apis': 'warn',
+    /** 🔧来自 Node 的方法应添加 node: 协议前缀 */
     'unicorn/prefer-node-protocol': 'warn',
+    /** 🔧使用同一种方法来选择 DOM 元素，避免混淆 */
     'unicorn/prefer-query-selector': 'warn',
     'unicorn/prefer-string-slice': 'warn'
   }

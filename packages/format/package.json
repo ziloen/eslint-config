@@ -14,7 +14,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "eslint": "latest",
+    "eslint": "^8.25.0",
     "typescript": "latest"
   }
 }
