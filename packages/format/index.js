@@ -39,8 +39,7 @@ module.exports = {
 
     /** new 表达式括号 */
     'new-parens': ['warn', 'never'],
-    /** 多余的括号 */
-    'no-extra-parens': 'warn',
+
     /** 多余分号 */
     'no-extra-semi': ['warn'],
     /** 空行 */
@@ -86,6 +85,10 @@ module.exports = {
     /** 关键词 空格 */
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': 'warn',
+    
+    /** 多余的括号 */
+    'no-extra-parens': 'off',
+    '@typescript-eslint/no-extra-parens': 'warn',
 
     /** 对象花括号内部前后空格 */
     'object-curly-spacing': 'off',
