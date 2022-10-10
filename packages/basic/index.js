@@ -43,8 +43,8 @@ module.exports = {
     'no-fallthrough': ['error', {
       allowEmptyCase: true
     }],
-    /** Promise 内 return 没有意义，使用 resolve 或 reject */
-    'no-promise-executor-return': 'error',
+    /** Promise 内 return 没有意义，使用 resolve 或 reject (无法配置允许箭头函数，取消警告) */
+    // 'no-promise-executor-return': 'error',
     /** 令人混淆的 window 上的变量 */
     'no-restricted-globals': [
       'error',
