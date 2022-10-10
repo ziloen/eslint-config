@@ -2,4 +2,6 @@
 const a = `${[]}`
 const b = name
 
+const g = /**@type {any}*/({})
+
 export {}
