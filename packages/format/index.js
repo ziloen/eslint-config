@@ -12,7 +12,7 @@ module.exports = {
     /** 计算属性名内部空格 */
     'computed-property-spacing': 'warn',
     /** 属性`o.p`点号位置 */
-    'dot-location': 'warn',
+    'dot-location': ['warn', 'property'],
     /** 生成器函数星号前后空格 */
     'generator-star-spacing': ['warn', {
       before: false,
