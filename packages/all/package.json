@@ -23,7 +23,7 @@
     "eslint-plugin-html": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-promise": "latest",
-    "eslint-plugin-react": "^7.31.9",
+    "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-unicorn": "^44.0.2",
     "eslint-plugin-vue": "latest",
     "typescript": "latest"
