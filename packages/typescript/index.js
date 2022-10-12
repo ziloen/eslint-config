@@ -48,6 +48,11 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': ['error', {
       allowNumber: true
       // allowBoolean: true,
-    }]
+    }],
+
+    /** 禁止使用 void 函数的返回值 */
+    '@typescript-eslint/no-confusing-void-expression': 'warn',
+    /** 禁止冗余类型定义 */
+    '@typescript-eslint/no-redundant-type-constituents': 'warn'
   }
 }

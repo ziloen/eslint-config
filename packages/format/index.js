@@ -125,6 +125,9 @@ module.exports = {
       multiline: { delimiter: 'none', requireLast: false },
       singleline: { delimiter: 'comma', requireLast: false },
       multilineDetection: 'brackets'
-    }]
+    }],
+
+    /** 🔧多余的限定符 */
+    '@typescript-eslint/no-unnecessary-qualifier': 'warn'
   }
 }
