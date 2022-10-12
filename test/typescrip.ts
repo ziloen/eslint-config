@@ -58,3 +58,6 @@ const arr2 = [1, 2 ,   3];
 const fn45: (a: any) => any = /*  */(a) => {return 123}
 
 export {     }
+
+
+interface G {  a: string; b: string }

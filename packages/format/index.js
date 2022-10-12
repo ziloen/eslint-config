@@ -1,5 +1,7 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   rules: {
     /** 数组前后空格 */
     'array-bracket-spacing': ['warn', 'never'],
@@ -85,7 +87,7 @@ module.exports = {
     /** 关键词 空格 */
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': 'warn',
-    
+
     /** 多余的括号 */
     'no-extra-parens': 'off',
     '@typescript-eslint/no-extra-parens': 'warn',
@@ -110,7 +112,19 @@ module.exports = {
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': 'warn',
 
+
+    // -------------------------------------------------------------
+    // 以下为 TS Plugin Rules
+    // -------------------------------------------------------------
+
     /** 类型标注空格 */
-    '@typescript-eslint/type-annotation-spacing': 'warn'
+    '@typescript-eslint/type-annotation-spacing': 'warn',
+
+    /** 属性间隔符 `;` / `,` / none */
+    '@typescript-eslint/member-delimiter-style': ['warn', {
+      multiline: { delimiter: 'none', requireLast: false },
+      singleline: { delimiter: 'comma', requireLast: false },
+      multilineDetection: 'brackets'
+    }]
   }
 }
