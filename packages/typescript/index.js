@@ -17,8 +17,9 @@ module.exports = {
     /** 禁用默认`no-undef`，eslint 不会检查`*.d.ts`，导致误报全局变量与类型不存在 */
     'no-undef': 'off',
 
-    /** 禁止不必要的 await */
-    '@typescript-eslint/await-thenable': 'warn',
+    /** ✅禁止不必要的 await */
+    // '@typescript-eslint/await-thenable': 'warn',
+
     /** 允许空函数 */
     '@typescript-eslint/no-empty-function': 'off',
     /** 允许显式 any */
