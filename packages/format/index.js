@@ -25,7 +25,7 @@ module.exports = {
     'key-spacing': ['warn'],
     /** 最大长度 */
     'max-len': ['warn', {
-      code: 80,
+      code: 120,
       tabWidth: 2,
       ignoreComments: true,
       ignoreTrailingComments: true,
