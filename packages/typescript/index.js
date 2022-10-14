@@ -53,6 +53,9 @@ module.exports = {
     /** 禁止使用 void 函数的返回值 */
     '@typescript-eslint/no-confusing-void-expression': 'warn',
     /** 禁止冗余类型定义 */
-    '@typescript-eslint/no-redundant-type-constituents': 'warn'
+    '@typescript-eslint/no-redundant-type-constituents': 'warn',
+
+    /** 允许可合为一个联合类型的函数声明多个函数签名 */
+    '@typescript-eslint/unified-signatures': 'off'
   }
 }
