@@ -8,7 +8,7 @@
     "release": "bumpp package.json packages/*/package.json --commit --no-push && pnpm -r publish --access public",
     "lint": "eslint . --ignore-pattern test --fix"
   },
-  "packageManager": "pnpm@7.13.4",
+  "packageManager": "pnpm@7.13.5",
   "dependencies": {
     "@ziloen/eslint-config": "workspace:0.0.71",
     "@ziloen/eslint-config-basic": "workspace:0.0.71",
