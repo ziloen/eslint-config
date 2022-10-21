@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "eslint": "^8.25.0",
-    "eslint-plugin-promise": "^6.1.0",
+    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-unicorn": "^44.0.2"
   }
 }
