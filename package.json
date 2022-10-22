@@ -17,13 +17,13 @@
     "@ziloen/eslint-config-typescript": "workspace:0.0.71",
     "@ziloen/eslint-config-vue": "workspace:0.0.71",
     "bumpp": "latest",
-    "eslint": "^8.25.0",
+    "eslint": "^8.26.0",
     "react": "^18.2.0",
     "typescript": "latest"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.7",
-    "@types/node": "^18.11.0",
+    "@types/node": "^18.11.3",
     "@types/react": "^18.0.21"
   },
   "eslintConfig": {
