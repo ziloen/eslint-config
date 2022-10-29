@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@types/eslint': ^8.4.8
+      '@types/eslint': ^8.4.9
       '@types/node': ^18.11.7
       '@types/react': ^18.0.24
       '@ziloen/eslint-config': workspace:0.0.71
@@ -29,7 +29,7 @@ importers:
       react: 18.2.0
       typescript: 4.8.4
     devDependencies:
-      '@types/eslint': 8.4.8
+      '@types/eslint': 8.4.9
       '@types/node': 18.11.7
       '@types/react': 18.0.24
 
@@ -212,8 +212,8 @@ packages:
       fastq: 1.13.0
     dev: false
 
-  /@types/eslint/8.4.8:
-    resolution: {integrity: sha512-zUCKQI1bUCTi+0kQs5ZQzQ/XILWRLIlh15FXWNykJ+NG3TMKMVvwwC6GP3DR1Ylga15fB7iAExSzc4PNlR5i3w==}
+  /@types/eslint/8.4.9:
+    resolution: {integrity: sha512-jFCSo4wJzlHQLCpceUhUnXdrPuCNOjGFMQ8Eg6JXxlz3QaCKOb7eGi2cephQdM4XTYsNej69P9JDJ1zqNIbncQ==}
     dependencies:
       '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
