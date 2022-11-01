@@ -22,6 +22,8 @@ module.exports = {
     }
   },
   rules: {
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    // 让 TS 检查
+    'react/jsx-no-undef': 'off'
   }
 }
