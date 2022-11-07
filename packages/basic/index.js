@@ -72,6 +72,8 @@ module.exports = {
     'prefer-object-has-own': 'warn',
     /** 这可能会导致数据竞争 */
     'require-atomic-updates': 'error',
+    /** 不允许 new Symbol 与 new BigInt 这种错误用法 */
+    'no-new-native-nonconstructor': 'error',
 
     // Node 插件 未安装
     /** 同步发方法会阻塞线程，使用异步方法代替 */
