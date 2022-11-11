@@ -17,6 +17,8 @@ module.exports = {
   rules: {
     /** 检查数组方法返回值 */
     'array-callback-return': ['error', { 'allowImplicit': true }],
+    /** 禁止定义块作用域外的访问 var 变量 */
+    "block-scoped-var": "error",
     /** 倾向使用全等 === */
     'eqeqeq': ['warn', 'smart'],
     /** `a = a || b` 简写为 `a ||= b` */
