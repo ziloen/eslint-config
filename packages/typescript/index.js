@@ -34,6 +34,9 @@ module.exports = {
     /** 允许未使用变量 */
     '@typescript-eslint/no-unused-vars': 'off',
 
+    /** 允许未处理的 Promise */
+    '@typescript-eslint/no-floating-promises': "off",
+
     /** 超出范围的数字 */
     'no-loss-of-precision': 'off',
     '@typescript-eslint/no-loss-of-precision': 'error',
