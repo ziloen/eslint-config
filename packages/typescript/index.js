@@ -35,7 +35,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
 
     /** 允许未处理的 Promise */
-    '@typescript-eslint/no-floating-promises': "off",
+    '@typescript-eslint/no-floating-promises': 'off',
 
     /** 超出范围的数字 */
     'no-loss-of-precision': 'off',
@@ -54,11 +54,15 @@ module.exports = {
     }],
 
     /** 禁止使用 void 函数的返回值 */
-    '@typescript-eslint/no-confusing-void-expression': 'warn',
+    '@typescript-eslint/no-confusing-void-expression': ['warn', {
+      ignoreArrowShorthand: true
+    }],
     /** 禁止冗余类型定义 */
     '@typescript-eslint/no-redundant-type-constituents': 'warn',
 
     /** 允许可合为一个联合类型的函数声明多个函数签名 */
-    '@typescript-eslint/unified-signatures': 'off'
+    '@typescript-eslint/unified-signatures': 'off',
+    /** 不限制只使用 interface 或者 type */
+    '@typescript-eslint/consistent-type-definitions': 'off',
   }
 }
