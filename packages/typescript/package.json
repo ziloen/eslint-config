@@ -12,8 +12,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
     "@ziloen/eslint-config-basic": "workspace:*",
     "eslint": "^8.27.0",
     "typescript": "latest"
