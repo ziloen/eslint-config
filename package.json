@@ -16,7 +16,7 @@
     "@ziloen/eslint-config-typescript": "workspace:*",
     "@ziloen/eslint-config-vue": "workspace:*",
     "bumpp": "latest",
-    "eslint": "^8.27.0",
+    "eslint": "^8.28.0",
     "react": "^18.2.0",
     "typescript": "latest"
   },
