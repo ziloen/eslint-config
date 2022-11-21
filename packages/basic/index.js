@@ -18,7 +18,7 @@ module.exports = {
     /** 检查数组方法返回值 */
     'array-callback-return': ['error', { 'allowImplicit': true }],
     /** 禁止定义块作用域外的访问 var 变量 */
-    "block-scoped-var": "error",
+    'block-scoped-var': 'error',
     /** 倾向使用全等 === */
     'eqeqeq': ['warn', 'smart'],
     /** `a = a || b` 简写为 `a ||= b` */
@@ -104,6 +104,10 @@ module.exports = {
     'unicorn/no-new-buffer': 'error',
     /** 禁止声明`then`属性，以免和`Promsie`混淆 */
     'unicorn/no-thenable': 'error',
+    /** 使用 var === undefined 来检查 而不是 typeof var === 'undefined'，除了全局变量 */
+    'unicorn/no-typeof-undefined': ['warn', {
+      checkGlobalVariables: false
+    }],
     'unicorn/no-unreadable-array-destructuring': 'error',
     'unicorn/no-useless-fallback-in-spread': 'warn',
     'unicorn/no-useless-promise-resolve-reject': 'warn',
@@ -128,6 +132,8 @@ module.exports = {
     'unicorn/prefer-node-protocol': 'warn',
     /** 🔧使用同一种方法来选择 DOM 元素，避免混淆 */
     'unicorn/prefer-query-selector': 'warn',
+    /** 🔧使用 Set#size 直接获得数量而不是先转换为 Array 再读取 Array#length */
+    'unicorn/prefer-set-size': 'warn',
     'unicorn/prefer-string-slice': 'warn'
   }
 }
