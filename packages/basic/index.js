@@ -66,7 +66,7 @@ module.exports = {
 
     'prefer-const': ['warn', {
       destructuring: 'all',
-      ignoreReadBeforeAssign: true
+      ignoreReadBeforeAssign: false
     }],
     /** 使用 `a ** b` 替代 `Math.pow(a, b)` */
     'prefer-exponentiation-operator': 'warn',
@@ -93,10 +93,11 @@ module.exports = {
     'unicorn/expiring-todo-comments': 'warn',
     /** 🔧不要使用 instanceof Array 判断数组 */
     'unicorn/no-instanceof-array': 'warn',
+    /** 事件监听移除字面量函数是无效的 */
     'unicorn/no-invalid-remove-event-listener': 'error',
-    /** 手动操作原生 Cookie 很麻烦 */
+    /** 手动操作原生 Cookie 很麻烦容易出错 */
     'unicorn/no-document-cookie': 'warn',
-    /** 警告嵌套三元运算符 (可以通过对齐来表示，取消警告) */
+    /** 警告嵌套三元运算符 (可以通过对齐来表示，不警告) */
     // 'no-nested-ternary': 'off',
     // 'unicorn/no-nested-ternary': 'warn',
     /** 🔧使用 Buffer.from() 或 Buffer.alloc() 代替 */
@@ -119,10 +120,11 @@ module.exports = {
     'unicorn/prefer-export-from': ['warn', {
       ignoreUsedVariables: true
     }],
+    /** 使用新的API */
     'unicorn/prefer-keyboard-event-key': 'warn',
     /** 🔧使用更现代的 DOM API */
     'unicorn/prefer-modern-dom-apis': 'warn',
-    /** 🔧来自 Node 的方法应添加 node: 协议前缀 */
+    /** 🔧来自 Node 的方法应添加 node: 协议前缀，避免混淆 */
     'unicorn/prefer-node-protocol': 'warn',
     /** 🔧使用同一种方法来选择 DOM 元素，避免混淆 */
     'unicorn/prefer-query-selector': 'warn',
