@@ -47,7 +47,7 @@ importers:
       eslint-plugin-promise: ^6.1.1
       eslint-plugin-react: ^7.31.11
       eslint-plugin-unicorn: ^45.0.0
-      eslint-plugin-vue: ^9.7.0
+      eslint-plugin-vue: ^9.8.0
       typescript: latest
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.44.0_fnsv2sbzcckq65bwfk7a5xwslu
@@ -62,7 +62,7 @@ importers:
       eslint-plugin-promise: 6.1.1_eslint@8.28.0
       eslint-plugin-react: 7.31.11_eslint@8.28.0
       eslint-plugin-unicorn: 45.0.0_eslint@8.28.0
-      eslint-plugin-vue: 9.7.0_eslint@8.28.0
+      eslint-plugin-vue: 9.8.0_eslint@8.28.0
       typescript: 4.9.3
 
   packages/basic:
@@ -115,11 +115,11 @@ importers:
     specifiers:
       '@ziloen/eslint-config-typescript': workspace:*
       eslint: ^8.28.0
-      eslint-plugin-vue: ^9.7.0
+      eslint-plugin-vue: ^9.8.0
     dependencies:
       '@ziloen/eslint-config-typescript': link:../typescript
       eslint: 8.28.0
-      eslint-plugin-vue: 9.7.0_eslint@8.28.0
+      eslint-plugin-vue: 9.8.0_eslint@8.28.0
 
 packages:
 
@@ -917,8 +917,8 @@ packages:
       strip-indent: 3.0.0
     dev: false
 
-  /eslint-plugin-vue/9.7.0_eslint@8.28.0:
-    resolution: {integrity: sha512-DrOO3WZCZEwcLsnd3ohFwqCoipGRSTKTBTnLwdhqAbYZtzWl0o7D+D8ZhlmiZvABKTEl8AFsqH1GHGdybyoQmw==}
+  /eslint-plugin-vue/9.8.0_eslint@8.28.0:
+    resolution: {integrity: sha512-E/AXwcTzunyzM83C2QqDHxepMzvI2y6x+mmeYHbVDQlKFqmKYvRrhaVixEeeG27uI44p9oKDFiyCRw4XxgtfHA==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
@@ -927,7 +927,7 @@ packages:
       eslint-utils: 3.0.0_eslint@8.28.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
-      postcss-selector-parser: 6.0.10
+      postcss-selector-parser: 6.0.11
       semver: 7.3.8
       vue-eslint-parser: 9.1.0_eslint@8.28.0
       xml-name-validator: 4.0.0
@@ -1758,8 +1758,8 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /postcss-selector-parser/6.0.10:
-    resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
+  /postcss-selector-parser/6.0.11:
+    resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
