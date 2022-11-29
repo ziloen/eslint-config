@@ -57,12 +57,16 @@ module.exports = {
     '@typescript-eslint/no-confusing-void-expression': ['warn', {
       ignoreArrowShorthand: true
     }],
+    /** 禁止 promise 错误用法 */
+    '@typescript-eslint/no-misused-promises': ['error', {
+      checksVoidReturn: false
+    }],
     /** 禁止冗余类型定义 */
     '@typescript-eslint/no-redundant-type-constituents': 'warn',
 
     /** 允许可合为一个联合类型的函数声明多个函数签名 */
     '@typescript-eslint/unified-signatures': 'off',
     /** 不限制只使用 interface 或者 type */
-    '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off'
   }
 }
