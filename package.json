@@ -16,14 +16,14 @@
     "@ziloen/eslint-config-typescript": "workspace:*",
     "@ziloen/eslint-config-vue": "workspace:*",
     "bumpp": "latest",
-    "eslint": "^8.28.0",
+    "eslint": "^8.29.0",
     "react": "^18.2.0",
     "typescript": "latest"
   },
   "devDependencies": {
     "@types/eslint": "^8.4.10",
     "@types/node": "^18.11.10",
-    "@types/react": "^18.0.25"
+    "@types/react": "^18.0.26"
   },
   "eslintConfig": {
     "extends": [
