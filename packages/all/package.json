@@ -13,8 +13,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.1",
+    "@typescript-eslint/parser": "^5.45.1",
     "@ziloen/eslint-config-react": "workspace:*",
     "@ziloen/eslint-config-typescript": "workspace:*",
     "@ziloen/eslint-config-vue": "workspace:*",
