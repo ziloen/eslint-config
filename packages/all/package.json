@@ -13,8 +13,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.45.1",
-    "@typescript-eslint/parser": "^5.45.1",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
     "@ziloen/eslint-config-react": "workspace:*",
     "@ziloen/eslint-config-typescript": "workspace:*",
     "@ziloen/eslint-config-vue": "workspace:*",
@@ -26,6 +26,6 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-unicorn": "^45.0.1",
     "eslint-plugin-vue": "^9.8.0",
-    "typescript": "latest"
+    "typescript": "^4.9.4"
   }
 }
