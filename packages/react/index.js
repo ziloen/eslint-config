@@ -29,6 +29,6 @@ module.exports = {
     /** 简写 <React.Fragment></React.Fragment> => <></> */
     'react/jsx-fragments': ['warn', 'syntax'],
     /** 避免错误用法 */
-    'react/no-invalid-html-attribute': "warn",
+    'react/no-invalid-html-attribute': 'warn'
   }
 }
