@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.4.10",
-    "@types/node": "^18.11.11",
+    "@types/node": "^18.11.12",
     "@types/react": "^18.0.26"
   },
   "eslintConfig": {
