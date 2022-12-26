@@ -1,6 +1,5 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
-  parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
     /** 数组前后空格 */
@@ -95,7 +94,10 @@ module.exports = {
 
     /** 多余的括号 */
     'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': 'warn',
+    '@typescript-eslint/no-extra-parens': ['warn', 'all', {
+      /** 允许 JSDoc 类型转换 */
+      allowParensAfterCommentPattern: '@type'
+    }],
 
     /** 多余的分号 */
     'no-extra-semi': 'off',
