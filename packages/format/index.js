@@ -57,6 +57,9 @@ module.exports = {
     /** 对象与属性间的空格 */
     'no-whitespace-before-property': 'warn',
 
+    /** 属性名的引号 */
+    'quote-props': ['warn', 'as-needed'],
+
     /** 展开操作符前后空格 */
     'rest-spread-spacing': ['warn', 'never'],
 
@@ -70,7 +73,7 @@ module.exports = {
 
     /** 括号风格 */
     'brace-style': 'off',
-    '@typescript-eslint/brace-style': ['warn', '1tbs', { 'allowSingleLine': true }],
+    '@typescript-eslint/brace-style': ['warn', '1tbs', { allowSingleLine: true }],
 
     /** 尾随逗号 */
     'comma-dangle': 'off',
@@ -86,7 +89,7 @@ module.exports = {
 
     /** 缩进 */
     indent: 'off',
-    '@typescript-eslint/indent': ['warn', 2, { 'VariableDeclarator': 2 }],
+    '@typescript-eslint/indent': ['warn', 2, { VariableDeclarator: 2 }],
 
     /** 关键词 空格 */
     'keyword-spacing': 'off',
@@ -125,9 +128,9 @@ module.exports = {
     /** 函数声明参数括号前的空格 */
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': ['warn', {
-      'anonymous': 'always',
-      'named': 'never',
-      'asyncArrow': 'always'
+      anonymous: 'always',
+      named: 'never',
+      asyncArrow: 'always'
     }],
 
     /** 操作符左右空格 */

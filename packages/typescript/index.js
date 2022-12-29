@@ -71,7 +71,10 @@ module.exports = {
 
     /** 警告未使用的表达式 */
     'no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-expressions': 'warn',
+    '@typescript-eslint/no-unused-expressions': ['warn', {
+      allowShortCircuit: true,
+      enforceForJSX: true
+    }],
 
     /** 禁止 promise 错误用法 */
     '@typescript-eslint/no-misused-promises': ['error', {
