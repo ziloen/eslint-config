@@ -25,10 +25,8 @@ module.exports = {
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': 'off',
 
-    /** 禁止使用 void 函数的返回值 */
-    '@typescript-eslint/no-confusing-void-expression': ['warn', {
-      ignoreArrowShorthand: true
-    }],
+    /** 禁止使用 void 函数的返回值 ("off" 因为 return voidExpression() 这种缩写 { voidExpress(); return }  也会报错) */
+    '@typescript-eslint/no-confusing-void-expression': ['off'],
 
     /** 不允许 class 有重复的成员 (TypeScript 已检查，禁用此规则) */
     'no-dupe-class-members': 'off',
