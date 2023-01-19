@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@types/eslint': ^8.4.10
       '@types/node': ^18.11.18
-      '@types/react': ^18.0.26
+      '@types/react': ^18.0.27
       '@ziloen/eslint-config': workspace:*
       '@ziloen/eslint-config-basic': workspace:*
       '@ziloen/eslint-config-format': workspace:*
@@ -31,7 +31,7 @@ importers:
     devDependencies:
       '@types/eslint': 8.4.10
       '@types/node': 18.11.18
-      '@types/react': 18.0.26
+      '@types/react': 18.0.27
 
   packages/all:
     specifiers:
@@ -252,8 +252,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react/18.0.26:
-    resolution: {integrity: sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==}
+  /@types/react/18.0.27:
+    resolution: {integrity: sha512-3vtRKHgVxu3Jp9t718R9BuzoD4NcQ8YJ5XRzsSKxNDiDonD2MXIT1TmSkenxuCycZJoQT5d2vE8LwWJxBC1gmA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
