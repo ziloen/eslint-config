@@ -67,13 +67,19 @@ importers:
 
   packages/react:
     specifiers:
+      '@typescript-eslint/parser': ^5.52.0
       '@ziloen/eslint-config-typescript': workspace:*
       eslint: ^8.34.0
+      eslint-plugin-jsx-expressions: ^1.3.1
       eslint-plugin-react: ^7.32.2
+      typescript: ^4.9.5
     dependencies:
+      '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
       '@ziloen/eslint-config-typescript': link:../typescript
       eslint: 8.34.0
+      eslint-plugin-jsx-expressions: 1.3.1_6cfvjsbua5ptj65675bqcn6oza
       eslint-plugin-react: 7.32.2_eslint@8.34.0
+      typescript: 4.9.5
 
   packages/typescript:
     specifiers:
@@ -272,6 +278,19 @@ packages:
       typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@typescript-eslint/experimental-utils/5.52.0_7kw3g6rralp5ps6mg3uyzz6azm:
+    resolution: {integrity: sha512-kd8CRr04mNE3hw4et6+0T0NI5vli2H6dJCGzjX1r12s/FXUehLVadmvo2Nl3DN80YqAh1cVC6zYZAkpmGiVJ5g==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
+      eslint: 8.34.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: false
 
   /@typescript-eslint/parser/5.52.0_7kw3g6rralp5ps6mg3uyzz6azm:
@@ -858,6 +877,26 @@ packages:
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
+      - supports-color
+    dev: false
+
+  /eslint-plugin-jsx-expressions/1.3.1_6cfvjsbua5ptj65675bqcn6oza:
+    resolution: {integrity: sha512-7PTIx62Oy4l3Igtat361C/SCrJ4yXNNJRh/pzXMbzvPzFkvOpHBkTXITkH8PMLDu1RAdilDpjaOUv1m14DbY7w==}
+    engines: {node: 12.x || 14.x || >= 16}
+    peerDependencies:
+      '@typescript-eslint/parser': ^4.0.0 || ^5.0.0
+      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@typescript-eslint/experimental-utils': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
+      '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
+      eslint: 8.34.0
+      tsutils: 3.21.0_typescript@4.9.5
+      typescript: 4.9.5
+    transitivePeerDependencies:
       - supports-color
     dev: false
 
