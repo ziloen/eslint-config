@@ -1,6 +1,6 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'react'],
   rules: {
     /** 数组前后空格 */
     'array-bracket-spacing': ['warn', 'never'],
@@ -154,6 +154,15 @@ module.exports = {
     }],
 
     /** 🔧多余的限定符 */
-    '@typescript-eslint/no-unnecessary-qualifier': 'warn'
+    '@typescript-eslint/no-unnecessary-qualifier': 'warn',
+
+
+
+    // -------------------------------------------------------------
+    // 以下为 React Plugin Rules
+    // -------------------------------------------------------------
+    'react/self-closing-comp': ['warn', {
+      component: true
+    }]
   }
 }
