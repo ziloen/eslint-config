@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@ziloen/eslint-config-typescript": "workspace:*",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "eslint-plugin-vue": "^9.9.0"
   }
 }
