@@ -57,6 +57,9 @@ module.exports = {
     /** 对象与属性间的空格 */
     'no-whitespace-before-property': 'warn',
 
+    /** 偏好模板字符串 */
+    'prefer-template': 'warn',
+
     /** 属性名的引号 */
     'quote-props': ['warn', 'as-needed'],
 
