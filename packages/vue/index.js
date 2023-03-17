@@ -21,6 +21,7 @@ module.exports = {
   ],
 
   rules: {
+    /** allow ununed vars */
     'vue/no-unused-vars': 'off',
     'vue/html-self-closing': 'off',
     'vue/max-attributes-per-line': 'off',
@@ -29,8 +30,5 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'vue/require-prop-types': 'off',
     'vue/singleline-html-element-content-newline': 'off',
-
-    // reactivity transform
-    'vue/no-setup-props-destructure': 'off'
   }
 }
