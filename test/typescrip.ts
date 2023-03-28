@@ -61,3 +61,14 @@ export {     }
 
 
 interface G {  a: string; b: string }
+
+// not working https://github.com/typescript-eslint/typescript-eslint/issues/1824
+function TestGenericIndent<T extends Record<
+string,
+| string
+| number
+>>(a: T) {
+
+}
+
+type TestGenericSpace<T=true> = T
