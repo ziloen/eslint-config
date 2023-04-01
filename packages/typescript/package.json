@@ -16,6 +16,6 @@
     "@typescript-eslint/parser": "^5.57.0",
     "@ziloen/eslint-config-basic": "workspace:*",
     "eslint": "^8.37.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.3"
   }
 }
