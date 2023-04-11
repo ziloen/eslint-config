@@ -12,14 +12,14 @@
     "@ziloen/eslint-config": "workspace:*",
     "@ziloen/eslint-config-format": "workspace:*",
     "bumpp": "^9.1.0",
-    "eslint": "^8.37.0",
+    "eslint": "^8.38.0",
     "react": "^18.2.0",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@types/eslint": "^8.37.0",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.31"
+    "@types/react": "^18.0.34"
   },
   "eslintConfig": {
     "extends": [
