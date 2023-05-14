@@ -2,20 +2,32 @@
 module.exports = {
   plugins: ['@typescript-eslint', 'react'],
   rules: {
+    /** 数组括号换行 */
+    'array-bracket-newline': ['warn', 'consistent'],
+
     /** 数组前后空格 */
     'array-bracket-spacing': ['warn', 'never'],
+
+    /** 数组内元素换行 */
+    'array-element-newline': ['warn', 'consistent'],
 
     /** 箭头函数括号 */
     'arrow-parens': ['warn', 'as-needed'],
 
-    /** 语句块内部前后空格 */
-    'block-spacing': 'warn',
+    /** 箭头左右空格 */
+    'arrow-spacing': 'warn',
 
     /** 计算属性名内部空格 */
     'computed-property-spacing': 'warn',
 
+    /** 逗号位置 */
+    'comma-style': 'warn',
+
     /** 属性`o.p`点号位置 */
     'dot-location': ['warn', 'property'],
+
+    /** 函数调用参数换行 */
+    'function-call-argument-newline': ['warn', 'consistent'],
 
     /** 生成器函数星号前后空格 */
     'generator-star-spacing': ['warn', {
@@ -25,9 +37,6 @@ module.exports = {
       anonymous: 'after',
       method: 'neither'
     }],
-
-    /** 对象键名空格 */
-    'key-spacing': ['warn'],
 
     /** 最大长度 */
     'max-len': ['warn', {
@@ -46,16 +55,26 @@ module.exports = {
     /** new 表达式括号 */
     'new-parens': ['warn', 'never'],
 
-    /** 空行 */
-    'no-multiple-empty-lines': ['warn', { max: 3 }],
+    /** 链式调用换行 */
+    'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
+
+    /** 禁止混用空格和 tab 作为 indent */
+    'no-mixed-spaces-and-tabs': 'warn',
+
     /** 多余的空格 */
     'no-multi-spaces': 'warn',
 
+    /** 多行空行 */
+    'no-multiple-empty-lines': ['warn', { max: 3 }],
+
     /** 尾随空格 */
-    'no-trailing-spaces': 'warn',
+    'no-trailing-spaces': ['warn', { ignoreComments: true }],
 
     /** 对象与属性间的空格 */
     'no-whitespace-before-property': 'warn',
+
+    /** 对象花括号换行 */
+    'object-curly-newline': ['warn', { consistent: true }],
 
     /** 偏好模板字符串 */
     'prefer-template': 'warn',
@@ -66,6 +85,25 @@ module.exports = {
     /** 展开操作符前后空格 */
     'rest-spread-spacing': ['warn', 'never'],
 
+    /** 分号前后空格 */
+    'semi-spacing': ['warn', { before: false, after: true }],
+
+    /** 分号位置 */
+    'semi-style': 'warn',
+
+    /** 括号中前后空格 */
+    'space-in-parens': 'warn',
+
+    /** 一元操作符前后空格 */
+    'space-unary-ops': ['warn', { words: true, nonwords: false }],
+
+    /** switch case 冒号前后空格 */
+    'switch-colon-spacing': 'warn',
+
+    /** 模板字符串花括号中前后空格 */
+    'template-curly-spacing': 'warn',
+
+    /** 生成器函数星号空格 */
     'yield-star-spacing': ['warn', 'after'],
 
 
@@ -73,6 +111,10 @@ module.exports = {
     // -------------------------------------------------------------
     // 以下需要覆盖原配置 以在 ts 文件中生效
     // -------------------------------------------------------------
+
+    /** 语句块内部前后空格 */
+    'block-spacing': 'off',
+    '@typescript-eslint/block-spacing': 'warn',
 
     /** 括号风格 */
     'brace-style': 'off',
@@ -93,6 +135,10 @@ module.exports = {
     /** 缩进 */
     indent: 'off',
     '@typescript-eslint/indent': ['warn', 2, { VariableDeclarator: 2 }],
+
+    /** 对象键名空格 */
+    'key-spacing': 'off',
+    '@typescript-eslint/key-spacing': 'warn',
 
     /** 关键词 空格 */
     'keyword-spacing': 'off',
@@ -146,24 +192,25 @@ module.exports = {
     // 以下为 TS Plugin Rules
     // -------------------------------------------------------------
 
-    /** 类型标注空格 */
-    '@typescript-eslint/type-annotation-spacing': 'warn',
-
-    /** 属性间隔符 `;` / `,` / none */
+    /** 类型定义属性间隔符 `;` / `,` / none */
     '@typescript-eslint/member-delimiter-style': ['warn', {
       multiline: { delimiter: 'none', requireLast: false },
-      singleline: { delimiter: 'comma', requireLast: false },
+      singleline: { delimiter: 'semi', requireLast: false },
       multilineDetection: 'brackets'
     }],
 
     /** 🔧多余的限定符 */
     '@typescript-eslint/no-unnecessary-qualifier': 'warn',
 
+    /** 类型标注空格 */
+    '@typescript-eslint/type-annotation-spacing': 'warn',
+
 
 
     // -------------------------------------------------------------
     // 以下为 React Plugin Rules
     // -------------------------------------------------------------
+
     'react/self-closing-comp': ['warn', {
       component: true
     }]
