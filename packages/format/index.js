@@ -80,7 +80,7 @@ module.exports = {
 
     /** 尾随逗号 */
     'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': ['warn', 'never'],
+    '@typescript-eslint/comma-dangle': ['warn', 'only-multiline'],
 
     /** 逗号前后空格 */
     'comma-spacing': 'off',
