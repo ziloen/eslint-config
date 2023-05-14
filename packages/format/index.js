@@ -148,7 +148,8 @@ module.exports = {
     'no-extra-parens': 'off',
     '@typescript-eslint/no-extra-parens': ['warn', 'all', {
       /** 允许 JSDoc 类型转换 */
-      allowParensAfterCommentPattern: '@type'
+      allowParensAfterCommentPattern: '@type',
+      ignoreJSX: 'multi-line'
     }],
 
     /** 多余的分号 */
