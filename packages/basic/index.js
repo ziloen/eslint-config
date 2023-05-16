@@ -1,7 +1,8 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
   plugins: [
-    'unicorn'
+    'unicorn',
+    'promise',
   ],
   extends: 'eslint:recommended',
   ignorePatterns: [
@@ -81,9 +82,12 @@ module.exports = {
     /** 同步发方法会阻塞线程，使用异步方法代替 */
     // 'node/no-sync': 'warn',
 
+
+
     // -------------------------------------------------------------
     // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
     // -------------------------------------------------------------
+
     /** 🔧更好的正则 */
     'unicorn/better-regex': ['warn', {
       sortCharacterClasses: false
@@ -91,12 +95,12 @@ module.exports = {
     /** Error 应有错误信息 */
     'unicorn/error-message': 'warn',
     'unicorn/expiring-todo-comments': 'warn',
+    /** 手动操作原生 Cookie 很麻烦容易出错 */
+    'unicorn/no-document-cookie': 'warn',
     /** 🔧不要使用 instanceof Array 判断数组 */
     'unicorn/no-instanceof-array': 'warn',
     /** 事件监听移除字面量函数是无效的 */
     'unicorn/no-invalid-remove-event-listener': 'error',
-    /** 手动操作原生 Cookie 很麻烦容易出错 */
-    'unicorn/no-document-cookie': 'warn',
     /** 警告嵌套三元运算符 (可以通过对齐来表示，不警告) */
     // 'no-nested-ternary': 'off',
     // 'unicorn/no-nested-ternary': 'warn',
@@ -108,32 +112,82 @@ module.exports = {
     'unicorn/no-typeof-undefined': ['warn', {
       checkGlobalVariables: false
     }],
+    /** 🔧去除多余的 `await` */
+    'unicorn/no-unnecessary-await': 'off',
     'unicorn/no-unreadable-array-destructuring': 'error',
+    /** 🔧去除多余的 fallback */
     'unicorn/no-useless-fallback-in-spread': 'warn',
+    /** 🔧去除多余的 `Promise.resove/reject` */
     'unicorn/no-useless-promise-resolve-reject': 'warn',
+    /** 🔧去除多余的 `...` */
     'unicorn/no-useless-spread': 'warn',
+    /** 🔧去除多余的 undefined */
     'unicorn/no-useless-undefined': ['warn', {
       checkArguments: false
     }],
+    /** 🔧`1`, `1.0`, `1.` 没有区别 */
     'unicorn/no-zero-fractions': 'warn',
     'unicorn/number-literal-case': 'warn',
+    /** 🔧使用 `Array#flat()` 替代 `Array#concat()` */
+    'unicorn/prefer-array-flat': 'warn',
+    /** 🔧使用 `Array#flatMap()` 替代 `Array#concat().map()` */
+    'unicorn/prefer-array-flat-map': 'warn',
+    /** 🔧使用 indexOf 代替简单查找 findIndex */
+    'unicorn/prefer-array-index-of': 'warn',
+    /** 🔧偏好使用 `Array#some()` */
+    'unicorn/prefer-array-some': 'warn',
+    /** 🔧偏好使用 `Array#at()` 和 `String#at()` */
     'unicorn/prefer-at': 'warn',
+    /** 使用 `Blob#arrayBuffer()` 和 `Blob#text()` */
+    'unicorn/prefer-blob-reading-methods': 'warn',
+    /**  */
     'unicorn/prefer-code-point': 'warn',
-    'unicorn/prefer-dom-node-text-content': 'warn',
+    /** 🔧使用 `Node#append()` 代替 `Node#appendChild()` */
     'unicorn/prefer-dom-node-append': 'warn',
+    /** 🔧使用 HTML#dataset 而不是直接操作 attribute `data-*` */
+    'unicorn/prefer-dom-node-dataset': 'warn',
+    /** 🔧使用 Node#remove 代替 node.parentNode.removeChild() */
+    'unicorn/prefer-dom-node-remove': 'warn',
+    /** 使用 textContent 代替 innerText，参考 [Differences from innerText](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext)  */
+    'unicorn/prefer-dom-node-text-content': 'warn',
+    /** 🔧使用 export...from 如果导入导出未使用 */
     'unicorn/prefer-export-from': ['warn', {
       ignoreUsedVariables: true
     }],
-    /** 使用新的API */
+    /** 🔧使用 Array#includes 代替 indexOf / some 代替存在性检查 */
+    'unicorn/prefer-includes': 'warn',
+    /** 🔧使用新的 KeyboradEvent#key 而不是 KeyboardEvent#keyCode */
     'unicorn/prefer-keyboard-event-key': 'warn',
     /** 🔧使用更现代的 DOM API */
     'unicorn/prefer-modern-dom-apis': 'warn',
+    /** 🔧使用更信贷的 Math API */
+    'unicorn/prefer-modern-math-apis': 'warn',
+    /** 🔧使用负数 -index 代替 xxx.length - index */
+    'unicorn/prefer-negative-index': 'warn',
     /** 🔧来自 Node 的方法应添加 node: 协议前缀，避免混淆 */
     'unicorn/prefer-node-protocol': 'warn',
+    /** 🔧使用 Object.fromEntries 代替手动 */
+    'unicorn/prefer-object-from-entries': 'warn',
+    /** 🔧省略 catch 如果未使用 */
+    'unicorn/prefer-optional-catch-binding': 'warn',
+    /** 🔧使用 prototype 上而不是实例上的 prototype */
+    'unicorn/prefer-prototype-methods': 'warn',
     /** 🔧使用同一种方法来选择 DOM 元素，避免混淆 */
     'unicorn/prefer-query-selector': 'warn',
     /** 🔧使用 Set#size 直接获得数量而不是先转换为 Array 再读取 Array#length */
     'unicorn/prefer-set-size': 'warn',
-    'unicorn/prefer-string-slice': 'warn'
+    /** 🔧偏好使用 string.slice 而不是 string.substring / string.substr */
+    'unicorn/prefer-string-slice': 'warn',
+    /** 🔧throw 应使用 new Error */
+    'unicorn/throw-new-error': 'warn',
+
+
+
+    // -------------------------------------------------------------
+    // eslint-plugin-promise
+    // -------------------------------------------------------------
+
+    /** 🔧Promise 上的静态方法应直接使用 */
+    'promise/no-new-statics': 'error',
   }
 }
