@@ -133,8 +133,17 @@ module.exports = {
     '@typescript-eslint/func-call-spacing': 'warn',
 
     /** 缩进 */
-    indent: 'off',
-    '@typescript-eslint/indent': ['warn', 2, { VariableDeclarator: 2 }],
+    //  https://github.com/typescript-eslint/typescript-eslint/issues/1824
+    indent: ['warn', 2, {
+      /** 对齐第一个变量定义 */
+      VariableDeclarator: 'first',
+      /** swtich case 增加 1 indent */
+      SwitchCase: 1,
+      /** 三元表达式偏移 */
+      offsetTernaryExpressions: true
+    }],
+    // indent: 'off',
+    // '@typescript-eslint/indent': ['warn', 2, { VariableDeclarator: 2 }],
 
     /** 对象键名空格 */
     'key-spacing': 'off',
@@ -196,7 +205,7 @@ module.exports = {
     /** 类型定义属性间隔符 `;` / `,` / none */
     '@typescript-eslint/member-delimiter-style': ['warn', {
       multiline: { delimiter: 'none', requireLast: false },
-      singleline: { delimiter: 'semi', requireLast: false },
+      singleline: { requireLast: false },
       multilineDetection: 'brackets'
     }],
 

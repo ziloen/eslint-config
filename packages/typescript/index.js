@@ -82,6 +82,15 @@ module.exports = {
     /** 禁止冗余类型定义 */
     '@typescript-eslint/no-redundant-type-constituents': 'warn',
 
+    /**
+     * ```ts 
+     * a: number | undefined;
+     * let b = a || 100 
+     * //        ^ 也会被要求改成 ??，然而有时是有意使用 || 检查 0 的，且无法配置，故关闭
+     * ```
+     */
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+
     /** 使用可选链`a?.b`替代`a && a.b` */
     '@typescript-eslint/prefer-optional-chain': 'warn',
 
