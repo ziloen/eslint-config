@@ -91,8 +91,15 @@ module.exports = {
      */
     "@typescript-eslint/prefer-nullish-coalescing": "off",
 
-    /** 使用可选链`a?.b`替代`a && a.b` */
-    '@typescript-eslint/prefer-optional-chain': 'warn',
+    /** 
+     * 使用可选链`a?.b`替代`a && a.b`
+     * 
+     * ```ts
+     * if (!a || !a.b) 
+     * //   ^ 也会被要求改成 ?.，降低可读性，且无配置，故关闭
+     * ```
+     */
+    '@typescript-eslint/prefer-optional-chain': 'off',
 
     /** 返回 promise 的函数必须有 async 关键字 */
     '@typescript-eslint/promise-function-async': ['warn', {

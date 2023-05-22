@@ -52,8 +52,14 @@ module.exports = {
     /** 多行三元表达式 */
     // 'multiline-ternary': ['warn'],
 
-    /** new 表达式括号 */
-    'new-parens': ['warn', 'never'],
+    /** 
+     * new 表达式括号
+     * ```ts
+     * const a = new A().a()
+     * //        ^ 会被改成 (new A).a()，且无法配置，故关闭
+     * ```
+     */
+    'new-parens': "off",
 
     /** 链式调用换行 */
     'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
