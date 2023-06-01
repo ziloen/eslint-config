@@ -60,6 +60,10 @@ module.exports = {
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': ['error'],
 
+    /** Disallow throwing literals as exceptions. */
+    'no-throw-literal': 'off',
+    '@typescript-eslint/no-throw-literal': 'error',
+
     /** 禁用默认`no-undef`，eslint 不会检查`*.d.ts`，导致误报全局变量与类型不存在 */
     'no-undef': 'off',
 
@@ -89,7 +93,7 @@ module.exports = {
      * //        ^ 也会被要求改成 ??，然而有时是有意使用 || 检查 0 的，且无法配置，故关闭
      * ```
      */
-    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
 
     /** 
      * 使用可选链`a?.b`替代`a && a.b`

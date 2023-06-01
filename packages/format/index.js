@@ -59,7 +59,7 @@ module.exports = {
      * //        ^ 会被改成 (new A).a()，且无法配置，故关闭
      * ```
      */
-    'new-parens': "off",
+    'new-parens': 'off',
 
     /** 链式调用换行 */
     'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
@@ -96,6 +96,11 @@ module.exports = {
 
     /** 分号位置 */
     'semi-style': 'warn',
+
+    /** 排序 */
+    'sort-imports': ['warn', {
+      ignoreDeclarationSort: true
+    }],
 
     /** 括号中前后空格 */
     'space-in-parens': 'warn',
@@ -164,6 +169,7 @@ module.exports = {
     '@typescript-eslint/no-extra-parens': ['warn', 'all', {
       /** 允许 JSDoc 类型转换 */
       allowParensAfterCommentPattern: '@type',
+      /** 允許 JSX 包圍括號 */
       ignoreJSX: 'multi-line'
     }],
 
