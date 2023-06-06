@@ -233,8 +233,30 @@ module.exports = {
     // 以下为 React Plugin Rules
     // -------------------------------------------------------------
 
+    /** JSX 自闭合 */
     'react/self-closing-comp': ['warn', {
-      component: true
-    }]
+      component: true,
+      html: false
+    }],
+
+    /** JSX 标签空格 */
+    'react/jsx-tag-spacing': ['warn', {
+      closingSlash: 'never',
+      beforeSelfClosing: 'proportional-always',
+      afterOpening: 'never',
+      beforeClosing: 'never'
+    }],
+
+    /** 需要 key */
+    'react/jsx-key': ['error', {}],
+
+    /** 括号内前后空格 */
+    'react/jsx-curly-spacing': ['warn']
+    
+    // 
+    // 'react/jsx-indent': ["warn", 2, {
+    //   indentLogicalExpressions: true
+    // }],
+    // 'react/jsx-indent-props': ["warn", 2]
   }
 }

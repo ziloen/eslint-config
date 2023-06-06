@@ -11,8 +11,8 @@
   "dependencies": {
     "@ziloen/eslint-config": "workspace:*",
     "@ziloen/eslint-config-format": "workspace:*",
-    "bumpp": "^9.1.0",
-    "eslint": "^8.41.0",
+    "bumpp": "^9.1.1",
+    "eslint": "^8.42.0",
     "react": "^18.2.0",
     "typescript": "^5.1.3"
   },
