@@ -110,6 +110,14 @@ module.exports = {
       checkArrowFunctions: false
     }],
 
+    /** 
+     * 数组排序需显式指明排序方法，默认行为可能并不是想要的结果
+     * ```ts
+     * [1, 2, 3, 10, 20, 30].sort(); //→ [1, 10, 2, 20, 3, 30]
+     * ```
+     */
+    '@typescript-eslint/require-array-sort-compare': ['error'],
+
     /** 模板字符串只允许数字字符串 */
     '@typescript-eslint/restrict-template-expressions': ['error', {
       allowNumber: true
