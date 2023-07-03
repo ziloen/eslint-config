@@ -169,8 +169,16 @@ module.exports = {
     '@typescript-eslint/no-extra-parens': ['warn', 'all', {
       /** 允许 JSDoc 类型转换 */
       allowParensAfterCommentPattern: '@type',
-      /** 允許 JSX 包圍括號 */
-      ignoreJSX: 'multi-line'
+      /** 允许 JSX 多行包围括号 */
+      ignoreJSX: 'multi-line',
+      /** 允许条件赋值包围括号 */
+      conditionalAssign: false,
+      /** 允许 return 赋值包围括号 */
+      returnAssign: false,
+      /** 允许三元表达式内包围括号 */
+      ternaryOperandBinaryExpressions: false,
+      /** 允许嵌套二元表达式包围括号 */
+      nestedBinaryExpressions: false
     }],
 
     /** 多余的分号 */
