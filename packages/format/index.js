@@ -74,7 +74,10 @@ module.exports = {
     'no-multiple-empty-lines': ['warn', { max: 3 }],
 
     /** 尾随空格 */
-    'no-trailing-spaces': ['warn', { ignoreComments: true }],
+    'no-trailing-spaces': ['warn', { 
+      /** 注释内可能有 markdown，尾随空格会影响显示格式 */
+      ignoreComments: true 
+    }],
 
     /** 对象与属性间的空格 */
     'no-whitespace-before-property': 'warn',
@@ -146,7 +149,7 @@ module.exports = {
     /** 缩进 */
     //  https://github.com/typescript-eslint/typescript-eslint/issues/1824
     indent: ['warn', 2, {
-      /** 对齐第一个变量定义 */
+      /** 同时定义多个变量时，对齐到第一个变量定义 */
       VariableDeclarator: 'first',
       /** swtich case 增加 1 indent */
       SwitchCase: 1,
