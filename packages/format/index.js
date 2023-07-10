@@ -74,9 +74,9 @@ module.exports = {
     'no-multiple-empty-lines': ['warn', { max: 3 }],
 
     /** 尾随空格 */
-    'no-trailing-spaces': ['warn', { 
+    'no-trailing-spaces': ['warn', {
       /** 注释内可能有 markdown，尾随空格会影响显示格式 */
-      ignoreComments: true 
+      ignoreComments: true
     }],
 
     /** 对象与属性间的空格 */
@@ -176,11 +176,11 @@ module.exports = {
       ignoreJSX: 'multi-line',
       /** 允许条件赋值包围括号 */
       conditionalAssign: false,
-      /** 允许 return 赋值包围括号 */
+      // /** 允许 return 赋值包围括号 */
       returnAssign: false,
-      /** 允许三元表达式内包围括号 */
-      ternaryOperandBinaryExpressions: false,
-      /** 允许嵌套二元表达式包围括号 */
+      // /** 允许三元表达式内包围括号 */
+      // ternaryOperandBinaryExpressions: false, // typescript-eslint 5.61.0 未实现此选项
+      // /** 允许嵌套二元表达式包围括号 */
       nestedBinaryExpressions: false
     }],
 
@@ -237,37 +237,41 @@ module.exports = {
 
     /** 类型标注空格 */
     '@typescript-eslint/type-annotation-spacing': 'warn',
+  },
+  overrides: [
+    {
+      files: ['*.jsx', '*.tsx'],
+      rules: {
+        // -------------------------------------------------------------
+        // 以下为 React Plugin Rules
+        // -------------------------------------------------------------
 
+        /** JSX 自闭合 */
+        'react/self-closing-comp': ['warn', {
+          component: true,
+          html: false
+        }],
 
+        /** JSX 标签空格 */
+        'react/jsx-tag-spacing': ['warn', {
+          closingSlash: 'never',
+          beforeSelfClosing: 'proportional-always',
+          afterOpening: 'never',
+          beforeClosing: 'never'
+        }],
 
-    // -------------------------------------------------------------
-    // 以下为 React Plugin Rules
-    // -------------------------------------------------------------
+        /** 需要 key */
+        'react/jsx-key': ['error', {}],
 
-    /** JSX 自闭合 */
-    'react/self-closing-comp': ['warn', {
-      component: true,
-      html: false
-    }],
+        /** 括号内前后空格 */
+        'react/jsx-curly-spacing': ['warn']
 
-    /** JSX 标签空格 */
-    'react/jsx-tag-spacing': ['warn', {
-      closingSlash: 'never',
-      beforeSelfClosing: 'proportional-always',
-      afterOpening: 'never',
-      beforeClosing: 'never'
-    }],
-
-    /** 需要 key */
-    'react/jsx-key': ['error', {}],
-
-    /** 括号内前后空格 */
-    'react/jsx-curly-spacing': ['warn']
-    
-    // 
-    // 'react/jsx-indent': ["warn", 2, {
-    //   indentLogicalExpressions: true
-    // }],
-    // 'react/jsx-indent-props': ["warn", 2]
-  }
+        // 
+        // 'react/jsx-indent': ["warn", 2, {
+        //   indentLogicalExpressions: true
+        // }],
+        // 'react/jsx-indent-props': ["warn", 2]
+      }
+    }
+  ]
 }
