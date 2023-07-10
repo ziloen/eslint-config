@@ -7,7 +7,6 @@ module.exports = {
   extends: 'eslint:recommended',
   ignorePatterns: [
     '*.min.*',
-    '*.d.ts',
     'CHANGELOG.md',
     'LICENSE*',
     // lock files
@@ -75,7 +74,7 @@ module.exports = {
 
     /** 
      * Promise 内 return 没有意义，使用 resolve 或 reject 
-     * 无法配置允许箭头函数，故关闭
+     * 无法配置允许箭头函数，故关闭 https://github.com/eslint/eslint/issues/17278
      */
     'no-promise-executor-return': 'off',
 
@@ -90,9 +89,16 @@ module.exports = {
 
     /** 禁止不必要的 await */
     'no-return-await': 'warn',
+
+    /** 允许未使用的变量 */
     'no-unused-vars': 'off',
+
+    /** 禁止不必要的重命名 */
     'no-useless-rename': 'warn',
+
+    /** 禁止使用 var 定义变量 */
     'no-var': 'error',
+
     'object-shorthand': ['warn', 'always', {
       avoidQuotes: true
     }],
