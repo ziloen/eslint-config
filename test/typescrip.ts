@@ -40,7 +40,7 @@ function fn2 (){
   
 }
 
-const fn3 = async () => {}
+const fn3 = async() => {}
 const fn4 =() => {}
 
 const t = function() {
