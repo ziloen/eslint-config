@@ -103,8 +103,12 @@ module.exports = {
       avoidQuotes: true
     }],
 
-    /** 优先使用 const */
-    'prefer-const': ['warn', {
+    /** 
+     * 优先使用 const 
+     * 
+     * 不知道怎么取消 autofix，暂时关闭
+     */
+    'prefer-const': ["off", {
       destructuring: 'all',
       ignoreReadBeforeAssign: false
     }],

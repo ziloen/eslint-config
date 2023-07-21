@@ -179,7 +179,7 @@ module.exports = {
       // /** 允许 return 赋值包围括号 */
       returnAssign: false,
       // /** 允许三元表达式内包围括号 */
-      // ternaryOperandBinaryExpressions: false, // typescript-eslint 5.61.0 未实现此选项
+      ternaryOperandBinaryExpressions: false, // typescript-eslint 5.61.0 未实现此选项
       // /** 允许嵌套二元表达式包围括号 */
       nestedBinaryExpressions: false
     }],
