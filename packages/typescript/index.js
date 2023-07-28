@@ -15,6 +15,9 @@ module.exports = {
     /** ✅禁止不必要的 await */
     // '@typescript-eslint/await-thenable': 'warn',
 
+    /** 不限制只使用 interface 或者 type */
+    '@typescript-eslint/consistent-type-definitions': 'off',
+
     /** 可选参数必须放在最后 */
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
@@ -47,6 +50,12 @@ module.exports = {
     'no-loop-func': 'off',
     '@typescript-eslint/no-loop-func': 'error',
 
+    /** 禁止 promise 错误用法 */
+    '@typescript-eslint/no-misused-promises': ['error', {
+      /** 允许快捷写法 */
+      checksVoidReturn: false
+    }],
+
     /** ✅禁止超出精度范围的数字 */
     // 'no-loss-of-precision': 'off',
     // '@typescript-eslint/no-loss-of-precision': 'error',
@@ -58,6 +67,9 @@ module.exports = {
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': ['error'],
 
+    /** 禁止冗余类型定义 */
+    '@typescript-eslint/no-redundant-type-constituents': 'warn',
+
     /** Disallow throwing literals as exceptions. */
     'no-throw-literal': 'off',
     '@typescript-eslint/no-throw-literal': 'error',
@@ -65,9 +77,8 @@ module.exports = {
     /** 禁用默认`no-undef`，eslint 不会检查`*.d.ts`，导致误报全局变量与类型不存在 */
     'no-undef': 'off',
 
-    /** 允许未使用变量 */
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    /** 🔒因为有时类型不正确，autofix 移除`?.`会导致运行时错误，故关闭 */
+    '@typescript-eslint/no-unnecessary-condition': 'off',
 
     /** 警告未使用的表达式 */
     'no-unused-expressions': 'off',
@@ -76,13 +87,9 @@ module.exports = {
       enforceForJSX: true
     }],
 
-    /** 禁止 promise 错误用法 */
-    '@typescript-eslint/no-misused-promises': ['error', {
-      checksVoidReturn: false
-    }],
-
-    /** 禁止冗余类型定义 */
-    '@typescript-eslint/no-redundant-type-constituents': 'warn',
+    /** 允许未使用变量 */
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
 
     /**
      * ```ts 
@@ -123,8 +130,5 @@ module.exports = {
 
     /** 允许可合为一个联合类型的函数声明多个函数签名 */
     '@typescript-eslint/unified-signatures': 'off',
-
-    /** 不限制只使用 interface 或者 type */
-    '@typescript-eslint/consistent-type-definitions': 'off'
   }
 }
