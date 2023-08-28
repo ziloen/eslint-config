@@ -2,34 +2,34 @@
 module.exports = {
   plugins: ['@typescript-eslint', 'react'],
   rules: {
-    /** 数组括号换行 */
+    /** 🔧数组括号换行 */
     'array-bracket-newline': ['warn', 'consistent'],
 
-    /** 数组前后空格 */
+    /** 🔧数组前后空格 */
     'array-bracket-spacing': ['warn', 'never'],
 
-    /** 数组内元素换行 */
+    /** 🔧数组内元素换行 */
     'array-element-newline': ['warn', 'consistent'],
 
-    /** 箭头函数括号 */
+    /** 🔧箭头函数括号 */
     'arrow-parens': ['warn', 'as-needed'],
 
-    /** 箭头左右空格 */
+    /** 🔧箭头左右空格 */
     'arrow-spacing': 'warn',
 
-    /** 计算属性名内部空格 */
+    /** 🔧计算属性名内部空格 */
     'computed-property-spacing': 'warn',
 
-    /** 逗号位置 */
+    /** 🔧逗号位置 */
     'comma-style': 'warn',
 
-    /** 属性`o.p`点号位置 */
+    /** 🔧属性`o.p`点号位置 */
     'dot-location': ['warn', 'property'],
 
-    /** 函数调用参数换行 */
+    /** 🔧函数调用参数换行 */
     'function-call-argument-newline': ['warn', 'consistent'],
 
-    /** 生成器函数星号前后空格 */
+    /** 🔧生成器函数星号前后空格 */
     'generator-star-spacing': ['warn', {
       before: false,
       after: true,
@@ -53,7 +53,7 @@ module.exports = {
     // 'multiline-ternary': ['warn'],
 
     /** 
-     * new 表达式括号
+     * 🔧new 表达式括号
      * ```ts
      * const a = new A().a()
      * //        ^ 会被改成 (new A).a()，且无法配置，故关闭
@@ -61,7 +61,7 @@ module.exports = {
      */
     'new-parens': 'off',
 
-    /** 链式调用换行 */
+    /** 🔧链式调用换行 */
     'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
 
     /** 禁止混用空格和 tab 作为 indent */
@@ -142,13 +142,22 @@ module.exports = {
     'comma-spacing': 'off',
     '@typescript-eslint/comma-spacing': 'warn',
 
-    /** 函数调用空格 */
+    /** 🔧函数调用空格 */
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': 'warn',
 
-    /** 缩进 */
+    /** 🔧缩进 */
     //  https://github.com/typescript-eslint/typescript-eslint/issues/1824
-    indent: ['warn', 2, {
+    // indent: ['warn', 2, {
+    //   /** 同时定义多个变量时，对齐到第一个变量定义 */
+    //   VariableDeclarator: 'first',
+    //   /** swtich case 增加 1 indent */
+    //   SwitchCase: 1,
+    //   /** 三元表达式偏移 */
+    //   offsetTernaryExpressions: true
+    // }],
+    indent: 'off',
+    '@typescript-eslint/indent': ['warn', 2, {
       /** 同时定义多个变量时，对齐到第一个变量定义 */
       VariableDeclarator: 'first',
       /** swtich case 增加 1 indent */
@@ -156,10 +165,8 @@ module.exports = {
       /** 三元表达式偏移 */
       offsetTernaryExpressions: true
     }],
-    // indent: 'off',
-    // '@typescript-eslint/indent': ['warn', 2, { VariableDeclarator: 2 }],
 
-    /** 对象键名空格 */
+    /** 🔧对象键名空格 */
     'key-spacing': 'off',
     '@typescript-eslint/key-spacing': 'warn',
 
@@ -260,17 +267,20 @@ module.exports = {
           beforeClosing: 'never'
         }],
 
-        /** 需要 key */
-        'react/jsx-key': ['error', {}],
 
         /** 括号内前后空格 */
-        'react/jsx-curly-spacing': ['warn']
+        'react/jsx-curly-spacing': ['warn'],
 
-        // 
-        // 'react/jsx-indent': ["warn", 2, {
-        //   indentLogicalExpressions: true
-        // }],
-        // 'react/jsx-indent-props': ["warn", 2]
+        /** 🔧JSX 缩进 */
+        'react/jsx-indent': ['warn', 2, {
+          checkAttributes: true,
+          indentLogicalExpressions: true,
+        }],
+
+        /** 🔧属性缩进 */
+        'react/jsx-indent-props': ['warn', {
+          indentMode: 2
+        }],
       }
     }
   ]

@@ -106,9 +106,9 @@ module.exports = {
     /** 
      * 优先使用 const 
      * 
-     * 不知道怎么取消 autofix，暂时关闭
+     * 有时解构会出现不变的变量也是用 let，autofix 会导致运行时错误，故关闭
      */
-    'prefer-const': ["off", {
+    'prefer-const': ['off', {
       destructuring: 'all',
       ignoreReadBeforeAssign: false
     }],
@@ -214,7 +214,7 @@ module.exports = {
 
     /** 🔧偏好使用 `Array#some()` */
     'unicorn/prefer-array-some': 'warn',
-    
+
     /** 🔧偏好使用 `Array#at()` 和 `String#at()` */
     'unicorn/prefer-at': 'warn',
 
