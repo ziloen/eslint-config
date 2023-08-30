@@ -1,6 +1,6 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'antfu'],
   rules: {
     /** 🔧数组括号换行 */
     'array-bracket-newline': ['warn', 'consistent'],
@@ -163,12 +163,22 @@ module.exports = {
       /** swtich case 增加 1 indent */
       SwitchCase: 1,
       /** 三元表达式偏移 */
-      offsetTernaryExpressions: true
+      offsetTernaryExpressions: true,
+      /** 嵌套三元表达式不增加 indent */
+      flatTernaryExpressions: false,
+      /** 忽略一些边缘情况 */
+      ignoredNodes: [
+        'PropertyDefinition[decorators]',
+        'TSUnionType',
+        'FunctionExpression[params]:has(Identifier[decorators])',
+        'TSTypeParameterInstantiation',
+        'TSIntersectionType',
+      ]
     }],
 
     /** 🔧对象键名空格 */
     'key-spacing': 'off',
-    '@typescript-eslint/key-spacing': 'warn',
+    '@typescript-eslint/key-spacing': ['warn'],
 
     /** 关键词 空格 */
     'keyword-spacing': 'off',
@@ -179,15 +189,15 @@ module.exports = {
     '@typescript-eslint/no-extra-parens': ['warn', 'all', {
       /** 允许 JSDoc 类型转换 */
       allowParensAfterCommentPattern: '@type',
-      /** 允许 JSX 多行包围括号 */
-      ignoreJSX: 'multi-line',
+      /** 忽略 JSX */
+      ignoreJSX: 'all',
       /** 允许条件赋值包围括号 */
       conditionalAssign: false,
-      // /** 允许 return 赋值包围括号 */
+      /** 允许 return 赋值包围括号 */
       returnAssign: false,
-      // /** 允许三元表达式内包围括号 */
-      ternaryOperandBinaryExpressions: false, // typescript-eslint 5.61.0 未实现此选项
-      // /** 允许嵌套二元表达式包围括号 */
+      /** 允许三元表达式内包围括号 */
+      ternaryOperandBinaryExpressions: false,
+      /** 允许嵌套二元表达式包围括号 */
       nestedBinaryExpressions: false
     }],
 
@@ -243,7 +253,18 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-qualifier': 'warn',
 
     /** 类型标注空格 */
-    '@typescript-eslint/type-annotation-spacing': 'warn',
+    '@typescript-eslint/type-annotation-spacing': ['warn'],
+
+
+
+    // -------------------------------------------------------------
+    // 以下为其他规则
+    // -------------------------------------------------------------
+    /** 泛型尖括号空格 */
+    'antfu/generic-spacing': 'warn',
+
+    /** 元组空格 */
+    'antfu/named-tuple-spacing': 'warn'
   },
   overrides: [
     {
@@ -271,11 +292,12 @@ module.exports = {
         /** 括号内前后空格 */
         'react/jsx-curly-spacing': ['warn'],
 
-        /** 🔧JSX 缩进 */
-        'react/jsx-indent': ['warn', 2, {
-          checkAttributes: true,
-          indentLogicalExpressions: true,
-        }],
+        /** 🔧JSX 缩进，会和 TS indent 冲突，关闭 */
+        'react/jsx-indent': 'off',
+        // 'react/jsx-indent': ['warn', 2, {
+        //   checkAttributes: true,
+        //   indentLogicalExpressions: true,
+        // }],
 
         /** 🔧属性缩进 */
         'react/jsx-indent-props': ['warn', {
