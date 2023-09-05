@@ -119,6 +119,15 @@ module.exports = {
     /** 使用 `Object.hasOwn()` 替代 `Object.prototype.hasOwnProperty.call()` */
     'prefer-object-has-own': 'warn',
 
+
+
+    /** 偏好 reject Error 对象 */
+    'prefer-promise-reject-errors': ['warn', {
+      allowEmptyReject: true
+    }],
+
+
+
     /** 
      * 这可能会导致数据竞争
      * ```ts

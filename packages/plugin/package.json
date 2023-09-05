@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-ziloen",
+  "version": "0.0.101",
+  "author": "ziloen",
+  "license": "MIT",
+  "homepage": "https://github.com/ziloen/eslint-config",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && unbuild",
+    "stub": "unbuild --stub",
+    "prepublishOnly": "nr build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^6.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/rule-tester": "^6.6.0",
+    "unbuild": "^2.0.0",
+    "vitest": "^0.34.3"
+  }
+}

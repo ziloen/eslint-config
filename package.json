@@ -19,14 +19,5 @@
   "devDependencies": {
     "@types/eslint": "^8.44.2",
     "@types/react": "^18.2.21"
-  },
-  "eslintConfig": {
-    "extends": [
-      "@ziloen",
-      "@ziloen/eslint-config-format"
-    ],
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    }
   }
 }
