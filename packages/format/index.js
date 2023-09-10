@@ -79,11 +79,19 @@ module.exports = {
       ignoreComments: true
     }],
 
+    /** 禁止不必要的重命名 */
+    'no-useless-rename': 'warn',
+
     /** 对象与属性间的空格 */
     'no-whitespace-before-property': 'warn',
 
     /** 对象花括号换行 */
     'object-curly-newline': ['warn', { consistent: true }],
+
+    /** 对象键快捷写法 */
+    'object-shorthand': ['warn', 'always', {
+      avoidQuotes: true
+    }],
 
     /** 偏好模板字符串 */
     'prefer-template': 'warn',

@@ -118,7 +118,7 @@ module.exports = {
     /** 
      * 🔧返回 promise 的函数必须有 async 关键字
      * 
-     * 不写也行，不限制偏好，故关闭
+     * 不写也行，不限制此偏好，故关闭
      */
     '@typescript-eslint/promise-function-async': ['off', {
       checkArrowFunctions: false

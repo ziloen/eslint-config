@@ -21,6 +21,9 @@ module.exports = {
     /** 禁止定义块作用域外的访问 var 变量 */
     'block-scoped-var': 'error',
 
+    /** 派生 class 必须要有 super() */
+    'constructor-super': 'error',
+
     /** 倾向使用全等 === */
     eqeqeq: ['warn', 'smart'],
 
@@ -54,14 +57,17 @@ module.exports = {
     /** 错误使用 */
     'no-constant-binary-expression': 'error',
 
-    /** console.log使用后删除 */
-    'no-console': ['warn', {
+    /** 
+     * console.log使用后删除
+     */
+    'no-console': ['off', {
       allow: ['warn', 'error']
     }],
 
     /** `constructor` 中不应有返回值(允许作为控制流使用) */
     'no-constructor-return': 'warn',
 
+    /** 允许空函数声明 */
     'no-empty': 'off',
 
     /** 禁止使用 eval */
@@ -71,6 +77,9 @@ module.exports = {
     'no-fallthrough': ['error', {
       allowEmptyCase: true
     }],
+
+    /** 不允许 new Symbol 与 new BigInt 这种错误用法 */
+    'no-new-native-nonconstructor': 'error',
 
     /** 
      * Promise 内 return 没有意义，使用 resolve 或 reject 
@@ -93,15 +102,8 @@ module.exports = {
     /** 允许未使用的变量 */
     'no-unused-vars': 'off',
 
-    /** 禁止不必要的重命名 */
-    'no-useless-rename': 'warn',
-
     /** 禁止使用 var 定义变量 */
     'no-var': 'error',
-
-    'object-shorthand': ['warn', 'always', {
-      avoidQuotes: true
-    }],
 
     /** 
      * 优先使用 const 
@@ -119,14 +121,10 @@ module.exports = {
     /** 使用 `Object.hasOwn()` 替代 `Object.prototype.hasOwnProperty.call()` */
     'prefer-object-has-own': 'warn',
 
-
-
     /** 偏好 reject Error 对象 */
     'prefer-promise-reject-errors': ['warn', {
       allowEmptyReject: true
     }],
-
-
 
     /** 
      * 这可能会导致数据竞争
@@ -135,14 +133,13 @@ module.exports = {
      * 
      * async function doSomething() {
      *   const b = a ||= await getA()
-     *   //        ^^^^^^^^^^^^^^^^^^也会被警告，且无法配置，故关闭
+     *   //        ^^^^^^^^^^^^^^^^^^确实在多次调用时有数据竞争，但暂未找到两全之法，故关闭
      * }
      * ``` 
      */
     'require-atomic-updates': 'off',
 
-    /** 不允许 new Symbol 与 new BigInt 这种错误用法 */
-    'no-new-native-nonconstructor': 'error',
+
 
     // Node 插件 未安装
     /** 同步发方法会阻塞线程，使用异步方法代替 */
@@ -162,7 +159,8 @@ module.exports = {
     /** Error 应有错误信息 */
     'unicorn/error-message': 'warn',
 
-    'unicorn/expiring-todo-comments': 'warn',
+    // 暂时未使用
+    // 'unicorn/expiring-todo-comments': 'warn',
 
     /** 手动操作原生 Cookie 很麻烦容易出错 */
     'unicorn/no-document-cookie': 'warn',
@@ -173,7 +171,7 @@ module.exports = {
     /** 事件监听移除字面量函数是无效的 */
     'unicorn/no-invalid-remove-event-listener': 'error',
 
-    /** 警告嵌套三元运算符 (可以通过对齐来表示，不警告) */
+    /** 警告嵌套三元运算符 (可以通过 indent 来表示，不警告) */
     // 'no-nested-ternary': 'off',
     // 'unicorn/no-nested-ternary': 'warn',
 
@@ -191,6 +189,7 @@ module.exports = {
     /** 🔧去除多余的 `await` */
     'unicorn/no-unnecessary-await': 'off',
 
+    /** 禁止令人迷惑的数组解构 */
     'unicorn/no-unreadable-array-destructuring': 'error',
 
     /** 🔧去除多余的 fallback */
@@ -259,7 +258,7 @@ module.exports = {
     /** 🔧使用更现代的 DOM API */
     'unicorn/prefer-modern-dom-apis': 'warn',
 
-    /** 🔧使用更信贷的 Math API */
+    /** 🔧使用更现代的 Math API */
     'unicorn/prefer-modern-math-apis': 'warn',
 
     /** 🔧使用负数 -index 代替 xxx.length - index */
