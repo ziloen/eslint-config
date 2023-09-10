@@ -115,8 +115,12 @@ module.exports = {
      */
     '@typescript-eslint/prefer-optional-chain': 'off',
 
-    /** 🔧返回 promise 的函数必须有 async 关键字 */
-    '@typescript-eslint/promise-function-async': ['warn', {
+    /** 
+     * 🔧返回 promise 的函数必须有 async 关键字
+     * 
+     * 不写也行，不限制偏好，故关闭
+     */
+    '@typescript-eslint/promise-function-async': ['off', {
       checkArrowFunctions: false
     }],
 
