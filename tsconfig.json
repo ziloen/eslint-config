@@ -2,12 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "strict": true,
-    "module": "NodeNext",
+    "module": "ESNext",
     "target": "ESNext",
     "checkJs": true,
     "allowJs": true,
     "outDir": "./dist",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "lib": [

@@ -14,9 +14,6 @@
     "stub": "unbuild --stub",
     "prepublishOnly": "nr build"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@typescript-eslint/utils": "^6.6.0"
   },
