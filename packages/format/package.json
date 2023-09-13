@@ -17,7 +17,7 @@
     "eslint": "^8.49.0",
     "eslint-plugin-antfu": "^0.41.3",
     "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-ziloen": "workspace:^",
+    "eslint-plugin-ziloen": "workspace:*",
     "typescript": "^5.2.2"
   }
 }
