@@ -1,6 +1,6 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
-  plugins: ['@typescript-eslint', 'react', 'antfu'],
+  plugins: ['@typescript-eslint', 'react', 'antfu', 'ziloen'],
   rules: {
     /** 🔧数组括号换行 */
     'array-bracket-newline': ['warn', 'consistent'],
@@ -174,11 +174,12 @@ module.exports = {
       offsetTernaryExpressions: true,
       /** 嵌套三元表达式不增加 indent */
       flatTernaryExpressions: false,
-      /** 忽略一些边缘情况 */
+      /** 忽略一些无法正确处理的边缘情况，手动添加 indent */
       ignoredNodes: [
         'PropertyDefinition[decorators]',
         'TSUnionType',
         'FunctionExpression[params]:has(Identifier[decorators])',
+        // 类型泛型参数
         'TSTypeParameterInstantiation',
         'TSIntersectionType',
       ]
@@ -268,11 +269,7 @@ module.exports = {
     // -------------------------------------------------------------
     // 以下为其他规则
     // -------------------------------------------------------------
-    /** 泛型尖括号空格 */
-    'antfu/generic-spacing': 'warn',
-
-    /** 元组空格 */
-    'antfu/named-tuple-spacing': 'warn'
+    "@ziloen/generic-spacing": "warn"
   },
   overrides: [
     {
