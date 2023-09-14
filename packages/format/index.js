@@ -1,6 +1,6 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
-  plugins: ['@typescript-eslint', 'react', 'antfu', 'ziloen'],
+  plugins: ['@typescript-eslint', 'react', 'ziloen'],
   rules: {
     /** 🔧数组括号换行 */
     'array-bracket-newline': ['warn', 'consistent'],
