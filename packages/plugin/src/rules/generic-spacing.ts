@@ -2,17 +2,14 @@ import { TSESTree } from '@typescript-eslint/utils'
 import { createEslintRule } from '../utils'
 import { RuleContext } from '@typescript-eslint/utils/ts-eslint'
 
-// TSTypeParameterDeclaration type A"<T, S>"
-// TSTypeParameterInstantiation Record"<T, any>"
-// TSTypeParameter "T = string"
 
 export const RULE_NAME = 'generic-spacing'
 export type MessageIds = 'genericSpacingMismatch'
 export type Options = []
 
-const messageId = 'genericSpacingMismatch'
+export const messageId = 'genericSpacingMismatch'
 
-function spacingAround(
+function removeSpaceAround(
   node: TSESTree.TSTypeParameterInstantiation | TSESTree.TSTypeParameterDeclaration,
   context: Readonly<RuleContext<MessageIds, []>>
 ) {
@@ -37,6 +34,13 @@ function spacingAround(
       messageId,
       *fix(fixer) {
         yield fixer.replaceTextRange([start, startNode.range[0]], '')
+      },
+      loc: {
+        start: {
+          column: node.loc.start.column + 1,
+          line: node.loc.start.line
+        },
+        end: startNode.loc.start
       }
     })
   }
@@ -79,8 +83,11 @@ export default createEslintRule<Options, MessageIds>({
     const sourceCode = context.sourceCode
 
     return {
-      TSTypeParameterDeclaration: node => spacingAround(node, context),
-      TSTypeParameterInstantiation: node => spacingAround(node, context),
+      // type T<"K, S"> = any
+      TSTypeParameterDeclaration: node => removeSpaceAround(node, context),
+      // type T = Record<"K, S">
+      TSTypeParameterInstantiation: node => removeSpaceAround(node, context),
+      // type T<"K = any", "S = any"> = any
       TSTypeParameter(node) {
         if (!node.default) return
         const startNode = node.constraint || node.name
@@ -89,6 +96,7 @@ export default createEslintRule<Options, MessageIds>({
         const start = startNode.range[1]
         const end = endNode.range[0]
 
+        // replace all content between name and default with " = "
         if (sourceCode.text.slice(start, end) !== ' = ') {
           context.report({
             node,

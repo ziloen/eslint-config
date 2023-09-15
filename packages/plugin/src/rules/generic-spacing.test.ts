@@ -1,5 +1,5 @@
 import { RuleTester } from '@typescript-eslint/rule-tester'
-import rule, { RULE_NAME } from './generic-spacing'
+import rule, { RULE_NAME, messageId } from './generic-spacing'
 
 const valid = [
   `type Foo<T, K> = T`,
@@ -35,6 +35,6 @@ ruleTester.run(RULE_NAME, rule, {
   invalid: invalid.map(i => ({
     code: i[0],
     output: i[1].trim(),
-    errors: Array.from({ length: i[2] || 1 }, () => ({ messageId: 'genericSpacingMismatch' }))
+    errors: Array.from({ length: i[2] || 1 }, () => ({ messageId }))
   }))
 })
