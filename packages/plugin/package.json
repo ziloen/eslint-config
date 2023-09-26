@@ -16,14 +16,14 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^6.7.0",
+    "@typescript-eslint/utils": "^6.7.3",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/node": "^20.6.0",
-    "@typescript-eslint/rule-tester": "^6.7.0",
-    "rimraf": "^5.0.1",
+    "@types/node": "^20.7.0",
+    "@typescript-eslint/rule-tester": "^6.7.3",
+    "rimraf": "^5.0.4",
     "unbuild": "^2.0.0",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.5"
   }
 }

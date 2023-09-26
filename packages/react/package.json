@@ -12,9 +12,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.3",
     "@ziloen/eslint-config-typescript": "workspace:*",
-    "eslint": "^8.49.0",
+    "eslint": "^8.50.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-ziloen": "workspace:*",
     "typescript": "^5.2.2"

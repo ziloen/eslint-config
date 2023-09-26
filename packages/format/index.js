@@ -279,8 +279,12 @@ module.exports = {
         // 以下为 React Plugin Rules
         // -------------------------------------------------------------
 
-        /** JSX 自闭合 */
-        'react/self-closing-comp': ['warn', {
+        /** 
+         * JSX 自闭合
+         * 
+         * 经常还没写内容就被自动闭合
+         */
+        'react/self-closing-comp': ['off', {
           component: true,
           html: false
         }],
