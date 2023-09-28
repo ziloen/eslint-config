@@ -20,9 +20,9 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/node": "^20.7.0",
+    "@types/node": "^20.7.1",
     "@typescript-eslint/rule-tester": "^6.7.3",
-    "rimraf": "^5.0.4",
+    "rimraf": "^5.0.5",
     "unbuild": "^2.0.0",
     "vitest": "^0.34.5"
   }

@@ -6,13 +6,19 @@ module.exports = {
   ],
   extends: 'eslint:recommended',
   ignorePatterns: [
+    // files
     '*.min.*',
     'CHANGELOG.md',
     'LICENSE*',
+
     // lock files
     'package-lock.json',
     'pnpm-lock.yaml',
-    'yarn.lock'
+    'yarn.lock',
+
+    // directories
+    'node_modules',
+    'dist',
   ],
   rules: {
     /** 检查数组方法返回值 */
