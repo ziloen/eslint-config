@@ -19,6 +19,9 @@ module.exports = {
     // directories
     'node_modules',
     'dist',
+
+    // not support yet
+    '*.html'
   ],
   rules: {
     /** 检查数组方法返回值 */
@@ -30,8 +33,13 @@ module.exports = {
     /** 派生 class 必须要有 super() */
     'constructor-super': 'error',
 
-    /** 倾向使用全等 === */
-    eqeqeq: ['warn', 'smart'],
+    /** 
+     * 倾向使用全等 ===
+     * 
+     * FIXME: 使用 always 时 autofix 可能导致语义改变，暂时沿用 'smart'，
+     * 如果可以取消 autofix，将 option 设置为 'always'
+     */
+    eqeqeq: ['error', 'smart'],
 
     /** `a = a || b` 可以简写为 `a ||= b` */
     'logical-assignment-operators': ['warn'],

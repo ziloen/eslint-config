@@ -108,8 +108,12 @@ module.exports = {
     /** 分号位置 */
     'semi-style': 'warn',
 
-    /** 排序 */
-    'sort-imports': ['warn', {
+    /** 
+     * 排序
+     * 
+     * FIXME: 不支持 import { type foo } from 'bar' type import 语法，故关闭
+     */
+    'sort-imports': ['off', {
       ignoreDeclarationSort: true
     }],
 
