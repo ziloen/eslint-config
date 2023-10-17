@@ -21,7 +21,9 @@ module.exports = {
     '@typescript-eslint/dot-notation': 'off',
 
     /** 🔒禁止使用 void 函数的返回值 ("off" 因为 return voidExpression() 这种缩写 { voidExpress(); return }  也会报错) */
-    '@typescript-eslint/no-confusing-void-expression': 'off',
+    '@typescript-eslint/no-confusing-void-expression': ['off', {
+      ignoreArrowShorthand: true
+    }],
 
     /** 不允许 class 有重复的成员 (TypeScript 已检查，禁用此规则) */
     'no-dupe-class-members': 'off',
@@ -100,11 +102,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
 
     /**
-     * ```ts 
-     * a: number | undefined;
-     * let b = a || 100 
-     * //        ^ 也会被要求改成 ??，然而有时是有意使用 || 检查 0 的，且无法配置，故关闭
-     * ```
+     * 
      */
     '@typescript-eslint/prefer-nullish-coalescing': ['warn', {
       ignorePrimitives: {
@@ -118,6 +116,7 @@ module.exports = {
     /** 
      * 使用可选链`a?.b`替代`a && a.b`
      * 
+     * FIXME:
      * ```ts
      * if (!a || !a.b) 
      * //  ^ 也会被要求改成 ?.，降低可读性，且无配置，故关闭
