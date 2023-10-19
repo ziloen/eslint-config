@@ -5,6 +5,9 @@ module.exports = {
     'plugin:@typescript-eslint/strict-type-checked'
   ],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    EXPERIMENTAL_useProjectService: true
+  },
   rules: {
     /** ✅禁止不必要的 await */
     // '@typescript-eslint/await-thenable': 'warn',

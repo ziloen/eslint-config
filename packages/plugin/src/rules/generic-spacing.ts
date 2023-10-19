@@ -90,7 +90,7 @@ export default createEslintRule<Options, MessageIds>({
       // type T<"K = any", "S = any"> = any
       TSTypeParameter(node) {
         if (!node.default) return
-        const startNode = node.constraint || node.name
+        const startNode = node.constraint ?? node.name
         const endNode = node.default
 
         const start = startNode.range[1]
