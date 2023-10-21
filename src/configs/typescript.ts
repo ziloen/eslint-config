@@ -7,10 +7,7 @@ export const typescript: FlatESLintConfigItem[] = [
   ...javascript,
   {
     files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.js',
-      '**/*.jsx'
+      '**/*.?([cm])[tj]s?(x)',
     ],
     languageOptions: {
       parser: parserTs,

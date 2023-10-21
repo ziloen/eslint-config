@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfigItem } from 'eslint-define-config'
-import { pluginVue, parserVue, pluginTs } from '../plugins'
+import { parserTs, parserVue, pluginTs, pluginVue } from '../plugins'
 import { typescript } from './typescript'
 
 export const vue: FlatESLintConfigItem[] = [
@@ -11,7 +11,7 @@ export const vue: FlatESLintConfigItem[] = [
     languageOptions: {
       parser: parserVue,
       parserOptions: {
-        parser: '@typescript-eslint/parser',
+        parser: parserTs as any,
         ecmaFeatures: {
           jsx: true
         },
