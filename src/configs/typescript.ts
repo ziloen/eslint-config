@@ -8,6 +8,7 @@ export const typescript: FlatESLintConfigItem[] = [
   {
     files: [
       '**/*.?([cm])[tj]s?(x)',
+      '**/*.vue'
     ],
     languageOptions: {
       parser: parserTs,
