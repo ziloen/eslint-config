@@ -4,17 +4,19 @@
     "strict": true,
     "module": "ESNext",
     "target": "ESNext",
-    "checkJs": true,
-    "allowJs": true,
-    "outDir": "./dist",
+    // "checkJs": true,
+    // "allowJs": true,
     "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "lib": [
-      "DOM",
       "ESNext",
-      "DOM.Iterable"
     ]
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

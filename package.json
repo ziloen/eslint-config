@@ -1,24 +1,49 @@
 {
-  "name": "@ziloen/eslint-config-monorepo",
+  "name": "@ziloen/eslint-config",
   "version": "0.0.110",
-  "private": true,
   "author": "ziloen",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "release": "bumpp package.json packages/*/package.json --commit --no-push && pnpm -r publish --access public",
-    "lint": "eslint . --ignore-pattern test --fix"
+    "build": "tsup src/index.ts --format esm,cjs --clean --dts",
+    "prepack": "pnpm run build",
+    "release": "bumpp --commit --no-push && pnpm publish",
+    "lint": "eslint . --fix"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
+    "@eslint/js": "^8.52.0",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
     "@ziloen/eslint-config": "workspace:*",
-    "@ziloen/eslint-config-format": "workspace:*",
     "bumpp": "^9.2.0",
-    "eslint": "^8.51.0",
+    "eslint": "^8.52.0",
+    "eslint-define-config": "^1.24.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-vue": "^9.17.0",
+    "eslint-plugin-ziloen": "^0.1.5",
     "react": "^18.2.0",
-    "typescript": "^5.2.2"
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vue-eslint-parser": "^9.3.2"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.6",
-    "@types/react": "^18.2.29",
-    "eslint-plugin-ziloen": "link:./packages/plugin"
+    "@types/react": "^18.2.31",
+    "@typescript-eslint/rule-tester": "^6.8.0",
+    "@typescript-eslint/utils": "^6.8.0",
+    "vue": "^3.3.6"
   }
 }

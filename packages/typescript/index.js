@@ -6,7 +6,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    EXPERIMENTAL_useProjectService: true
+    // EXPERIMENTAL_useProjectService: true
   },
   rules: {
     /** ✅禁止不必要的 await */

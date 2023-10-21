@@ -6,6 +6,7 @@
   "homepage": "https://github.com/ziloen/eslint-config",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
+  "type": "module",
   "files": [
     "dist"
   ],

@@ -1,8 +1,6 @@
 /** @type { import('eslint').Linter.Config } */
 module.exports = {
-  parserOptions: {
-    extraFileExtensions: ['.vue']
-  },
+  plugins: ['@typescript-eslint'],
 
   overrides: [
     {
@@ -10,7 +8,11 @@ module.exports = {
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
-        ecmaVersion: 'latest'
+        ecmaVersion: 'latest',
+        extraFileExtensions: ['.vue'],
+        ecmaFeatures: {
+          jsx: true,
+        },
       }
     }
   ],
