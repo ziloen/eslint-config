@@ -1,7 +1,7 @@
-import { format, typescript } from './dist/index.js'
+import { format, typescript, vue } from './dist/index.js'
 
 /** @type {import("./dist/index.d.ts").FlatESLintConfigItem[]} */
 export default [
-  ...typescript,
+  ...vue({ tsconfigPath: './tsconfig.json' }),
   ...format,
 ]
