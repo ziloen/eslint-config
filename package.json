@@ -22,17 +22,17 @@
     "dist"
   ],
   "dependencies": {
-    "@eslint/js": "^8.52.0",
-    "@types/node": "^20.8.9",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
-    "@typescript-eslint/parser": "^6.9.0",
+    "@eslint/js": "^8.53.0",
+    "@types/node": "^20.8.10",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
     "@ziloen/eslint-config": "workspace:*",
     "bumpp": "^9.2.0",
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "eslint-define-config": "^1.24.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-unicorn": "^49.0.0",
     "eslint-plugin-vue": "^9.18.1",
     "eslint-plugin-ziloen": "^0.1.5",
     "react": "^18.2.0",
@@ -41,10 +41,10 @@
     "vue-eslint-parser": "^9.3.2"
   },
   "devDependencies": {
-    "@types/eslint": "^8.44.6",
-    "@types/react": "^18.2.33",
-    "@typescript-eslint/rule-tester": "^6.9.0",
-    "@typescript-eslint/utils": "^6.9.0",
-    "vue": "^3.3.7"
+    "@types/eslint": "^8.44.7",
+    "@types/react": "^18.2.36",
+    "@typescript-eslint/rule-tester": "^6.10.0",
+    "@typescript-eslint/utils": "^6.10.0",
+    "vue": "^3.3.8"
   }
 }
