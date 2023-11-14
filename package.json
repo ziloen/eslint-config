@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --clean --dts",
+    "build": "tsup src/index.ts --format esm,cjs --clean --dts --minify",
     "prepack": "pnpm run build",
     "release": "bumpp --commit --no-push && pnpm publish",
     "lint": "eslint . --fix"
@@ -23,9 +23,10 @@
   ],
   "dependencies": {
     "@eslint/js": "^8.53.0",
-    "@types/node": "^20.8.10",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
+    "@stylistic/eslint-plugin": "^1.2.0",
+    "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
     "@ziloen/eslint-config": "workspace:*",
     "bumpp": "^9.2.0",
     "eslint": "^8.53.0",
@@ -41,10 +42,11 @@
     "vue-eslint-parser": "^9.3.2"
   },
   "devDependencies": {
+    "@stylistic/eslint-plugin-migrate": "^1.2.0",
     "@types/eslint": "^8.44.7",
-    "@types/react": "^18.2.36",
-    "@typescript-eslint/rule-tester": "^6.10.0",
-    "@typescript-eslint/utils": "^6.10.0",
+    "@types/react": "^18.2.37",
+    "@typescript-eslint/rule-tester": "^6.11.0",
+    "@typescript-eslint/utils": "^6.11.0",
     "vue": "^3.3.8"
   }
 }

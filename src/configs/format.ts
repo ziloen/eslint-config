@@ -1,45 +1,46 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfigItem } from 'eslint-define-config'
-import { pluginReact, pluginTs, pluginZiloen } from '../plugins'
+import { pluginReact, pluginStylistic, pluginTs, pluginZiloen } from '../plugins'
 
 
 export const format: FlatESLintConfigItem[] = [
   {
     plugins: {
       '@typescript-eslint': pluginTs as any,
-      ziloen: pluginZiloen as any
+      ziloen: pluginZiloen as any,
+      style: pluginStylistic,
     },
     rules: {
       /** 🔧数组括号换行 */
-      'array-bracket-newline': ['warn', 'consistent'],
+      'style/array-bracket-newline': ['warn', 'consistent'],
 
       /** 🔧数组前后空格 */
-      'array-bracket-spacing': ['warn', 'never'],
+      'style/array-bracket-spacing': ['warn', 'never'],
 
       /** 🔧数组内元素换行 */
-      'array-element-newline': ['warn', 'consistent'],
+      'style/array-element-newline': ['warn', 'consistent'],
 
       /** 🔧箭头函数括号 */
-      'arrow-parens': ['warn', 'as-needed'],
+      'style/arrow-parens': ['warn', 'as-needed'],
 
       /** 🔧箭头左右空格 */
-      'arrow-spacing': 'warn',
+      'style/arrow-spacing': 'warn',
 
       /** 🔧计算属性名内部空格 */
-      'computed-property-spacing': 'warn',
+      'style/computed-property-spacing': 'warn',
 
       /** 🔧逗号位置 */
-      'comma-style': 'warn',
+      'style/comma-style': 'warn',
 
       /** 🔧属性`o.p`点号位置 */
-      'dot-location': ['warn', 'property'],
+      'style/dot-location': ['warn', 'property'],
 
       /** 🔧函数调用参数换行 */
-      'function-call-argument-newline': ['warn', 'consistent'],
+      'style/function-call-argument-newline': ['warn', 'consistent'],
 
       /** 🔧生成器函数星号前后空格 */
-      'generator-star-spacing': ['warn', {
+      'style/generator-star-spacing': ['warn', {
         before: false,
         after: true,
         named: 'after',
@@ -48,7 +49,7 @@ export const format: FlatESLintConfigItem[] = [
       }],
 
       /** 最大长度 */
-      'max-len': ['warn', {
+      'style/max-len': ['warn', {
         code: 120,
         tabWidth: 2,
         ignoreComments: true,
@@ -68,22 +69,22 @@ export const format: FlatESLintConfigItem[] = [
        * //        ^ 会被改成 (new A).a()，且无法配置，故关闭
        * ```
        */
-      'new-parens': 'off',
+      'style/new-parens': 'off',
 
       /** 🔧链式调用换行 */
-      'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
+      'style/newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
 
       /** 禁止混用空格和 tab 作为 indent */
-      'no-mixed-spaces-and-tabs': 'warn',
+      'style/no-mixed-spaces-and-tabs': 'warn',
 
       /** 多余的空格 */
-      'no-multi-spaces': 'warn',
+      'style/no-multi-spaces': 'warn',
 
       /** 多行空行 */
-      'no-multiple-empty-lines': ['warn', { max: 3 }],
+      'style/no-multiple-empty-lines': ['warn', { max: 3 }],
 
       /** 尾随空格 */
-      'no-trailing-spaces': ['warn', {
+      'style/no-trailing-spaces': ['warn', {
         /** 注释内可能有 markdown，尾随空格会影响显示格式 */
         ignoreComments: true
       }],
@@ -92,10 +93,10 @@ export const format: FlatESLintConfigItem[] = [
       'no-useless-rename': 'warn',
 
       /** 对象与属性间的空格 */
-      'no-whitespace-before-property': 'warn',
+      'style/no-whitespace-before-property': 'warn',
 
       /** 对象花括号换行 */
-      'object-curly-newline': ['warn', { consistent: true }],
+      'style/object-curly-newline': ['warn', { consistent: true }],
 
       /** 对象键快捷写法 */
       'object-shorthand': ['warn', 'always', {
@@ -106,16 +107,16 @@ export const format: FlatESLintConfigItem[] = [
       'prefer-template': 'warn',
 
       /** 属性名的引号 */
-      'quote-props': ['warn', 'as-needed'],
+      'style/quote-props': ['warn', 'as-needed'],
 
       /** 展开操作符前后空格 */
-      'rest-spread-spacing': ['warn', 'never'],
+      'style/rest-spread-spacing': ['warn', 'never'],
 
       /** 分号前后空格 */
-      'semi-spacing': ['warn', { before: false, after: true }],
+      'style/semi-spacing': ['warn', { before: false, after: true }],
 
       /** 分号位置 */
-      'semi-style': 'warn',
+      'style/semi-style': 'warn',
 
       /** 
        * 排序
@@ -127,19 +128,19 @@ export const format: FlatESLintConfigItem[] = [
       }],
 
       /** 括号中前后空格 */
-      'space-in-parens': 'warn',
+      'style/space-in-parens': 'warn',
 
       /** 一元操作符前后空格 */
-      'space-unary-ops': ['warn', { words: true, nonwords: false }],
+      'style/space-unary-ops': ['warn', { words: true, nonwords: false }],
 
       /** switch case 冒号前后空格 */
-      'switch-colon-spacing': 'warn',
+      'style/switch-colon-spacing': 'warn',
 
       /** 模板字符串花括号中前后空格 */
-      'template-curly-spacing': 'warn',
+      'style/template-curly-spacing': 'warn',
 
       /** 生成器函数星号空格 */
-      'yield-star-spacing': ['warn', 'after'],
+      'style/yield-star-spacing': ['warn', 'after'],
 
 
 
@@ -148,24 +149,24 @@ export const format: FlatESLintConfigItem[] = [
       // -------------------------------------------------------------
 
       /** 语句块内部前后空格 */
-      'block-spacing': 'off',
-      '@typescript-eslint/block-spacing': 'warn',
+      // 'block-spacing': 'off',
+      'style/block-spacing': 'warn',
 
       /** 括号风格 */
-      'brace-style': 'off',
-      '@typescript-eslint/brace-style': ['warn', '1tbs', { allowSingleLine: true }],
+      // 'brace-style': 'off',
+      'style/brace-style': ['warn', '1tbs', { allowSingleLine: true }],
 
       /** 尾随逗号 */
-      'comma-dangle': 'off',
-      '@typescript-eslint/comma-dangle': ['warn', 'only-multiline'],
+      // 'comma-dangle': 'off',
+      'style/comma-dangle': ['warn', 'only-multiline'],
 
       /** 逗号前后空格 */
-      'comma-spacing': 'off',
-      '@typescript-eslint/comma-spacing': 'warn',
+      // 'comma-spacing': 'off',
+      'style/comma-spacing': 'warn',
 
       /** 🔧函数调用空格 */
-      'func-call-spacing': 'off',
-      '@typescript-eslint/func-call-spacing': 'warn',
+      // 'func-call-spacing': 'off',
+      'style/func-call-spacing': 'warn',
 
       /** 🔧缩进 */
       //  https://github.com/typescript-eslint/typescript-eslint/issues/1824
@@ -177,8 +178,8 @@ export const format: FlatESLintConfigItem[] = [
       //   /** 三元表达式偏移 */
       //   offsetTernaryExpressions: true
       // }],
-      indent: 'off',
-      '@typescript-eslint/indent': ['warn', 2, {
+      // indent: 'off',
+      'style/indent': ['warn', 2, {
         /** 同时定义多个变量时，对齐到第一个变量定义 */
         VariableDeclarator: 'first',
         /** swtich case 增加 1 indent */
@@ -199,16 +200,16 @@ export const format: FlatESLintConfigItem[] = [
       }],
 
       /** 🔧对象键名空格 */
-      'key-spacing': 'off',
-      '@typescript-eslint/key-spacing': ['warn'],
+      // 'key-spacing': 'off',
+      'style/key-spacing': ['warn'],
 
       /** 关键词 空格 */
-      'keyword-spacing': 'off',
-      '@typescript-eslint/keyword-spacing': 'warn',
+      // 'keyword-spacing': 'off',
+      'style/keyword-spacing': 'warn',
 
       /** 多余的括号 */
-      'no-extra-parens': 'off',
-      '@typescript-eslint/no-extra-parens': ['warn', 'all', {
+      // 'no-extra-parens': 'off',
+      'style/no-extra-parens': ['warn', 'all', {
         /** 允许 JSDoc 类型转换 */
         allowParensAfterCommentPattern: '@type',
         /** 忽略 JSX */
@@ -224,39 +225,39 @@ export const format: FlatESLintConfigItem[] = [
       }],
 
       /** 多余的分号 */
-      'no-extra-semi': 'off',
-      '@typescript-eslint/no-extra-semi': ['warn'],
+      // 'no-extra-semi': 'off',
+      'style/no-extra-semi': ['warn'],
 
       /** 对象花括号内部前后空格 */
-      'object-curly-spacing': 'off',
-      '@typescript-eslint/object-curly-spacing': ['warn', 'always'],
+      // 'object-curly-spacing': 'off',
+      'style/object-curly-spacing': ['warn', 'always'],
 
       /** 🔧字符串引号 */
-      quotes: 'off',
-      '@typescript-eslint/quotes': ['warn', 'single', {
+      // quotes: 'off',
+      'style/quotes': ['warn', 'single', {
         avoidEscape: true,
         allowTemplateLiterals: true
       }],
 
       /** 分号 */
-      semi: 'off',
-      '@typescript-eslint/semi': ['warn', 'never'],
+      // semi: 'off',
+      'style/semi': ['warn', 'never'],
 
       /** 块语句前的空格 */
-      'space-before-blocks': 'off',
-      '@typescript-eslint/space-before-blocks': 'warn',
+      // 'space-before-blocks': 'off',
+      'style/space-before-blocks': 'warn',
 
       /** 函数声明参数括号前的空格 */
-      'space-before-function-paren': 'off',
-      '@typescript-eslint/space-before-function-paren': ['warn', {
+      // 'space-before-function-paren': 'off',
+      'style/space-before-function-paren': ['warn', {
         anonymous: 'always',
         named: 'never',
         asyncArrow: 'always'
       }],
 
       /** 操作符左右空格 */
-      'space-infix-ops': 'off',
-      '@typescript-eslint/space-infix-ops': 'warn',
+      // 'space-infix-ops': 'off',
+      'style/space-infix-ops': 'warn',
 
 
 
@@ -265,7 +266,7 @@ export const format: FlatESLintConfigItem[] = [
       // -------------------------------------------------------------
 
       /** 类型定义属性间隔符 `;` / `,` / none */
-      '@typescript-eslint/member-delimiter-style': ['warn', {
+      'style/member-delimiter-style': ['warn', {
         multiline: { delimiter: 'none', requireLast: false },
         singleline: { requireLast: false },
         multilineDetection: 'brackets'
@@ -275,7 +276,7 @@ export const format: FlatESLintConfigItem[] = [
       '@typescript-eslint/no-unnecessary-qualifier': 'warn',
 
       /** 类型标注空格 */
-      '@typescript-eslint/type-annotation-spacing': ['warn'],
+      'style/type-annotation-spacing': ['warn'],
 
 
 
@@ -289,6 +290,7 @@ export const format: FlatESLintConfigItem[] = [
     files: ['**/*.jsx', '**/*.tsx'],
     plugins: {
       react: pluginReact,
+      style: pluginStylistic,
     },
     rules: {
       // -------------------------------------------------------------
@@ -306,7 +308,7 @@ export const format: FlatESLintConfigItem[] = [
       }],
 
       /** JSX 标签空格 */
-      'react/jsx-tag-spacing': ['warn', {
+      'style/jsx-tag-spacing': ['warn', {
         closingSlash: 'never',
         beforeSelfClosing: 'proportional-always',
         afterOpening: 'never',
@@ -315,17 +317,17 @@ export const format: FlatESLintConfigItem[] = [
 
 
       /** 括号内前后空格 */
-      'react/jsx-curly-spacing': ['warn'],
+      'style/jsx-curly-spacing': ['warn'],
 
       /** 🔧JSX 缩进，会和 TS indent 冲突，关闭 */
-      'react/jsx-indent': 'off',
+      'style/jsx-indent': 'off',
       // 'react/jsx-indent': ['warn', 2, {
       //   checkAttributes: true,
       //   indentLogicalExpressions: true,
       // }],
 
       /** 🔧属性缩进 */
-      'react/jsx-indent-props': ['warn', {
+      'style/jsx-indent-props': ['warn', {
         indentMode: 2
       }],
     }

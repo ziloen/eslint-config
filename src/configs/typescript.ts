@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 import { cwd } from 'node:process'
 import { parserTs, pluginTs } from '../plugins'
@@ -14,6 +13,7 @@ export function typescript(
     ...javascript,
     {
       plugins: {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         '@typescript-eslint': pluginTs as any
       },
     },
@@ -127,6 +127,9 @@ export function typescript(
          * 因为有时类型不正确，autofix 会导致 TS 错误，故关闭
          */
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+
+        /** `-` 只允许 number | bigint */
+        '@typescript-eslint/no-unsafe-unary-minus': 'error',
 
         /** 警告未使用的表达式 */
         'no-unused-expressions': 'off',
