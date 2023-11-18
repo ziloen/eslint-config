@@ -30,7 +30,7 @@
     "@ziloen/eslint-config": "workspace:*",
     "bumpp": "^9.2.0",
     "eslint": "^8.53.0",
-    "eslint-define-config": "^1.24.1",
+    "eslint-define-config": "^2.0.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-unicorn": "^49.0.0",
