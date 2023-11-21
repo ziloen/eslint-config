@@ -1,7 +1,8 @@
+export * from './format'
 export * from './javascript'
+export * from './react'
 export * from './typescript'
 export * from './vue'
-export * from './react'
-export * from './format'
 
-export type { FlatESLintConfig, defineFlatConfig, FlatESLintConfigItem } from "eslint-define-config"
+export type { FlatESLintConfig, defineFlatConfig } from 'eslint-define-config'
+

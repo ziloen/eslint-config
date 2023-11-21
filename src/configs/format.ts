@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 import { pluginReact, pluginStylistic, pluginTs, pluginZiloen } from '../plugins'
 
 
-export const format: FlatESLintConfigItem[] = [
+export const format: FlatESLintConfig[] = [
   {
     plugins: {
       '@typescript-eslint': pluginTs as any,
       ziloen: pluginZiloen as any,
-      style: pluginStylistic,
+      style: pluginStylistic as any,
     },
     rules: {
       /** 🔧数组括号换行 */
@@ -290,7 +290,7 @@ export const format: FlatESLintConfigItem[] = [
     files: ['**/*.jsx', '**/*.tsx'],
     plugins: {
       react: pluginReact,
-      style: pluginStylistic,
+      style: pluginStylistic as any,
     },
     rules: {
       // -------------------------------------------------------------

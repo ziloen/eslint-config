@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 // @ts-expect-error no type package
 import js from '@eslint/js'
-import { pluginUnicorn, pluginPromise } from '../plugins'
+import { pluginPromise, pluginUnicorn } from '../plugins'
 
 
 
-export const javascript: FlatESLintConfigItem[] = [
+export const javascript: FlatESLintConfig[] = [
   js.configs.recommended,
   {
     plugins: {

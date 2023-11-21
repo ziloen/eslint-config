@@ -1,4 +1,4 @@
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 import { cwd } from 'node:process'
 import { parserTs, pluginTs } from '../plugins'
 import { javascript } from './javascript'
@@ -7,8 +7,7 @@ export type TSOptions = { tsconfigPath: string }
 
 export function typescript(
   { tsconfigPath }: TSOptions
-): FlatESLintConfigItem[] {
-
+): FlatESLintConfig[] {
   return [
     ...javascript,
     {

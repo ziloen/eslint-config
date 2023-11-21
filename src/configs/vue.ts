@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 import { parserTs, parserVue, pluginVue } from '../plugins'
 import { TSOptions, typescript } from './typescript'
 
-export function vue({ tsconfigPath }: TSOptions): FlatESLintConfigItem[] {
+export function vue({ tsconfigPath }: TSOptions): FlatESLintConfig[] {
 
   return [
     ...typescript({ tsconfigPath }),

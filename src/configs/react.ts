@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 import { parserTs, pluginReact, pluginZiloen } from '../plugins'
 import { TSOptions, typescript } from './typescript'
 
 
 
-export function react({ tsconfigPath }: TSOptions): FlatESLintConfigItem[] {
+export function react({ tsconfigPath }: TSOptions) {
   return [
     ...typescript({ tsconfigPath }),
     {
@@ -47,5 +47,5 @@ export function react({ tsconfigPath }: TSOptions): FlatESLintConfigItem[] {
         'ziloen/jsx-strict-logical-expressions': 'error'
       }
     }
-  ]
+  ] as FlatESLintConfig[]
 }
