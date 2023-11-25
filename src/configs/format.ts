@@ -45,7 +45,7 @@ export const format: FlatESLintConfig[] = [
         after: true,
         named: 'after',
         anonymous: 'after',
-        method: 'neither'
+        method: 'before'
       }],
 
       /** 最大长度 */

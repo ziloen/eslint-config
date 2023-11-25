@@ -57,7 +57,7 @@ const arr2 = [1, 2 ,   3];
 
 const fn45: (a: any) => any = /*  */(a) => {return 123}
 
-export {     }
+export { }
 
 
 interface G {  a: string; b: string }
@@ -72,3 +72,13 @@ string,
 }
 
 type TestGenericSpace<T=true> = T
+
+// style/generator-star-spacing
+const testAyncIter = {
+  async * test() {
+    
+  },
+  test2: async function * () {
+    
+  }
+}
