@@ -1,3 +1,4 @@
+import type { ParserOptions } from '@typescript-eslint/parser'
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { cwd } from 'node:process'
 import { parserTs, pluginTs } from '../plugins'
@@ -17,7 +18,7 @@ export function typescript(
       },
     },
     {
-      files: ['**/*.?([cm])[tj]s?(x)', '**/*.vue'],
+      files: ['**/*.?([cm])[t]s?(x)', '**/*.vue'],
       languageOptions: {
         parser: parserTs,
         sourceType: 'module',
@@ -25,17 +26,21 @@ export function typescript(
           ecmaVersion: 'latest',
           project: tsconfigPath,
           tsconfigRootDir: cwd(),
-          // extraFileExtensions: ['.vue']
+          jsDocParsingMode: 'none',
+          extraFileExtensions: ['.vue'],
 
           // project: true,
           // EXPERIMENTAL_useProjectService: true,
-        }
+        } satisfies ParserOptions
       },
       rules: {
         ...pluginTs.configs['strict-type-checked'].rules,
 
         /** ✅禁止不必要的 await */
         // '@typescript-eslint/await-thenable': 'warn',
+
+        /** 分离 type import */
+        '@typescript-eslint/consistent-type-imports': 'warn',
 
         /** 🎨不限制只使用 interface 或者 type */
         '@typescript-eslint/consistent-type-definitions': 'off',
