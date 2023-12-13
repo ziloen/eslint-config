@@ -15,8 +15,7 @@
   "eslint.experimental.useFlatConfig": true,
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
-    // "source.fixAll.eslint": true,
-    "source.sortImports": true
+    "source.sortImports": "explicit"
   }
   // "eslint.validate": [
   //   "javascript",

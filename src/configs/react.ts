@@ -2,7 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { parserTs, pluginReact, pluginZiloen } from '../plugins'
-import { TSOptions, typescript } from './typescript'
+import type { TSOptions } from './typescript'
+import { typescript } from './typescript'
 
 
 
@@ -20,7 +21,7 @@ export function react({ tsconfigPath }: TSOptions) {
         parserOptions: {
           ecmaFeatures: {
             jsx: true
-          }
+          },
         },
       },
       rules: {

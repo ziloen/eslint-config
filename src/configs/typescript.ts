@@ -18,17 +18,18 @@ export function typescript(
       },
     },
     {
-      files: ['**/*.?([cm])[t]s?(x)', '**/*.vue'],
+      files: ['**/*.?([cm])ts?(x)', '**/*.vue'],
       languageOptions: {
         parser: parserTs,
         sourceType: 'module',
         parserOptions: {
           ecmaVersion: 'latest',
-          project: tsconfigPath,
+
           tsconfigRootDir: cwd(),
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
 
+          project: tsconfigPath,
           // project: true,
           // EXPERIMENTAL_useProjectService: true,
         } satisfies ParserOptions

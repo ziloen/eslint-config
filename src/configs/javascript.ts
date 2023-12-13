@@ -8,30 +8,38 @@ import { pluginPromise, pluginUnicorn } from '../plugins'
 
 
 export const javascript: FlatESLintConfig[] = [
+  {
+    ignores: [
+      // files
+      '**/CHANGELOG*.md',
+      '**/*.min.*',
+      '**/LICENSE*',
+      '**/auto-import?(s).d.ts',
+
+      // lock files
+      '**/package-lock.json',
+      '**/pnpm-lock.yaml',
+      '**/yarn.lock',
+      '**/bun.lockb',
+
+      // directories
+      '**/node_modules',
+      '**/dist',
+      '**/.nuxt',
+      '**/.next',
+      '**/.vercel',
+      '**/.idea',
+
+      // not support yet
+      '*.html',
+    ],
+  },
   js.configs.recommended,
   {
     plugins: {
       unicorn: pluginUnicorn,
       promise: pluginPromise
     },
-    ignores: [
-      // files
-      '*.min.*',
-      'CHANGELOG.md',
-      'LICENSE*',
-
-      // lock files
-      'package-lock.json',
-      'pnpm-lock.yaml',
-      'yarn.lock',
-
-      // directories
-      'node_modules',
-      'dist',
-
-      // not support yet
-      '*.html'
-    ],
     rules: {
       /** 检查数组方法返回值 */
       'array-callback-return': ['error', { allowImplicit: true }],
@@ -121,6 +129,9 @@ export const javascript: FlatESLintConfig[] = [
 
       /** 禁止不必要的 await */
       'no-return-await': 'warn',
+
+      /** 交由 TS 处理 */
+      'no-undef': 'off',
 
       /** 允许未使用的变量 */
       'no-unused-vars': 'off',
@@ -299,8 +310,12 @@ export const javascript: FlatESLintConfig[] = [
       /** 🔧使用 prototype 上而不是实例上的 prototype */
       'unicorn/prefer-prototype-methods': 'warn',
 
-      /** 🔧使用同一种方法来选择 DOM 元素，避免混淆 */
-      'unicorn/prefer-query-selector': 'warn',
+      /** 
+       * 🔧使用同一种方法来选择 DOM 元素，避免混淆
+       * 
+       * 禁用：不限制此偏好
+       */
+      'unicorn/prefer-query-selector': "off",
 
       /** 🔧使用 Set#size 直接获得数量而不是先转换为 Array 再读取 Array#length */
       'unicorn/prefer-set-size': 'warn',
