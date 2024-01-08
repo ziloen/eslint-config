@@ -190,14 +190,18 @@ export const format: FlatESLintConfig[] = [
         flatTernaryExpressions: false,
         /** 忽略一些无法正确处理的边缘情况，手动添加 indent */
         ignoredNodes: [
+          // Decorators
           'PropertyDefinition[decorators]',
-          'TSUnionType',
+          // 'TSUnionType',
           'FunctionExpression[params]:has(Identifier[decorators])',
           // 类型泛型参数
-          'TSTypeParameterInstantiation',
-          'TSIntersectionType',
+          // 'TSTypeParameterInstantiation',
+          // 'TSIntersectionType',
         ]
       }],
+
+      /** 二元操作符缩进 */
+      'style/indent-binary-ops': ['warn', 2],
 
       /** 🔧对象键名空格 */
       // 'key-spacing': 'off',

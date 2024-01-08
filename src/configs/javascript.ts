@@ -118,6 +118,15 @@ export const javascript: FlatESLintConfig[] = [
        */
       'no-promise-executor-return': 'off',
 
+      /**
+       * 警告 export default, 偏好使用命名 export
+       */
+      'no-restricted-exports': ['warn', {
+        restrictDefaultExports: {
+          direct: true
+        }
+      }],
+
       /** 令人混淆的 window 上的变量 */
       'no-restricted-globals': [
         'error',
@@ -315,7 +324,7 @@ export const javascript: FlatESLintConfig[] = [
        * 
        * 禁用：不限制此偏好
        */
-      'unicorn/prefer-query-selector': "off",
+      'unicorn/prefer-query-selector': 'off',
 
       /** 🔧使用 Set#size 直接获得数量而不是先转换为 Array 再读取 Array#length */
       'unicorn/prefer-set-size': 'warn',
