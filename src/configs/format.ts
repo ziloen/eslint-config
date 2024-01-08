@@ -184,10 +184,20 @@ export const format: FlatESLintConfig[] = [
         VariableDeclarator: 'first',
         /** swtich case 增加 1 indent */
         SwitchCase: 1,
-        /** 三元表达式偏移 */
-        offsetTernaryExpressions: true,
+        // outerIIFEBody: 1,
+        // MemberExpression: 1,
+        // FunctionDeclaration: { parameters: 1, body: 1 },
+        // FunctionExpression: { parameters: 1, body: 1 },
+        // StaticBlock: { body: 1 },
+        // CallExpression: { arguments: 1 },
+        // ArrayExpression: 1,
+        // ObjectExpression: 1,
+        // ImportDeclaration: 1,
         /** 嵌套三元表达式不增加 indent */
         flatTernaryExpressions: false,
+        /** 三元表达式偏移 */
+        offsetTernaryExpressions: true,
+        // ignoreComments: false,
         /** 忽略一些无法正确处理的边缘情况，手动添加 indent */
         ignoredNodes: [
           // Decorators
