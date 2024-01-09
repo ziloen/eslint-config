@@ -109,12 +109,18 @@ export const javascript: FlatESLintConfig[] = [
         allowEmptyCase: true
       }],
 
-      /** 不允许 new Symbol 与 new BigInt 这种错误用法 */
-      'no-new-native-nonconstructor': 'error',
+      /** 
+       * 不允许 new Symbol 与 new BigInt 这种错误用法
+       * 
+       * TS 已检查 constructor，故关闭
+       */
+      'no-new-native-nonconstructor': 'off',
+      /** @deprecated deprecated in V9 */
+      'no-new-symbol': 'off',
 
       /** 
        * Promise 内 return 没有意义，使用 resolve 或 reject 
-       * 无法配置允许箭头函数，故关闭 https://github.com/eslint/eslint/issues/17278
+       * 无法配置允许箭头函数，必须要加 void，故关闭 https://github.com/eslint/eslint/issues/17278
        */
       'no-promise-executor-return': 'off',
 
@@ -343,6 +349,14 @@ export const javascript: FlatESLintConfig[] = [
 
       /** 🔧Promise 上的静态方法应直接使用 */
       'promise/no-new-statics': 'error',
+    }
+  },
+
+  {
+    files: ['**/*.config.?([cm])[tj]s'],
+    rules: {
+      // Config file 允许导出 default
+      'no-restricted-exports': 'off'
     }
   }
 ]
