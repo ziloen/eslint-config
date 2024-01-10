@@ -126,8 +126,10 @@ export const javascript: FlatESLintConfig[] = [
 
       /**
        * 警告 export default, 偏好使用命名 export
+       * 
+       * config file 和 pages route 等都会使用 default export, 故关闭
        */
-      'no-restricted-exports': ['warn', {
+      'no-restricted-exports': ['off', {
         restrictDefaultExports: {
           direct: true
         }
@@ -351,12 +353,4 @@ export const javascript: FlatESLintConfig[] = [
       'promise/no-new-statics': 'error',
     }
   },
-
-  {
-    files: ['**/*.config.?([cm])[tj]s'],
-    rules: {
-      // Config file 允许导出 default
-      'no-restricted-exports': 'off'
-    }
-  }
 ]
