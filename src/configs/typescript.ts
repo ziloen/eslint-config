@@ -177,6 +177,12 @@ export function typescript(
         '@typescript-eslint/prefer-optional-chain': 'off',
 
         /**
+         * 🔒 要求 Promise reject 时传入 Error 对象
+         */
+        'prefer-promise-reject-errors': 'off',
+        '@typescript-eslint/prefer-promise-reject-errors': 'error',
+
+        /**
          * 🔧返回 promise 的函数必须有 async 关键字
          *
          * 不写也行，不限制此偏好，故关闭

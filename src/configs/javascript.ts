@@ -226,6 +226,9 @@ export const javascript: FlatESLintConfig[] = [
       // 'no-nested-ternary': 'off',
       // 'unicorn/no-nested-ternary': 'warn',
 
+      /** 🔧 new Array 会生成 <empty slot>，无法使用 map 等，且 new Array 参数数量不同行为不同容易导致错误  */
+      'unicorn/no-new-array': 'error',
+
       /** 🔧使用 Buffer.from() 或 Buffer.alloc() 代替 */
       'unicorn/no-new-buffer': 'error',
 
