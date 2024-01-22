@@ -217,6 +217,13 @@ export function typescript(
         /** 允许可合为一个联合类型的函数声明多个函数签名 */
         '@typescript-eslint/unified-signatures': 'off'
       }
+    },
+    {
+      files: ['**/*.d.ts'],
+      rules: {
+        '@typescript-eslint/ban-types': 'off',
+        '@typescript-eslint/no-invalid-void-type': 'off'
+      }
     }
   ]
 }
