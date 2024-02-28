@@ -4,7 +4,7 @@ import { cwd } from 'node:process'
 import { parserTs, pluginTs } from '../plugins'
 import { javascript } from './javascript'
 
-export type TSOptions = { tsconfigPath: string }
+export type TSOptions = { tsconfigPath: string | string[] }
 
 export function typescript(
   { tsconfigPath }: TSOptions
