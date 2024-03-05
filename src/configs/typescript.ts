@@ -222,7 +222,8 @@ export function typescript(
       files: ['**/*.d.ts'],
       rules: {
         '@typescript-eslint/ban-types': 'off',
-        '@typescript-eslint/no-invalid-void-type': 'off'
+        '@typescript-eslint/no-invalid-void-type': 'off',
+        '@typescript-eslint/consistent-type-imports': 'off'
       }
     }
   ]
