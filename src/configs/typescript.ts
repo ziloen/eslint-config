@@ -25,11 +25,11 @@ export function typescript(
         parserOptions: {
           ecmaVersion: 'latest',
 
-          tsconfigRootDir: cwd(),
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
-
+          
           project: tsconfigPath,
+          tsconfigRootDir: cwd(),
           // project: true,
           // EXPERIMENTAL_useProjectService: true,
         } satisfies ParserOptions
