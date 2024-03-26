@@ -27,7 +27,7 @@ export function typescript(
 
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
-          
+
           project: tsconfigPath,
           tsconfigRootDir: cwd(),
           // project: true,
@@ -108,13 +108,15 @@ export function typescript(
 
         /** 🔒Disallow throwing literals as exceptions. */
         'no-throw-literal': 'off',
-        '@typescript-eslint/no-throw-literal': [
+        '@typescript-eslint/only-throw-error': [
           'error',
           {
             allowThrowingAny: false,
             allowThrowingUnknown: false
           }
         ],
+
+
 
         /** 禁用默认`no-undef`，eslint 不会检查`*.d.ts`，导致误报全局变量与类型不存在 */
         'no-undef': 'off',

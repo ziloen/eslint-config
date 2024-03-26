@@ -2,7 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { parserTs, parserVue, pluginVue } from '../plugins'
-import { TSOptions, typescript } from './typescript'
+import type { TSOptions } from './typescript'
+import { typescript } from './typescript'
 
 export function vue({ tsconfigPath }: TSOptions): FlatESLintConfig[] {
 

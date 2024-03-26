@@ -104,6 +104,11 @@ export const javascript: FlatESLintConfig[] = [
       /** 禁止使用 eval */
       'no-eval': 'warn',
 
+      /** 
+       * handled by formatter
+       */
+      'no-extra-semi': 'off',
+
       /** 防止`switch case`忘写`break` */
       'no-fallthrough': ['error', {
         allowEmptyCase: true
