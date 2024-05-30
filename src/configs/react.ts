@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { parserTs, pluginReact, pluginZiloen } from '../plugins'
@@ -25,7 +24,7 @@ export function react({ tsconfigPath }: TSOptions) {
         },
       },
       rules: {
-      /** 16+ 不需要此导入 React */
+        /** 16+ 不需要此导入 React */
         'react/react-in-jsx-scope': 'off',
 
         /** ✅需要 key */

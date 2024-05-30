@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { parserTs, parserVue, pluginReact, pluginStylistic, pluginTs, pluginZiloen } from '../plugins'

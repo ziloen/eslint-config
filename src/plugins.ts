@@ -4,7 +4,6 @@
 
 export { default as pluginStylistic } from '@stylistic/eslint-plugin'
 export { default as pluginTs } from '@typescript-eslint/eslint-plugin'
-export { default as pluginPromise } from 'eslint-plugin-promise'
 export { default as pluginReact } from 'eslint-plugin-react'
 export { default as pluginUnicorn } from 'eslint-plugin-unicorn'
 export { default as pluginVue } from 'eslint-plugin-vue'

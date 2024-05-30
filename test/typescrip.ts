@@ -82,3 +82,5 @@ const testAyncIter = {
     
   }
 }
+
+type TestGenericSpace2<T extends Record< (string & {}), (unknown) >> = T 

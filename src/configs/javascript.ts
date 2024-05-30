@@ -3,7 +3,7 @@
 import type { FlatESLintConfig } from 'eslint-define-config'
 // @ts-expect-error no type package
 import js from '@eslint/js'
-import { pluginPromise, pluginUnicorn } from '../plugins'
+import { pluginUnicorn } from '../plugins'
 
 
 
@@ -38,7 +38,6 @@ export const javascript: FlatESLintConfig[] = [
   {
     plugins: {
       unicorn: pluginUnicorn,
-      promise: pluginPromise
     },
     rules: {
       /** 检查数组方法返回值 */
@@ -262,7 +261,8 @@ export const javascript: FlatESLintConfig[] = [
 
       /** 🔧去除多余的 undefined */
       'unicorn/no-useless-undefined': ['warn', {
-        checkArguments: false
+        checkArguments: false,
+        checkArrowFunctionBody: false,
       }],
 
       /** 🔧`1`, `1.0`, `1.` 没有区别 */
@@ -345,20 +345,14 @@ export const javascript: FlatESLintConfig[] = [
       /** 🔧使用 Set#size 直接获得数量而不是先转换为 Array 再读取 Array#length */
       'unicorn/prefer-set-size': 'warn',
 
+      /** 🔧Prefer using the `String.raw` tag to avoid escaping `\` */
+      'unicorn/prefer-string-raw': 'warn',
+
       /** 🔧偏好使用 string.slice 而不是 string.substring / string.substr */
       'unicorn/prefer-string-slice': 'warn',
 
       /** 🔧throw 应使用 new Error */
       'unicorn/throw-new-error': 'warn',
-
-
-
-      // -------------------------------------------------------------
-      // eslint-plugin-promise
-      // -------------------------------------------------------------
-
-      /** 🔧Promise 上的静态方法应直接使用 */
-      'promise/no-new-statics': 'error',
     }
   },
 ]
