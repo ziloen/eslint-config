@@ -32,6 +32,12 @@ export const javascript: FlatESLintConfig[] = [
 
       // not support yet
       '*.html',
+
+      // test artifacts
+      '**/test-results',
+      '**/playwright-report',
+      '**/blob-report',
+      '**/playwright/.cache',
     ],
   },
   js.configs.recommended,
