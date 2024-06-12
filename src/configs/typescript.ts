@@ -11,8 +11,10 @@ export function typescript(): FlatESLintConfig[] {
       {
         languageOptions: {
           parserOptions: {
-            // project: true,
-            projectService: true,
+            projectService: {
+              allowDefaultProject: ['./*.js'],
+              defaultProject: './tsconfig.json',
+            },
             tsconfigRootDir: import.meta.dirname
           }
         }
@@ -29,8 +31,10 @@ export function typescript(): FlatESLintConfig[] {
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
 
-          project: true,
-          projectService: true,
+          projectService: {
+            allowDefaultProject: ['./*.js'],
+            defaultProject: './tsconfig.json',
+          },
           tsconfigRootDir: import.meta.dirname,
         } satisfies ParserOptions
       },
