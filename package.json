@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsup",
-    "prepack": "pnpm run build",
+    "prepack": "tsup --minify",
     "release": "bumpp --commit --no-push && pnpm publish",
     "lint": "eslint ."
   },
