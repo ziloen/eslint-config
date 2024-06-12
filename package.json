@@ -5,10 +5,10 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --clean --dts --minify",
+    "build": "tsup",
     "prepack": "pnpm run build",
     "release": "bumpp --commit --no-push && pnpm publish",
-    "lint": "eslint . --fix"
+    "lint": "eslint ."
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

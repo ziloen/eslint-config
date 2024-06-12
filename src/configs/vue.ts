@@ -2,23 +2,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { parserTs, parserVue, pluginVue } from '../plugins'
-import type { TSOptions } from './typescript'
 import { typescript } from './typescript'
 
-export function vue({ tsconfigPath }: TSOptions): FlatESLintConfig[] {
+export function vue(): FlatESLintConfig[] {
 
   return [
-    ...typescript({ tsconfigPath }),
-    {
-      plugins: {
-        vue: pluginVue,
-      }
-    },
+    ...typescript(),
+    ...pluginVue.configs['flat/essential'] as FlatESLintConfig[],
     {
       files: ['**/*.vue'],
-      // plugins: {
-      //   vue: pluginVue,
-      // },
       languageOptions: {
         parser: parserVue,
         parserOptions: {
@@ -31,12 +23,11 @@ export function vue({ tsconfigPath }: TSOptions): FlatESLintConfig[] {
           sourceType: 'module',
 
           project: true,
-          // EXPERIMENTAL_useProjectService: true,
+          projectService: true,
         }
       },
-      processor: pluginVue.processors['.vue'],
+      processor: pluginVue.processors.vue,
       rules: {
-        ...pluginVue.configs['vue3-essential'].rules,
         /** allow ununed vars */
         'vue/no-unused-vars': 'off',
         'vue/html-self-closing': 'off',

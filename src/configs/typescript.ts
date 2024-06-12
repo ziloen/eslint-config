@@ -1,26 +1,19 @@
 import type { ParserOptions } from '@typescript-eslint/parser'
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { cwd } from 'node:process'
-import { parserTs, pluginTs } from '../plugins'
+import tseslint from 'typescript-eslint'
 import { javascript } from './javascript'
 
-export type TSOptions = { tsconfigPath: string | string[] }
-
-export function typescript(
-  { tsconfigPath }: TSOptions
-): FlatESLintConfig[] {
+export function typescript(): FlatESLintConfig[] {
   return [
     ...javascript,
-    {
-      plugins: {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        '@typescript-eslint': pluginTs as any
-      },
-    },
+    ...tseslint.config(
+      ...tseslint.configs.strictTypeChecked,
+    ) as FlatESLintConfig[],
     {
       files: ['**/*.?([cm])ts?(x)', '**/*.vue'],
       languageOptions: {
-        parser: parserTs,
+        parser: tseslint.parser,
         sourceType: 'module',
         parserOptions: {
           ecmaVersion: 'latest',
@@ -28,15 +21,11 @@ export function typescript(
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
 
-          project: tsconfigPath,
+          projectService: true,
           tsconfigRootDir: cwd(),
-          // project: true,
-          // EXPERIMENTAL_useProjectService: true,
         } satisfies ParserOptions
       },
       rules: {
-        ...pluginTs.configs['strict-type-checked'].rules,
-
         /** ✅禁止不必要的 await */
         // '@typescript-eslint/await-thenable': 'warn',
 

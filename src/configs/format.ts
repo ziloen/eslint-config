@@ -1,20 +1,21 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
-import { parserTs, parserVue, pluginReact, pluginStylistic, pluginTs, pluginZiloen } from '../plugins'
-import type { TSOptions } from './typescript'
+import tseslint from 'typescript-eslint'
+import { parserTs, parserVue, pluginReact, pluginStylistic, pluginZiloen } from '../plugins'
 
-export function format({ tsconfigPath }: TSOptions) {
+export function format() {
   return [
     {
       plugins: {
-        '@typescript-eslint': pluginTs as any,
+        '@typescript-eslint': tseslint.plugin as any,
         ziloen: pluginZiloen as any,
         style: pluginStylistic as any,
       },
       languageOptions: {
-        parser: parserTs,
+        parser: tseslint.parser,
         parserOptions: {
-          project: tsconfigPath,
+          projectService: true,
+          sourceType: "module",
           extraFileExtensions: ['.vue'],
         }
       },

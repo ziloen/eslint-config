@@ -1,14 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
 import { parserTs, pluginReact, pluginZiloen } from '../plugins'
-import type { TSOptions } from './typescript'
 import { typescript } from './typescript'
 
 
 
-export function react({ tsconfigPath }: TSOptions) {
+export function react() {
   return [
-    ...typescript({ tsconfigPath }),
+    ...typescript(),
     {
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
