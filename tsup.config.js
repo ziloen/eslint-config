@@ -8,7 +8,7 @@ export default defineConfig({
   bundle: true,
   minify: false,
   dts: true,
-  format: ['esm', 'cjs'],
+  format: ['esm'],
   platform: 'node',
   treeshake: true,
   skipNodeModulesBundle: true,

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
-import tseslint from 'typescript-eslint'
 import { pluginReact, pluginZiloen } from '../plugins'
 import { typescript } from './typescript'
 
@@ -15,7 +14,6 @@ export function react(): FlatESLintConfig[] {
         ziloen: pluginZiloen as any
       },
       languageOptions: {
-        parser: tseslint.parser,
         parserOptions: {
           ecmaFeatures: {
             jsx: true
