@@ -14,9 +14,6 @@ importers:
       '@stylistic/eslint-plugin':
         specifier: ^2.1.0
         version: 2.1.0(eslint@9.4.0)(typescript@5.4.5)
-      '@typescript-eslint/eslint-plugin':
-        specifier: 8.0.0-alpha.30
-        version: 8.0.0-alpha.30(@typescript-eslint/parser@8.0.0-alpha.30(eslint@9.4.0)(typescript@5.4.5))(eslint@9.4.0)(typescript@5.4.5)
       '@typescript-eslint/parser':
         specifier: 8.0.0-alpha.30
         version: 8.0.0-alpha.30(eslint@9.4.0)(typescript@5.4.5)
@@ -57,12 +54,6 @@ importers:
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
-      '@typescript-eslint/rule-tester':
-        specifier: 8.0.0-alpha.30
-        version: 8.0.0-alpha.30(@eslint/eslintrc@3.1.0)(eslint@9.4.0)(typescript@5.4.5)
-      '@typescript-eslint/utils':
-        specifier: 8.0.0-alpha.30
-        version: 8.0.0-alpha.30(eslint@9.4.0)(typescript@5.4.5)
       bumpp:
         specifier: ^9.4.1
         version: 9.4.1
@@ -471,13 +462,6 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
-
-  '@typescript-eslint/rule-tester@8.0.0-alpha.30':
-    resolution: {integrity: sha512-mqGc88a7uCoEMhdertGKaeLy8QrvqA5pKBchFosa+RX7EGU6ngJAmMj+ZRZka/r6hmTyDRbd44H3Z0ChOPgl+Q==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      '@eslint/eslintrc': '>=2'
-      eslint: ^8.57.0 || ^9.0.0
 
   '@typescript-eslint/scope-manager@7.11.0':
     resolution: {integrity: sha512-27tGdVEiutD4POirLZX4YzT180vevUURJl4wJGmm6TrQoiYwuxTIY98PBp6L2oN+JQxzE0URvYlzJaBHIekXAw==}
@@ -2418,20 +2402,6 @@ snapshots:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
-
-  '@typescript-eslint/rule-tester@8.0.0-alpha.30(@eslint/eslintrc@3.1.0)(eslint@9.4.0)(typescript@5.4.5)':
-    dependencies:
-      '@eslint/eslintrc': 3.1.0
-      '@typescript-eslint/typescript-estree': 8.0.0-alpha.30(typescript@5.4.5)
-      '@typescript-eslint/utils': 8.0.0-alpha.30(eslint@9.4.0)(typescript@5.4.5)
-      ajv: 6.12.6
-      eslint: 9.4.0
-      json-stable-stringify-without-jsonify: 1.0.1
-      lodash.merge: 4.6.2
-      semver: 7.6.2
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
 
   '@typescript-eslint/scope-manager@7.11.0':
     dependencies:

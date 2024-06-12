@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
 import tseslint from 'typescript-eslint'
-import { parserTs, parserVue, pluginReact, pluginStylistic, pluginZiloen } from '../plugins'
+import { parserVue, pluginReact, pluginStylistic, pluginZiloen } from '../plugins'
 
 export function format() {
   return [
@@ -364,7 +364,7 @@ export function format() {
           },
           ecmaVersion: 'latest',
           extraFileExtensions: ['.vue'],
-          parser: parserTs,
+          parser: tseslint.parser,
           sourceType: 'module',
 
           project: true,

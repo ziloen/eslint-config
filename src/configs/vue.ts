@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { FlatESLintConfig } from 'eslint-define-config'
-import { parserTs, parserVue, pluginVue } from '../plugins'
+import tseslint from 'typescript-eslint'
+import { parserVue, pluginVue } from '../plugins'
 import { typescript } from './typescript'
 
 export function vue(): FlatESLintConfig[] {
@@ -19,7 +20,7 @@ export function vue(): FlatESLintConfig[] {
           },
           ecmaVersion: 'latest',
           extraFileExtensions: ['.vue'],
-          parser: parserTs as any,
+          parser: tseslint.parser as any,
           sourceType: 'module',
 
           project: true,
