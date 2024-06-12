@@ -15,7 +15,7 @@ export function format() {
         parser: tseslint.parser,
         parserOptions: {
           projectService: true,
-          sourceType: "module",
+          sourceType: 'module',
           extraFileExtensions: ['.vue'],
         }
       },
