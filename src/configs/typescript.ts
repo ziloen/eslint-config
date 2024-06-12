@@ -8,6 +8,15 @@ export function typescript(): FlatESLintConfig[] {
     ...javascript,
     ...tseslint.config(
       ...tseslint.configs.strictTypeChecked,
+      {
+        languageOptions: {
+          parserOptions: {
+            // project: true,
+            projectService: true,
+            tsconfigRootDir: import.meta.dirname
+          }
+        }
+      }
     ) as FlatESLintConfig[],
     {
       files: ['**/*.?([cm])ts?(x)', '**/*.vue'],
