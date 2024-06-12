@@ -1,8 +1,8 @@
-export * from './format'
-export * from './javascript'
-export * from './react'
-export * from './typescript'
-export * from './vue'
+export { format } from './format'
+export { javascript } from './javascript'
+export { react } from './react'
+export { typescript } from './typescript'
+export { vue } from './vue'
 
-export type { FlatESLintConfig, defineFlatConfig } from 'eslint-define-config'
+export type { FlatESLintConfig } from 'eslint-define-config'
 

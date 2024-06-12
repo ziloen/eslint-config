@@ -5,7 +5,7 @@ import { pluginReact, pluginZiloen } from '../plugins'
 import { typescript } from './typescript'
 
 
-export function react() {
+export function react(): FlatESLintConfig[] {
   return [
     ...typescript(),
     {
@@ -46,5 +46,5 @@ export function react() {
         'ziloen/jsx-strict-logical-expressions': 'error'
       }
     }
-  ] as FlatESLintConfig[]
+  ]
 }
