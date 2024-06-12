@@ -1,6 +1,5 @@
 import type { ParserOptions } from '@typescript-eslint/parser'
 import type { FlatESLintConfig } from 'eslint-define-config'
-import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
 import { javascript } from './javascript'
 
@@ -21,8 +20,9 @@ export function typescript(): FlatESLintConfig[] {
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
 
+          project: true,
           projectService: true,
-          tsconfigRootDir: cwd(),
+          tsconfigRootDir: import.meta.dirname,
         } satisfies ParserOptions
       },
       rules: {
