@@ -15,16 +15,17 @@ export function vue(): FlatESLintConfig[] {
       languageOptions: {
         parser: parserVue,
         parserOptions: {
+          parser: tseslint.parser as any,
+
           ecmaFeatures: {
             jsx: true
           },
           ecmaVersion: 'latest',
           extraFileExtensions: ['.vue'],
-          parser: tseslint.parser as any,
           sourceType: 'module',
 
-          project: true,
           projectService: true,
+          tsconfigRootDir: import.meta.dirname
         }
       },
       processor: pluginVue.processors.vue,
