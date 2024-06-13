@@ -7,11 +7,17 @@ import { parserVue, pluginVue } from '../plugins'
 import { typescript } from './typescript'
 
 export function vue(
-  { project }: { project?: string | string[] } = {}
+  {
+    project,
+    tsconfigRootDir = cwd()
+  }: {
+    project?: string | string[]
+    tsconfigRootDir?: string
+  } = {}
 ): FlatESLintConfig[] {
 
   return [
-    ...typescript({ project }),
+    ...typescript({ project, tsconfigRootDir }),
     ...pluginVue.configs['flat/essential'] as FlatESLintConfig[],
     {
       name: 'vue/overrides',
@@ -30,7 +36,7 @@ export function vue(
 
           project: project ? project : undefined,
           projectService: project ? undefined : true,
-          tsconfigRootDir: cwd()
+          tsconfigRootDir
         }
       },
       processor: pluginVue.processors.vue,

@@ -5,10 +5,13 @@ import { typescript } from './typescript'
 
 
 export function react(
-  { project }: { project?: string | string[] } = {}
+  options?: {
+    project?: string | string[]
+    tsconfigRootDir?: string
+  }
 ): FlatESLintConfig[] {
   return [
-    ...typescript({ project }),
+    ...typescript(options),
     {
       name: 'react/override',
       files: ['**/*.jsx', '**/*.tsx'],

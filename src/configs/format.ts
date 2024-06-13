@@ -1,10 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
 import type { FlatESLintConfig } from '~/types'
 import { pluginReact, pluginStylistic, pluginZiloen } from '../plugins'
 
 export function format(
-  { project }: { project?: string | string[] } = {}
+  {
+    project,
+    tsconfigRootDir = cwd()
+  }: {
+    project?: string | string[]
+    tsconfigRootDir?: string
+  } = {}
 ): FlatESLintConfig[] {
   return [
     {
@@ -19,6 +26,7 @@ export function format(
         parserOptions: {
           project: project ? project : undefined,
           projectService: project ? undefined : true,
+          tsconfigRootDir,
           sourceType: 'module',
           extraFileExtensions: ['.vue'],
         }

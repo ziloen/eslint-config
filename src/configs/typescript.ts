@@ -8,7 +8,13 @@ import { javascript } from './javascript'
 let loaded = false
 
 export function typescript(
-  { project }: { project?: string | string[] } = {}
+  {
+    project,
+    tsconfigRootDir = cwd()
+  }: {
+    project?: string | string[]
+    tsconfigRootDir?: string
+  } = {}
 ): FlatESLintConfig[] {
   if (loaded) {
     return []
@@ -29,7 +35,7 @@ export function typescript(
               allowDefaultProject: ['./*.js'],
               defaultProject: './tsconfig.json',
             },
-            tsconfigRootDir: cwd()
+            tsconfigRootDir
           }
         }
       }
