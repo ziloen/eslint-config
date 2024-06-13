@@ -3,7 +3,9 @@ import tseslint from 'typescript-eslint'
 import type { FlatESLintConfig } from '~/types'
 import { pluginReact, pluginStylistic, pluginZiloen } from '../plugins'
 
-export function format(): FlatESLintConfig[] {
+export function format(
+  { project }: { project?: string | string[] } = {}
+): FlatESLintConfig[] {
   return [
     {
       name: 'format/general',
@@ -15,7 +17,8 @@ export function format(): FlatESLintConfig[] {
       languageOptions: {
         parser: tseslint.parser,
         parserOptions: {
-          projectService: true,
+          project: project ? project : undefined,
+          projectService: project ? undefined : true,
           sourceType: 'module',
           extraFileExtensions: ['.vue'],
         }

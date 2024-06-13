@@ -6,10 +6,12 @@ import type { FlatESLintConfig } from '~/types'
 import { parserVue, pluginVue } from '../plugins'
 import { typescript } from './typescript'
 
-export function vue(): FlatESLintConfig[] {
+export function vue(
+  { project }: { project?: string | string[] } = {}
+): FlatESLintConfig[] {
 
   return [
-    ...typescript(),
+    ...typescript({ project }),
     ...pluginVue.configs['flat/essential'] as FlatESLintConfig[],
     {
       name: 'vue/overrides',
@@ -26,7 +28,8 @@ export function vue(): FlatESLintConfig[] {
           extraFileExtensions: ['.vue'],
           sourceType: 'module',
 
-          projectService: true,
+          project: project ? project : undefined,
+          projectService: project ? undefined : true,
           tsconfigRootDir: cwd()
         }
       },

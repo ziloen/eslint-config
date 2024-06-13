@@ -4,9 +4,11 @@ import { pluginReact, pluginZiloen } from '../plugins'
 import { typescript } from './typescript'
 
 
-export function react(): FlatESLintConfig[] {
+export function react(
+  { project }: { project?: string | string[] } = {}
+): FlatESLintConfig[] {
   return [
-    ...typescript(),
+    ...typescript({ project }),
     {
       name: 'react/override',
       files: ['**/*.jsx', '**/*.tsx'],

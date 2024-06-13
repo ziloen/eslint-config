@@ -7,7 +7,9 @@ import { javascript } from './javascript'
 
 let loaded = false
 
-export function typescript(): FlatESLintConfig[] {
+export function typescript(
+  { project }: { project?: string | string[] } = {}
+): FlatESLintConfig[] {
   if (loaded) {
     return []
   }
@@ -22,7 +24,8 @@ export function typescript(): FlatESLintConfig[] {
         name: 'typescript/type-checked/project',
         languageOptions: {
           parserOptions: {
-            projectService: {
+            project: project ? project : undefined,
+            projectService: project ? undefined : {
               allowDefaultProject: ['./*.js'],
               defaultProject: './tsconfig.json',
             },
