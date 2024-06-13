@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { FlatESLintConfig } from 'eslint-define-config'
+import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
+import type { FlatESLintConfig } from '~/types'
 import { parserVue, pluginVue } from '../plugins'
 import { typescript } from './typescript'
 
@@ -11,6 +12,7 @@ export function vue(): FlatESLintConfig[] {
     ...typescript(),
     ...pluginVue.configs['flat/essential'] as FlatESLintConfig[],
     {
+      name: 'vue/overrides',
       files: ['**/*.vue'],
       languageOptions: {
         parser: parserVue,
@@ -25,7 +27,7 @@ export function vue(): FlatESLintConfig[] {
           sourceType: 'module',
 
           projectService: true,
-          tsconfigRootDir: import.meta.dirname
+          tsconfigRootDir: cwd()
         }
       },
       processor: pluginVue.processors.vue,

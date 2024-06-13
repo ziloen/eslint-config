@@ -1,14 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import type { FlatESLintConfig } from 'eslint-define-config'
 // @ts-expect-error no type package
 import js from '@eslint/js'
+import type { FlatESLintConfig } from '~/types'
 import { pluginUnicorn } from '../plugins'
 
 
 
 export const javascript: FlatESLintConfig[] = [
   {
+    name: 'javascript/ignore',
     ignores: [
       // files
       '**/CHANGELOG*.md',
@@ -42,6 +43,7 @@ export const javascript: FlatESLintConfig[] = [
   },
   js.configs.recommended,
   {
+    name: 'javascript/overrides',
     plugins: {
       unicorn: pluginUnicorn,
     },
@@ -109,9 +111,7 @@ export const javascript: FlatESLintConfig[] = [
       /** 禁止使用 eval */
       'no-eval': 'warn',
 
-      /** 
-       * handled by formatter
-       */
+      /** @deprecated handled by formatter */
       'no-extra-semi': 'off',
 
       /** 防止`switch case`忘写`break` */
@@ -154,8 +154,8 @@ export const javascript: FlatESLintConfig[] = [
         'status'
       ],
 
-      /** 禁止不必要的 await */
-      'no-return-await': 'warn',
+      /** @deprecated 禁止不必要的 await */
+      'no-return-await': 'off',
 
       /** 交由 TS 处理 */
       'no-undef': 'off',
@@ -199,19 +199,17 @@ export const javascript: FlatESLintConfig[] = [
        * ``` 
        */
       'require-atomic-updates': 'off',
-
-
-
-      // Node 插件 未安装
-      /** 同步发方法会阻塞线程，使用异步方法代替 */
-      // 'node/no-sync': 'warn',
-
-
-
-      // -------------------------------------------------------------
-      // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
-      // -------------------------------------------------------------
-
+    }
+  },
+  {
+    // -------------------------------------------------------------
+    // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
+    // -------------------------------------------------------------
+    name: 'unicorn/overrides',
+    plugins: {
+      unicorn: pluginUnicorn,
+    },
+    rules: {
       /** 🔧更好的正则 */
       'unicorn/better-regex': ['warn', {
         sortCharacterClasses: false
@@ -360,5 +358,5 @@ export const javascript: FlatESLintConfig[] = [
       /** 🔧throw 应使用 new Error */
       'unicorn/throw-new-error': 'warn',
     }
-  },
+  }
 ]

@@ -1,27 +1,45 @@
 import type { ParserOptions } from '@typescript-eslint/parser'
-import type { FlatESLintConfig } from 'eslint-define-config'
+import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
+import type { FlatESLintConfig } from '~/types'
 import { javascript } from './javascript'
 
+
+let loaded = false
+
 export function typescript(): FlatESLintConfig[] {
+  if (loaded) {
+    return []
+  }
+
+  loaded = true
+
   return [
     ...javascript,
     ...tseslint.config(
       ...tseslint.configs.strictTypeChecked,
       {
+        name: 'typescript/type-checked/project',
         languageOptions: {
           parserOptions: {
             projectService: {
               allowDefaultProject: ['./*.js'],
               defaultProject: './tsconfig.json',
             },
-            tsconfigRootDir: import.meta.dirname
+            tsconfigRootDir: cwd()
           }
         }
       }
     ) as FlatESLintConfig[],
     {
-      files: ['**/*.?([cm])ts?(x)', '**/*.vue'],
+      name: 'typescript/overrides',
+      files: [
+        '**/*.ts',
+        '**/*.tsx',
+        '**/*.mts',
+        '**/*.cts',
+        '**/*.vue'
+      ],
       languageOptions: {
         parser: tseslint.parser,
         sourceType: 'module',
@@ -35,7 +53,7 @@ export function typescript(): FlatESLintConfig[] {
             allowDefaultProject: ['./*.js'],
             defaultProject: './tsconfig.json',
           },
-          tsconfigRootDir: import.meta.dirname,
+          tsconfigRootDir: cwd(),
         } satisfies ParserOptions
       },
       rules: {
@@ -230,6 +248,6 @@ export function typescript(): FlatESLintConfig[] {
         '@typescript-eslint/consistent-type-imports': 'off',
         '@typescript-eslint/no-empty-object-type': 'off'
       }
-    }
+    },
   ]
 }

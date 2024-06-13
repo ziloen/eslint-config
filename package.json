@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsup",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "prepack": "tsup --minify",
     "release": "bumpp --commit --no-push && pnpm publish",
     "lint": "eslint ."

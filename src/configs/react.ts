@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { FlatESLintConfig } from 'eslint-define-config'
+import type { FlatESLintConfig } from '~/types'
 import { pluginReact, pluginZiloen } from '../plugins'
 import { typescript } from './typescript'
 
@@ -8,6 +8,7 @@ export function react(): FlatESLintConfig[] {
   return [
     ...typescript(),
     {
+      name: 'react/override',
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
         react: pluginReact,

@@ -15,7 +15,12 @@
     "allowSyntheticDefaultImports": true,
     "lib": [
       "ESNext",
-    ]
+    ],
+    "paths": {
+      "~/*": [
+        "src/*"
+      ],
+    }
   },
   "exclude": [
     "node_modules",

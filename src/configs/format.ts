@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import type { FlatESLintConfig } from 'eslint-define-config'
 import tseslint from 'typescript-eslint'
-import { parserVue, pluginReact, pluginStylistic, pluginZiloen } from '../plugins'
+import type { FlatESLintConfig } from '~/types'
+import { pluginReact, pluginStylistic, pluginZiloen } from '../plugins'
 
-export function format() {
+export function format(): FlatESLintConfig[] {
   return [
     {
+      name: 'format/general',
       plugins: {
         '@typescript-eslint': tseslint.plugin as any,
         ziloen: pluginZiloen as any,
@@ -247,7 +248,6 @@ export function format() {
         }],
 
         /** 多余的分号 */
-        // 'no-extra-semi': 'off',
         'style/no-extra-semi': ['warn'],
 
         /** 对象花括号内部前后空格 */
@@ -309,6 +309,7 @@ export function format() {
       },
     },
     {
+      name: 'format/react',
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
         react: pluginReact,
@@ -353,24 +354,6 @@ export function format() {
           indentMode: 2
         }],
       }
-    },
-    {
-      files: ['**/*.vue'],
-      languageOptions: {
-        parser: parserVue,
-        parserOptions: {
-          ecmaFeatures: {
-            jsx: true
-          },
-          ecmaVersion: 'latest',
-          extraFileExtensions: ['.vue'],
-          parser: tseslint.parser,
-          sourceType: 'module',
-
-          project: true,
-          // EXPERIMENTAL_useProjectService: true,
-        }
-      },
-    }
+    } as FlatESLintConfig,
   ] as FlatESLintConfig[]
 }
