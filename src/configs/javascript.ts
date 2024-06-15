@@ -44,9 +44,6 @@ export const javascript: FlatESLintConfig[] = [
   js.configs.recommended,
   {
     name: 'javascript/overrides',
-    plugins: {
-      unicorn: pluginUnicorn,
-    },
     rules: {
       /** 检查数组方法返回值 */
       'array-callback-return': ['error', { allowImplicit: true }],
@@ -229,6 +226,9 @@ export const javascript: FlatESLintConfig[] = [
 
       /** 事件监听移除字面量函数是无效的 */
       'unicorn/no-invalid-remove-event-listener': 'error',
+
+      /** 禁止在检查相等中使用 `!` */
+      'unicorn/no-negation-in-equality-check': 'error',
 
       /** 警告嵌套三元运算符 (可以通过 indent 来表示，不警告) */
       // 'no-nested-ternary': 'off',
