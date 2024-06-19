@@ -58,11 +58,12 @@ export function typescript(
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
 
-          projectService: {
+          project: project ? project : undefined,
+          projectService: project ? undefined : {
             allowDefaultProject: ['./*.js'],
             defaultProject: './tsconfig.json',
           },
-          tsconfigRootDir: cwd(),
+          tsconfigRootDir,
         } satisfies ParserOptions
       },
       rules: {
