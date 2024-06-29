@@ -351,10 +351,6 @@ export function format(
         style: pluginStylistic as any,
       },
       rules: {
-        // -------------------------------------------------------------
-        // 以下为 React Plugin Rules
-        // -------------------------------------------------------------
-
         /** JSX 标签空格 */
         'style/jsx-tag-spacing': ['warn', {
           closingSlash: 'never',

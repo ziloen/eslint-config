@@ -12,7 +12,6 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "eslint.experimental.useFlatConfig": true,
   "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.sortImports": "explicit"
