@@ -2,7 +2,7 @@
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
 import type { FlatESLintConfig } from '~/types'
-import { pluginReact, pluginStylistic, pluginZiloen } from '../plugins'
+import { pluginStylistic, pluginZiloen } from '../plugins'
 
 export function format(
   {
@@ -189,25 +189,50 @@ export function format(
         'style/func-call-spacing': 'warn',
 
         /** 🔧缩进 */
-        //  https://github.com/typescript-eslint/typescript-eslint/issues/1824
-        // indent: ['warn', 2, {
-        //   /** 同时定义多个变量时，对齐到第一个变量定义 */
-        //   VariableDeclarator: 'first',
-        //   /** swtich case 增加 1 indent */
-        //   SwitchCase: 1,
-        //   /** 三元表达式偏移 */
-        //   offsetTernaryExpressions: true
-        // }],
-        // indent: 'off',
         'style/indent': ['warn', 2, {
-          /** 同时定义多个变量时，对齐到第一个变量定义 */
+          /** 
+           * 同时定义多个变量时，对齐到第一个变量定义
+           * 
+           * ```ts
+           * const a = 1,
+           *       b = 2,
+           *       c = 3;
+           * // same indent as `a`
+           * ```
+           */
           VariableDeclarator: 'first',
-          /** swtich case 增加 1 indent */
+          /** 
+           * swtich case 增加 1 indent
+           * 
+           * ```ts
+           * switch (a) {
+           *   case 1:
+           *     // ^1 indent
+           *     break;
+           * }
+           * ```
+           */
           SwitchCase: 1,
-          // outerIIFEBody: 1,
-          // MemberExpression: 1,
-          // FunctionDeclaration: { parameters: 1, body: 1 },
+          /**
+           * ```ts
+           * (() => {
+           *   const a = 1;
+           *   // ^1 indent 
+           * })();
+           * ```
+           */
+          outerIIFEBody: 1,
+          /**
+           * ```ts
+           * obj
+           *   .prop
+           *   .method();
+           * // ^1 indent
+           * ```
+           */
+          MemberExpression: 1,
           // FunctionExpression: { parameters: 1, body: 1 },
+          // FunctionDeclaration: { parameters: 1, body: 1 },
           // StaticBlock: { body: 1 },
           // CallExpression: { arguments: 1 },
           // ArrayExpression: 1,
@@ -221,9 +246,9 @@ export function format(
           /** 忽略一些无法正确处理的边缘情况，手动添加 indent */
           ignoredNodes: [
             // Decorators
-            'PropertyDefinition[decorators]',
+            // 'PropertyDefinition[decorators]',
             // 'TSUnionType',
-            'FunctionExpression[params]:has(Identifier[decorators])',
+            // 'FunctionExpression[params]:has(Identifier[decorators])',
             // 类型泛型参数
             // 'TSTypeParameterInstantiation',
             // 'TSIntersectionType',
@@ -320,26 +345,15 @@ export function format(
       },
     },
     {
-      name: 'format/react',
+      name: 'format/jsx',
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
-        react: pluginReact,
         style: pluginStylistic as any,
       },
       rules: {
         // -------------------------------------------------------------
         // 以下为 React Plugin Rules
         // -------------------------------------------------------------
-
-        /** 
-         * JSX 自闭合
-         * 
-         * 经常还没写内容就被自动闭合
-         */
-        'react/self-closing-comp': ['off', {
-          component: true,
-          html: false
-        }],
 
         /** JSX 标签空格 */
         'style/jsx-tag-spacing': ['warn', {
@@ -349,16 +363,8 @@ export function format(
           beforeClosing: 'never'
         }],
 
-
         /** 括号内前后空格 */
         'style/jsx-curly-spacing': ['warn'],
-
-        /** 🔧JSX 缩进，会和 TS indent 冲突，关闭 */
-        'style/jsx-indent': 'off',
-        // 'react/jsx-indent': ['warn', 2, {
-        //   checkAttributes: true,
-        //   indentLogicalExpressions: true,
-        // }],
 
         /** 🔧属性缩进 */
         'style/jsx-indent-props': ['warn', {
