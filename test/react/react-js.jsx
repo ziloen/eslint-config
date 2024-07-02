@@ -11,7 +11,18 @@ export default function App() {
       {num && <div></div>}
       {str && <div></div>}
       {bool && <div></div>}
-      <button></button>
+
+      {/* Format */}
+      {bool 
+        ? <div>
+            <div></div>
+          </div>
+        : (
+            <div>
+              <div></div>
+            </div>
+          )
+      }
     </div>
   )
 }
