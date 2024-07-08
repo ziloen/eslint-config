@@ -23,7 +23,6 @@ export default function App() {
             </div>
           )
       }
-      <button></button>
     </div>
   )
 }
