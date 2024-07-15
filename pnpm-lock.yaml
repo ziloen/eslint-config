@@ -17,9 +17,6 @@ importers:
       '@typescript-eslint/parser':
         specifier: 8.0.0-alpha.44
         version: 8.0.0-alpha.44(eslint@9.7.0)(typescript@5.5.3)
-      eslint:
-        specifier: ^9.7.0
-        version: 9.7.0
       eslint-define-config:
         specifier: ^2.1.0
         version: 2.1.0
@@ -60,6 +57,9 @@ importers:
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
+      eslint:
+        specifier: ^9.7.0
+        version: 9.7.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
