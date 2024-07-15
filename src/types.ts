@@ -1,4 +1,3 @@
-import type { Linter } from 'eslint'
 import type { FlatESLintConfig as _FlatESLintConfig } from 'eslint-define-config'
 
 // export type TypedFlatConfigItem = Omit<Linter.FlatConfig, 'plugins'> & {
