@@ -38,7 +38,11 @@ export function typescript(
             tsconfigRootDir
           }
         }
-      }
+      },
+      {
+        files: ['**/*.js', '**/*.jsx'],
+        extends: [tseslint.configs.disableTypeChecked]
+      },
     ) as FlatESLintConfig[],
     {
       name: 'typescript/overrides',
