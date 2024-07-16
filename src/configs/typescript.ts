@@ -43,6 +43,38 @@ export function typescript(
         files: ['**/*.js', '**/*.jsx'],
         extends: [tseslint.configs.disableTypeChecked]
       },
+      {
+        name: 'typescript/off',
+        rules: {
+          /** 🎨不限制只使用 interface 或者 type */
+          '@typescript-eslint/consistent-type-definitions': 'off',
+
+          /** 可选参数必须放在最后 */
+          'default-param-last': 'off',
+          '@typescript-eslint/default-param-last': 'error',
+
+          /** 🎨不强制使用 `.`(点) 来访问属性 */
+          'dot-notation': 'off',
+          '@typescript-eslint/dot-notation': 'off',
+
+          /** 不允许 class 有重复的成员 (TypeScript 已检查，禁用此规则) */
+          'no-dupe-class-members': 'off',
+          '@typescript-eslint/no-dupe-class-members': 'off',
+
+          /** 🎨允许空函数 */
+          '@typescript-eslint/no-empty-function': 'off',
+
+          /** 允许非空断言 */
+          '@typescript-eslint/no-non-null-assertion': 'off',
+
+          /** 允许未使用变量 */
+          'no-unused-vars': 'off',
+          '@typescript-eslint/no-unused-vars': 'off',
+
+          /** 禁用默认`no-undef`，eslint 不会检查`*.d.ts`，导致误报全局变量与类型不存在 */
+          'no-undef': 'off',
+        }
+      }
     ) as FlatESLintConfig[],
     {
       name: 'typescript/overrides',
