@@ -44,7 +44,7 @@ export function react(
         /** 避免错误用法 */
         'react/no-invalid-html-attribute': 'warn',
 
-        /** 不允许可能出错的的 render 类型（number | string | object），（即使是 bool 也会报错，太蠢了） */
+        /** 不允许可能出错的的 render 类型（number | string | object），（即使是 boolean 也会报错，太蠢了） */
         // 'react/jsx-no-leaked-render': 'error',
         /** 严格 jsx render 类型，支持 TS 检查，替代 react/jsx-no-leaked-render */
         'ziloen/jsx-strict-logical-expressions': 'error'

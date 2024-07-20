@@ -1,4 +1,4 @@
-import type { ParserOptions } from '@typescript-eslint/parser'
+import type { ParserOptions } from '@typescript-eslint/types'
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
 import type { FlatESLintConfig } from '~/types'
