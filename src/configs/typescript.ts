@@ -141,6 +141,14 @@ export function typescript(
         /** ✅允许未处理的 Promise */
         '@typescript-eslint/no-floating-promises': 'off',
 
+        /**
+         * 以下也会被视为无效 void 类型，故关闭
+         * ```ts
+         * declare function a(): void | number;
+         * ```
+         */
+        '@typescript-eslint/no-invalid-void-type': 'off',
+
         /** 🔒不允许隐式 eval */
         // "no-implied-eval": "off",
         // "@typescript-eslint/no-implied-eval": "error",
