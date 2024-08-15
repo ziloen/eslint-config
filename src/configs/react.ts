@@ -43,6 +43,7 @@ export function react(
 
         /** 避免错误用法 */
         'react/no-invalid-html-attribute': 'warn',
+        'react/no-unknown-property': 'warn',
 
         /** 不允许可能出错的的 render 类型（number | string | object），（即使是 boolean 也会报错，太蠢了） */
         // 'react/jsx-no-leaked-render': 'error',
