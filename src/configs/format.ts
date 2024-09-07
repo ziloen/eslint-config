@@ -41,8 +41,11 @@ export function format(
         /** 🔧数组内元素换行 */
         'style/array-element-newline': ['warn', 'consistent'],
 
-        /** 🔧箭头函数括号 */
-        'style/arrow-parens': ['warn', 'as-needed'],
+        /** 
+         * 🔧箭头函数括号 `(arg) => {}`
+         * 始终添加括号，减少 git diff
+         */
+        'style/arrow-parens': ['warn', 'always'],
 
         /** 🔧箭头左右空格 */
         'style/arrow-spacing': 'warn',
@@ -173,19 +176,15 @@ export function format(
         'style/block-spacing': 'warn',
 
         /** 括号风格 */
-        // 'brace-style': 'off',
         'style/brace-style': ['warn', '1tbs', { allowSingleLine: true }],
 
         /** 尾随逗号 */
-        // 'comma-dangle': 'off',
         'style/comma-dangle': ['warn', 'only-multiline'],
 
         /** 逗号前后空格 */
-        // 'comma-spacing': 'off',
         'style/comma-spacing': 'warn',
 
         /** 🔧函数调用空格 */
-        // 'func-call-spacing': 'off',
         'style/func-call-spacing': 'warn',
 
         /** 🔧缩进 */
