@@ -26,6 +26,11 @@ export function react(
           },
         },
       },
+      settings: {
+        react: {
+          version: '18'
+        }
+      },
       rules: {
         /** 16+ 不需要此导入 React */
         'react/react-in-jsx-scope': 'off',
