@@ -128,6 +128,8 @@ export function typescript(
           }
         ],
 
+        '@typescript-eslint/no-deprecated': 'off',
+
         /** 不允许 class 有重复的成员 (TypeScript 已检查，禁用此规则) */
         'no-dupe-class-members': 'off',
         '@typescript-eslint/no-dupe-class-members': 'off',
