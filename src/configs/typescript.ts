@@ -284,11 +284,12 @@ export function typescript(
         '@typescript-eslint/restrict-template-expressions': [
           'error',
           {
+            allowAny: false,
+            allowArray: false,
+            allowBoolean: false,
+            allowNullish: false,
             allowNumber: true,
             allowRegExp: false,
-            allowNullish: false,
-            allowBoolean: false,
-            allowAny: false,
           }
         ],
 
