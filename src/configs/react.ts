@@ -16,7 +16,7 @@ export function react(
       name: 'react/override',
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
-        react: pluginReact,
+        react: pluginReact as any,
         ziloen: pluginZiloen as any
       },
       languageOptions: {
