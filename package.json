@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^20.14.13",
+    "@types/node": "^22.8.5",
     "@types/react": "^18.3.12",
     "bumpp": "^9.8.0",
     "cross-env": "^7.0.3",
@@ -46,6 +46,6 @@
     "vue": "^3.5.12"
   },
   "peerDependencies": {
-    "eslint": "^9.7.0"
+    "eslint": "^9"
   }
 }
