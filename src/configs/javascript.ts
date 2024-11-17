@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-// @ts-expect-error no type package
 import js from '@eslint/js'
 import type { FlatESLintConfig } from '~/types'
 import { pluginUnicorn } from '../plugins'
