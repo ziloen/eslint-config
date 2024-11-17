@@ -220,7 +220,7 @@ export function typescript(
           'warn',
           {
             allowShortCircuit: true,
-            enforceForJSX: true
+            enforceForJSX: true,
           }
         ],
 
