@@ -1,3 +1,7 @@
+import type { ESLint } from "eslint"
+
+type A = ESLint
+
 const a = `${[]}`
 const b = name
 
