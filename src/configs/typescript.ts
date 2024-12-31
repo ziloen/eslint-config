@@ -205,6 +205,11 @@ export function typescript(
         '@typescript-eslint/no-unnecessary-condition': 'off',
 
         /**
+         * `function asType<T>(val: any): asserts val is T { }` 也会被被认作多余的类型参数
+         */
+        '@typescript-eslint/no-unnecessary-type-parameters': 'off',
+
+        /**
          * ✅不必要的类型断言
          *
          * 因为有时类型不正确，autofix 会导致 TS 错误，故关闭

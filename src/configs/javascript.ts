@@ -296,7 +296,8 @@ export const javascript: FlatESLintConfig[] = [
       'unicorn/prefer-dom-node-append': 'warn',
 
       /** 🔧使用 HTML#dataset 而不是直接操作 attribute `data-*` */
-      'unicorn/prefer-dom-node-dataset': 'warn',
+      // setAttribute 有时更清晰，不限制此偏好
+      'unicorn/prefer-dom-node-dataset': 'off',
 
       /** 🔧使用 Node#remove 代替 node.parentNode.removeChild() */
       'unicorn/prefer-dom-node-remove': 'warn',
