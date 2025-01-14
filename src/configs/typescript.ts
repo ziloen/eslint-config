@@ -172,6 +172,9 @@ export function typescript(
         // 'no-loss-of-precision': 'off',
         // '@typescript-eslint/no-loss-of-precision': 'error',
 
+        /** 🔒不允许扩散非对象 `{...[]}`、`{...new Map}` 等错误用法 */
+        '@typescript-eslint/no-misused-spread': 'error',
+
         /** 允许非空断言 */
         '@typescript-eslint/no-non-null-assertion': 'off',
 

@@ -260,8 +260,12 @@ export const javascript: FlatESLintConfig[] = [
       /** 🔧去除多余的 `...` */
       'unicorn/no-useless-spread': 'warn',
 
-      /** 🔧去除多余的 undefined */
-      'unicorn/no-useless-undefined': ['warn', {
+      /** 
+       * 🔧去除多余的 undefined
+       * 
+       * `() => undefined` 时需要显示返回 `undefined`, 也会被警告且无法关闭，故禁用
+       */
+      'unicorn/no-useless-undefined': ['off', {
         checkArguments: false,
         checkArrowFunctionBody: false,
       }],
