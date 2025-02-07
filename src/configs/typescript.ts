@@ -1,4 +1,3 @@
-import type { ParserOptions } from '@typescript-eslint/types'
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
 import type { FlatESLintConfig } from '~/types'
@@ -100,7 +99,7 @@ export function typescript(
             defaultProject: './tsconfig.json',
           },
           tsconfigRootDir,
-        } satisfies ParserOptions
+        }
       },
       rules: {
         /** ✅禁止不必要的 await */
