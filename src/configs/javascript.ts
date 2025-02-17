@@ -219,7 +219,7 @@ export const javascript: FlatESLintConfig[] = [
       'unicorn/no-document-cookie': 'warn',
 
       /** 🔧不要使用 instanceof Array 判断数组 */
-      'unicorn/no-instanceof-array': 'warn',
+      'unicorn/no-instanceof-builtins': 'warn',
 
       /** 事件监听移除字面量函数是无效的 */
       'unicorn/no-invalid-remove-event-listener': 'error',
