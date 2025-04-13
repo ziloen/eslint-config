@@ -1,4 +1,4 @@
-import type { FlatESLintConfig as _FlatESLintConfig } from 'eslint-define-config'
+import type { TSESLint } from '@typescript-eslint/utils'
 
 // export type TypedFlatConfigItem = Omit<Linter.FlatConfig, 'plugins'> & {
 //   // Relax plugins type limitation, as most of the plugins did not have correct type info yet.
@@ -10,6 +10,4 @@ import type { FlatESLintConfig as _FlatESLintConfig } from 'eslint-define-config
 //   plugins?: Record<string, any>
 // }
 
-export type FlatESLintConfig = _FlatESLintConfig & {
-  name?: string | undefined
-}
+export type FlatESLintConfig = TSESLint.FlatConfig.Config
