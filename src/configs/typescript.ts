@@ -72,6 +72,9 @@ export function typescript(
 
           /** 禁用默认`no-undef`，eslint 不会检查`*.d.ts`，导致误报全局变量与类型不存在 */
           'no-undef': 'off',
+
+          'require-await': 'off',
+          '@typescript-eslint/require-await': 'off',
         }
       }
     ) as FlatESLintConfig[],
