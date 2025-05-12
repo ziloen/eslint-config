@@ -287,6 +287,9 @@ export function typescript(
          */
         '@typescript-eslint/require-array-sort-compare': ['error'],
 
+        'require-await': 'off',
+        '@typescript-eslint/require-await': 'off',
+
         /** ✅模板字符串只允许数字字符串 */
         '@typescript-eslint/restrict-template-expressions': [
           'error',
