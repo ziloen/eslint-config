@@ -4,6 +4,7 @@ import type { FlatESLintConfig } from '~/types'
 import { typescript } from './typescript'
 
 
+
 export function react(
   options?: {
     project?: string | string[]

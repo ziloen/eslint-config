@@ -1,9 +1,10 @@
-
 import { default as pluginStylistic } from '@stylistic/eslint-plugin'
 import { default as pluginZiloen } from 'eslint-plugin-ziloen'
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
 import type { FlatESLintConfig } from '~/types'
+
+
 
 export function format(
   {

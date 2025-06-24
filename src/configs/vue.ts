@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { default as pluginVue } from 'eslint-plugin-vue'
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
-import { default as parserVue } from 'vue-eslint-parser'
 import type { FlatESLintConfig } from '~/types'
 import { typescript } from './typescript'
 
@@ -18,28 +16,18 @@ export function vue(
 
   return [
     ...typescript({ project, tsconfigRootDir }),
-    ...pluginVue.configs['flat/essential'] as FlatESLintConfig[],
+    ...pluginVue.configs['flat/essential'],
     {
       name: 'vue/overrides',
       files: ['**/*.vue'],
       languageOptions: {
-        parser: parserVue,
         parserOptions: {
           parser: tseslint.parser,
-
-          ecmaFeatures: {
-            jsx: true
-          },
-          ecmaVersion: 'latest',
-          extraFileExtensions: ['.vue'],
-          sourceType: 'module',
-
           project: project ? project : undefined,
           projectService: project ? undefined : true,
           tsconfigRootDir
         }
       },
-      processor: pluginVue.processors.vue,
       rules: {
         /** allow ununed vars */
         'vue/no-unused-vars': 'off',

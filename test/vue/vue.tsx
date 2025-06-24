@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name */
 import { defineComponent, ref } from 'vue'
 
 
