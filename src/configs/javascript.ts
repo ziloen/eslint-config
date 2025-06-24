@@ -1,6 +1,6 @@
 import js from '@eslint/js'
+import { default as pluginUnicorn } from 'eslint-plugin-unicorn'
 import type { FlatESLintConfig } from '~/types'
-import { pluginUnicorn } from '../plugins'
 
 
 

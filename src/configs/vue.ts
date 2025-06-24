@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { default as pluginVue } from 'eslint-plugin-vue'
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
+import { default as parserVue } from 'vue-eslint-parser'
 import type { FlatESLintConfig } from '~/types'
-import { parserVue, pluginVue } from '../plugins'
 import { typescript } from './typescript'
 
 export function vue(
@@ -24,7 +25,7 @@ export function vue(
       languageOptions: {
         parser: parserVue,
         parserOptions: {
-          parser: tseslint.parser as any,
+          parser: tseslint.parser,
 
           ecmaFeatures: {
             jsx: true

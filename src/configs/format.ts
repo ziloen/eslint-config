@@ -1,8 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
+import { default as pluginStylistic } from '@stylistic/eslint-plugin'
+import { default as pluginZiloen } from 'eslint-plugin-ziloen'
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
 import type { FlatESLintConfig } from '~/types'
-import { pluginStylistic, pluginZiloen } from '../plugins'
 
 export function format(
   {
@@ -17,9 +18,9 @@ export function format(
     {
       name: 'format/general',
       plugins: {
-        '@typescript-eslint': tseslint.plugin as any,
-        ziloen: pluginZiloen as any,
-        style: pluginStylistic as any,
+        '@typescript-eslint': tseslint.plugin,
+        ziloen: pluginZiloen,
+        style: pluginStylistic,
       },
       languageOptions: {
         parser: tseslint.parser,
@@ -185,7 +186,7 @@ export function format(
         'style/comma-spacing': 'warn',
 
         /** 🔧函数调用空格 */
-        'style/func-call-spacing': 'warn',
+        'style/function-call-spacing': 'warn',
 
         /** 🔧缩进 */
         'style/indent': ['warn', 2, {
@@ -347,7 +348,7 @@ export function format(
       name: 'format/jsx',
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
-        style: pluginStylistic as any,
+        style: pluginStylistic,
       },
       rules: {
         /** JSX 标签空格 */

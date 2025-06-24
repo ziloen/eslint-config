@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { default as pluginReact } from 'eslint-plugin-react'
+import { default as pluginZiloen } from 'eslint-plugin-ziloen'
 import type { FlatESLintConfig } from '~/types'
-import { pluginReact, pluginZiloen } from '../plugins'
 import { typescript } from './typescript'
 
 
@@ -16,8 +16,8 @@ export function react(
       name: 'react/override',
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
-        react: pluginReact as any,
-        ziloen: pluginZiloen as any
+        react: pluginReact,
+        ziloen: pluginZiloen,
       },
       languageOptions: {
         parserOptions: {
