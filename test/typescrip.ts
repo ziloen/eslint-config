@@ -2,6 +2,7 @@
 const a = `${[]}`
 const b = 123
 
+const testRegexpUnusedCaptureGroup = '2000-12-31'.replace(/(\d{4})-(\d{2})-(\d{2})/, 'Date')
 
 
 // format

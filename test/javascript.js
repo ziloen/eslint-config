@@ -4,4 +4,7 @@ const b = name
 
 const g = /**@type {any}*/({})
 
-export {}
+const testRegexpUnusedCaptureGroup = '2000-12-31'.replace(/(\d{4})-(\d{2})-(\d{2})/, 'Date')
+
+export { }
+

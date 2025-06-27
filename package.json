@@ -28,6 +28,7 @@
     "@stylistic/eslint-plugin": "^5.0.0",
     "@typescript-eslint/utils": "^8.35.0",
     "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-regexp": "^2.9.0",
     "eslint-plugin-unicorn": "^59.0.1",
     "eslint-plugin-vue": "^10.2.0",
     "eslint-plugin-ziloen": "^0.1.16",
@@ -36,13 +37,13 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^24.0.3",
+    "@types/node": "^24.0.4",
     "@types/react": "^19.1.8",
     "bumpp": "^10.2.0",
     "cross-env": "^7.0.3",
     "eslint": "^9.29.0",
     "react": "^19.1.0",
-    "tsdown": "0.12.8",
+    "tsdown": "0.12.9",
     "vue": "^3.5.17"
   },
   "peerDependencies": {

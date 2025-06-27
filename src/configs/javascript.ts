@@ -1,7 +1,7 @@
 import js from '@eslint/js'
+import * as regexpPlugin from 'eslint-plugin-regexp'
 import { default as pluginUnicorn } from 'eslint-plugin-unicorn'
 import type { FlatESLintConfig } from '~/types'
-
 
 
 export const javascript: FlatESLintConfig[] = [
@@ -196,14 +196,19 @@ export const javascript: FlatESLintConfig[] = [
     }
   },
   {
-    // -------------------------------------------------------------
-    // unicorn https://github.com/sindresorhus/eslint-plugin-unicorn
-    // -------------------------------------------------------------
     name: 'unicorn/overrides',
     plugins: {
+      // https://github.com/sindresorhus/eslint-plugin-unicorn
       unicorn: pluginUnicorn,
+      // https://github.com/ota-meshi/eslint-plugin-regexp
+      regexp: regexpPlugin,
     },
     rules: {
+      'regexp/no-unused-capturing-group': ['error', {
+        fixable: false,
+        allowNamed: false
+      }],
+
       /** 🔧更好的正则 */
       'unicorn/better-regex': ['warn', {
         sortCharacterClasses: false
@@ -359,6 +364,7 @@ export const javascript: FlatESLintConfig[] = [
 
       /** 🔧throw 应使用 new Error */
       'unicorn/throw-new-error': 'warn',
+
     }
   }
 ]
