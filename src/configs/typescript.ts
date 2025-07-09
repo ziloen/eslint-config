@@ -40,6 +40,7 @@ export function typescript(
         }
       },
       {
+        name: 'typescript/disable-js-type-check',
         files: ['**/*.js', '**/*.jsx'],
         extends: [tseslint.configs.disableTypeChecked]
       },
@@ -188,6 +189,24 @@ export function typescript(
         /** ✅禁止冗余类型定义 */
         '@typescript-eslint/no-redundant-type-constituents': 'warn',
 
+        'no-restricted-syntax': [
+          'warn',
+          /**
+           * 使用 `#private` 替代 `private` 访问修饰符
+           */
+          {
+            selector: ':matches(PropertyDefinition, MethodDefinition)[accessibility="private"]',
+            message: 'Use `#private` instead '
+          },
+          /**
+           * 多余的 `public` 访问修饰符
+           */
+          {
+            selector: ':matches(PropertyDefinition, MethodDefinition)[accessibility="public"]',
+            message: 'Unnecessary `public` access modifier, just remove it'
+          },
+        ],
+
         /** 🔒Disallow throwing literals as exceptions. */
         'no-throw-literal': 'off',
         '@typescript-eslint/only-throw-error': [
@@ -308,7 +327,7 @@ export function typescript(
         ],
 
         /** 允许可合为一个联合类型的函数声明多个函数签名 */
-        '@typescript-eslint/unified-signatures': 'off'
+        '@typescript-eslint/unified-signatures': 'off',
       }
     },
     {

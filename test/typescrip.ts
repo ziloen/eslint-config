@@ -85,3 +85,14 @@ const testAyncIter = {
 }
 
 type TestGenericSpace2<T extends Record< (string & {}), (unknown) >> = T 
+
+
+class TestCalss {
+  private a: string | undefined
+
+  public method() {
+    this.a = "123"
+
+    console.log(this.a);
+  }
+}
