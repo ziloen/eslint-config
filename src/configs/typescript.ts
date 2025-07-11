@@ -42,7 +42,18 @@ export function typescript(
       {
         name: 'typescript/disable-js-type-check',
         files: ['**/*.js', '**/*.jsx'],
-        extends: [tseslint.configs.disableTypeChecked]
+        extends: [tseslint.configs.disableTypeChecked],
+        rules: {
+          /** 警告未使用的表达式 */
+          'no-unused-expressions': 'off',
+          '@typescript-eslint/no-unused-expressions': [
+            'warn',
+            {
+              allowShortCircuit: true,
+              enforceForJSX: true,
+            }
+          ],
+        }
       },
       {
         name: 'typescript/off',
