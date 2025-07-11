@@ -154,6 +154,14 @@ export const javascript: FlatESLintConfig[] = [
       /** 交由 TS 处理 */
       'no-undef': 'off',
 
+      'no-unused-expressions': [
+        'warn',
+        {
+          allowShortCircuit: true,
+          enforceForJSX: true,
+        }
+      ],
+
       /** 允许未使用的变量 */
       'no-unused-vars': 'off',
 
