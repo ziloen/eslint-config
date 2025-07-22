@@ -225,6 +225,11 @@ export const javascript: FlatESLintConfig[] = [
       /** Error 应有错误信息 */
       'unicorn/error-message': 'warn',
 
+      /**
+       * use `Array#toReversed()` instead of `Array#reverse()`
+       */
+      'unicorn/no-array-reverse': ['warn'],
+
       // 暂时未使用
       // 'unicorn/expiring-todo-comments': 'warn',
 

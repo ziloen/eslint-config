@@ -5,7 +5,7 @@ export default defineConfig({
     'src/index.ts',
   ],
   outDir: 'dist',
-  bundle: true,
+  unbundle: false,
   minify: false,
   dts: true,
   format: ['esm'],
