@@ -1,3 +1,3 @@
-import type { TSESLint } from '@typescript-eslint/utils'
+import type { configs } from 'typescript-eslint'
 
-export type FlatESLintConfig = TSESLint.FlatConfig.Config
+export type FlatESLintConfig = typeof configs.base

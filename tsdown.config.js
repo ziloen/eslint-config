@@ -7,7 +7,9 @@ export default defineConfig({
   outDir: 'dist',
   unbundle: false,
   minify: false,
-  dts: true,
+  dts: {
+    oxc: true,
+  },
   format: ['esm'],
   platform: 'node',
   treeshake: true,
