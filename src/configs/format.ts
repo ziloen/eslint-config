@@ -292,10 +292,9 @@ export function format(
         'style/object-curly-spacing': ['warn', 'always'],
 
         /** 🔧字符串引号 */
-        // quotes: 'off',
         'style/quotes': ['warn', 'single', {
           avoidEscape: true,
-          allowTemplateLiterals: true
+          allowTemplateLiterals: 'avoidEscape'
         }],
 
         /** 分号 */
