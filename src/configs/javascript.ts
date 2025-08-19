@@ -1,10 +1,10 @@
 import js from '@eslint/js'
 import * as regexpPlugin from 'eslint-plugin-regexp'
 import { default as pluginUnicorn } from 'eslint-plugin-unicorn'
-import type { FlatESLintConfig } from '~/types'
+import type { ConfigArray } from '~/types'
 
 
-export const javascript: FlatESLintConfig[] = [
+export const javascript: ConfigArray = [
   {
     name: 'javascript/ignore',
     ignores: [

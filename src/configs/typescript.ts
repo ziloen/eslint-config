@@ -1,6 +1,6 @@
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
-import type { FlatESLintConfig } from '~/types'
+import type { ConfigArray } from '~/types'
 import { javascript } from './javascript'
 
 
@@ -15,7 +15,7 @@ export function typescript(
     project?: string | string[]
     tsconfigRootDir?: string
   } = {}
-): FlatESLintConfig[] {
+): ConfigArray {
   if (loaded) {
     return []
   }
@@ -341,6 +341,6 @@ export function typescript(
           '@typescript-eslint/no-empty-object-type': 'off'
         }
       },
-    ) as FlatESLintConfig[],
+    ),
   ]
 }

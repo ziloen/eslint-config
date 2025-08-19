@@ -1,3 +1,3 @@
 export * from './configs'
-export type { FlatESLintConfig } from './types'
+export { ConfigArray } from './types'
 

@@ -1,6 +1,6 @@
 import { default as pluginReact } from 'eslint-plugin-react'
 import { default as pluginZiloen } from 'eslint-plugin-ziloen'
-import type { FlatESLintConfig } from '~/types'
+import type { ConfigArray } from '~/types'
 import { typescript } from './typescript'
 
 
@@ -10,7 +10,7 @@ export function react(
     project?: string | string[]
     tsconfigRootDir?: string
   }
-): FlatESLintConfig[] {
+): ConfigArray {
   return [
     ...typescript(options),
     {
