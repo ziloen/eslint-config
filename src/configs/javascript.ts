@@ -168,6 +168,14 @@ export const javascript: ConfigArray = [
       /** 禁止使用 var 定义变量 */
       'no-var': 'error',
 
+      /**
+       * 防止开发时忘记删除调试代码
+       */
+      'no-warning-comments': ['error', {
+        terms: ['DEBUG:', '@debug'],
+        location: 'anywhere'
+      }],
+
       /** 
        * 优先使用 const 
        * 

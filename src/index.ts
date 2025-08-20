@@ -1,3 +1,3 @@
 export * from './configs'
-export { ConfigArray } from './types'
+export type { ConfigArray } from './types'
 
