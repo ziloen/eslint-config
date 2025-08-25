@@ -25,3 +25,8 @@ type A =
  ++| "1" 
  >
 -->
+<!-- Unicorn -->
+<!-- 
+--const doc = new DOMParser().parseFromString(html, "text/html");
+++const doc = Document.parseHTMLUnsafe(html)
+-->
