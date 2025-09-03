@@ -172,7 +172,7 @@ export const javascript: ConfigArray = [
        * 防止开发时忘记删除调试代码
        */
       'no-warning-comments': ['error', {
-        terms: ['DEBUG:', '@debug'],
+        terms: ['@debug'],
         location: 'anywhere'
       }],
 
