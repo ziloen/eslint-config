@@ -335,6 +335,7 @@ export function typescript(
         name: 'typescript/dts-overrides',
         files: ['**/*.d.ts'],
         rules: {
+          'no-var': 'off',
           '@typescript-eslint/ban-types': 'off',
           '@typescript-eslint/no-invalid-void-type': 'off',
           '@typescript-eslint/consistent-type-imports': 'off',
