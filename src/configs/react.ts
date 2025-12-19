@@ -7,7 +7,7 @@ import { typescript } from './typescript'
 
 export function react(
   options?: {
-    project?: string | string[]
+    project?: string | string[] | true
     tsconfigRootDir?: string
   }
 ): Config[] {

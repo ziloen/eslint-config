@@ -9,7 +9,7 @@ export function vue(
     project,
     tsconfigRootDir = cwd()
   }: {
-    project?: string | string[]
+    project?: string | string[] | true
     tsconfigRootDir?: string
   } = {}
 ): Config[] {
