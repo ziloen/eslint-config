@@ -24,25 +24,24 @@ export function typescript(
 
   loaded = true
 
+  const parserOptions: FlatConfig.ParserOptions = project === true
+    ? { projectService: true }
+    : project
+      ? { project }
+      : {
+          projectService: {
+            allowDefaultProject: ['./*.js'],
+            defaultProject: './tsconfig.json',
+          },
+          tsconfigRootDir
+        }
+
   return defineConfig(
     javascript,
     tseslint.configs.strictTypeChecked,
     ({
       name: 'typescript/type-checked/project',
-      languageOptions: {
-        parserOptions:
-        project === true
-          ? { projectService: true }
-          : project
-            ? { project }
-            : {
-                projectService: {
-                  allowDefaultProject: ['./*.js'],
-                  defaultProject: './tsconfig.json',
-                },
-                tsconfigRootDir
-              }
-      }
+      languageOptions: { parserOptions }
     } satisfies FlatConfig.Config),
     {
       name: 'typescript/overrides',
@@ -63,13 +62,7 @@ export function typescript(
 
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
-
-          project: project ? project : undefined,
-          projectService: project ? undefined : {
-            allowDefaultProject: ['./*.js'],
-            defaultProject: './tsconfig.json',
-          },
-          tsconfigRootDir,
+          ...parserOptions,
         }
       },
       rules: {
