@@ -22,27 +22,27 @@
     "dist"
   ],
   "dependencies": {
-    "@eslint-react/eslint-plugin": "^2.3.9",
-    "@eslint/js": "^9.39.1",
+    "@eslint-react/eslint-plugin": "^2.3.13",
+    "@eslint/js": "^9.39.2",
     "@stylistic/eslint-plugin": "^5.6.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-regexp": "^2.10.0",
     "eslint-plugin-unicorn": "^62.0.0",
-    "eslint-plugin-vue": "^10.6.1",
-    "eslint-plugin-ziloen": "^0.1.16",
+    "eslint-plugin-vue": "^10.6.2",
+    "eslint-plugin-ziloen": "^0.1.17",
     "typescript": "^5.9.3",
-    "typescript-eslint": "8.48.0"
+    "typescript-eslint": "8.50.0"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^24.10.1",
+    "@types/node": "^24",
     "@types/react": "^19.2.7",
-    "bumpp": "^10.3.1",
+    "bumpp": "^10.3.2",
     "cross-env": "^10.1.0",
-    "eslint": "^9.39.1",
-    "react": "^19.2.0",
-    "tsdown": "0.16.7",
-    "vue": "^3.5.25"
+    "eslint": "^9.39.2",
+    "react": "^19.2.3",
+    "tsdown": "0.18.1",
+    "vue": "^3.5.26"
   },
   "peerDependencies": {
     "eslint": "^9"

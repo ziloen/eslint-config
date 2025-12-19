@@ -1,10 +1,10 @@
 import js from '@eslint/js'
 import * as regexpPlugin from 'eslint-plugin-regexp'
 import { default as pluginUnicorn } from 'eslint-plugin-unicorn'
-import type { ConfigArray } from '~/types'
+import type { Config } from 'eslint/config'
 
 
-export const javascript: ConfigArray = [
+export const javascript: Config[] = [
   {
     name: 'javascript/ignore',
     ignores: [

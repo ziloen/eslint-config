@@ -1,7 +1,7 @@
 import { default as pluginVue } from 'eslint-plugin-vue'
+import type { Config } from 'eslint/config'
 import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
-import type { ConfigArray } from '~/types'
 import { typescript } from './typescript'
 
 export function vue(
@@ -12,7 +12,7 @@ export function vue(
     project?: string | string[]
     tsconfigRootDir?: string
   } = {}
-): ConfigArray {
+): Config[] {
 
   return [
     ...typescript({ project, tsconfigRootDir }),

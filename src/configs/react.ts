@@ -1,6 +1,6 @@
 import { default as pluginReact } from 'eslint-plugin-react'
 import { default as pluginZiloen } from 'eslint-plugin-ziloen'
-import type { ConfigArray } from '~/types'
+import { defineConfig, type Config } from 'eslint/config'
 import { typescript } from './typescript'
 
 
@@ -10,9 +10,9 @@ export function react(
     project?: string | string[]
     tsconfigRootDir?: string
   }
-): ConfigArray {
-  return [
-    ...typescript(options),
+): Config[] {
+  return defineConfig(
+    typescript(options),
     {
       name: 'react/override',
       files: ['**/*.jsx', '**/*.tsx'],
@@ -57,5 +57,5 @@ export function react(
         'ziloen/jsx-strict-logical-expressions': 'error'
       }
     }
-  ]
+  )
 }
