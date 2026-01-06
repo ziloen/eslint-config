@@ -338,7 +338,8 @@ export function typescript(
         '@typescript-eslint/consistent-type-imports': 'off',
         '@typescript-eslint/no-empty-object-type': 'off',
         '@typescript-eslint/no-invalid-void-type': 'off',
-        '@typescript-eslint/no-redeclare': ['error', { ignoreDeclarationMerge: true }],
+        /** 允许在 d.ts 中重复声明 interface + var */
+        '@typescript-eslint/no-redeclare': 'off',
       }
     },
   )
