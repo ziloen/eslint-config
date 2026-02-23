@@ -366,12 +366,6 @@ export function format(
         'style/jsx-indent-props': ['warn', {
           indentMode: 2
         }],
-
-        /** 🔧属性排序 */
-        'style/jsx-sort-props': ['warn', {
-          noSortAlphabetically: false,
-          reservedFirst: true,
-        }],
       }
     },
   ]
