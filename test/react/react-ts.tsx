@@ -1,6 +1,4 @@
-import type { ESLint } from "eslint"
-
-type A = ESLint
+import { Fragment } from 'react'
 
 const a = `${[]}`
 const b = name
@@ -27,6 +25,14 @@ export default function App() {
             </div>
           )
       }
+
+      <svg>
+        <path stroke-width="24" />
+      </svg>
+
+      <Fragment>
+        <div></div>
+      </Fragment>
     </div>
   )
 }

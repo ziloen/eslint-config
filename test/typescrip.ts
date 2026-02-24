@@ -11,6 +11,16 @@ const noExtraSemi = ''
 
 const indent=2+ 90|0
 
+if (Math.random() > 0.5) {
+  // OK
+  throw new Error("test")
+}
+
+if (Math.random() > 0.5) {
+  // Expect lint error
+  throw "test"
+}
+
 const iii = ~~indent
 
 const d = ''

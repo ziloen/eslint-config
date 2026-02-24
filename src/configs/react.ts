@@ -1,5 +1,5 @@
+import eslintReact from '@eslint-react/eslint-plugin'
 import { default as pluginReact } from 'eslint-plugin-react'
-import { default as pluginZiloen } from 'eslint-plugin-ziloen'
 import { defineConfig, type Config } from 'eslint/config'
 import { typescript } from './typescript'
 
@@ -18,7 +18,9 @@ export function react(
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
         react: pluginReact,
-        ziloen: pluginZiloen,
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        ...eslintReact.configs.all.plugins as Record<never, never>
       },
       languageOptions: {
         parserOptions: {
@@ -33,28 +35,18 @@ export function react(
         }
       },
       rules: {
-        /** 16+ 不需要此导入 React */
-        'react/react-in-jsx-scope': 'off',
-
         /** ✅需要 key */
-        'react/jsx-key': ['error', {
-          // checkFragmentShorthand: true
-        }],
-
-        /** 让 TS 检查 */
-        'react/jsx-no-undef': 'off',
+        '@eslint-react/no-missing-key': 'error',
 
         /** 简写 <React.Fragment></React.Fragment> => <></> */
-        'react/jsx-fragments': ['warn', 'syntax'],
+        '@eslint-react/jsx-shorthand-fragment': 'warn',
 
         /** 避免错误用法 */
         'react/no-invalid-html-attribute': 'warn',
-        'react/no-unknown-property': 'warn',
+        '@eslint-react/dom/no-unknown-property': 'warn',
 
-        /** 不允许可能出错的的 render 类型（number | string | object），（即使是 boolean 也会报错，太蠢了） */
-        // 'react/jsx-no-leaked-render': 'error',
-        /** 严格 jsx render 类型，支持 TS 检查，替代 react/jsx-no-leaked-render */
-        'ziloen/jsx-strict-logical-expressions': 'error'
+        /** 避免 `<>{items.length && <div></div>}</>` 意外渲染 `0` */
+        '@eslint-react/no-leaked-conditional-rendering': 'error',
       }
     }
   )
