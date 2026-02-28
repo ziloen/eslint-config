@@ -6,15 +6,13 @@ import tseslint from 'typescript-eslint'
 
 
 
-export function format(
-  {
-    project,
-    tsconfigRootDir = cwd()
-  }: {
-    project?: string | string[] | true
-    tsconfigRootDir?: string
-  } = {}
-): Config[] {
+export function format({
+  project,
+  tsconfigRootDir = cwd(),
+}: {
+  project?: string | string[] | true
+  tsconfigRootDir?: string
+} = {}): Config[] {
   return [
     {
       name: 'format/general',
@@ -31,7 +29,7 @@ export function format(
           tsconfigRootDir,
           sourceType: 'module',
           extraFileExtensions: ['.vue'],
-        }
+        },
       },
       rules: {
         /** 🔧数组括号换行 */
@@ -43,7 +41,7 @@ export function format(
         /** 🔧数组内元素换行 */
         'style/array-element-newline': ['warn', 'consistent'],
 
-        /** 
+        /**
          * 🔧箭头函数括号 `(arg) => {}`
          * 始终添加括号，减少 git diff
          */
@@ -70,7 +68,7 @@ export function format(
           after: true,
           named: 'after',
           anonymous: 'after',
-          method: 'before'
+          method: 'before',
         }],
 
         /** 最大长度 */
@@ -81,13 +79,13 @@ export function format(
           ignoreTrailingComments: true,
           ignoreStrings: true,
           ignoreTemplateLiterals: true,
-          ignoreRegExpLiterals: true
+          ignoreRegExpLiterals: true,
         }],
 
         /** 多行三元表达式 */
         // 'multiline-ternary': ['warn'],
 
-        /** 
+        /**
          * 🔧new 表达式括号
          * ```ts
          * const a = new A().a()
@@ -111,7 +109,7 @@ export function format(
         /** 尾随空格 */
         'style/no-trailing-spaces': ['warn', {
           /** 注释内可能有 markdown，尾随空格会影响显示格式 */
-          ignoreComments: true
+          ignoreComments: true,
         }],
 
         /** 禁止不必要的重命名 */
@@ -125,7 +123,7 @@ export function format(
 
         /** 对象键快捷写法 */
         'object-shorthand': ['warn', 'always', {
-          avoidQuotes: true
+          avoidQuotes: true,
         }],
 
         /** 偏好模板字符串 */
@@ -143,14 +141,17 @@ export function format(
         /** 分号位置 */
         'style/semi-style': 'warn',
 
-        /** 
+        /**
          * 排序
-         * 
+         *
          * FIXME: 不支持 import { type foo } from 'bar' type import 语法，故关闭
          */
-        'sort-imports': ['off', {
-          ignoreDeclarationSort: true
-        }],
+        'sort-imports': [
+          'off',
+          {
+            ignoreDeclarationSort: true,
+          },
+        ],
 
         /** 括号中前后空格 */
         'style/space-in-parens': 'warn',
@@ -166,8 +167,6 @@ export function format(
 
         /** 生成器函数星号空格 */
         'style/yield-star-spacing': ['warn', 'after'],
-
-
 
         // -------------------------------------------------------------
         // 以下需要覆盖原配置 以在 ts 文件中生效
@@ -253,7 +252,7 @@ export function format(
             // 类型泛型参数
             // 'TSTypeParameterInstantiation',
             // 'TSIntersectionType',
-          ]
+          ],
         }],
 
         /** 二元操作符缩进 */
@@ -281,7 +280,7 @@ export function format(
           /** 允许三元表达式内包围括号 */
           ternaryOperandBinaryExpressions: false,
           /** 允许嵌套二元表达式包围括号 */
-          nestedBinaryExpressions: false
+          nestedBinaryExpressions: false,
         }],
 
         /** 多余的分号 */
@@ -294,7 +293,7 @@ export function format(
         /** 🔧字符串引号 */
         'style/quotes': ['warn', 'single', {
           avoidEscape: true,
-          allowTemplateLiterals: 'avoidEscape'
+          allowTemplateLiterals: 'avoidEscape',
         }],
 
         /** 分号 */
@@ -310,14 +309,12 @@ export function format(
         'style/space-before-function-paren': ['warn', {
           anonymous: 'always',
           named: 'never',
-          asyncArrow: 'always'
+          asyncArrow: 'always',
         }],
 
         /** 操作符左右空格 */
         // 'space-infix-ops': 'off',
         'style/space-infix-ops': 'warn',
-
-
 
         // -------------------------------------------------------------
         // 以下为 TS Plugin Rules
@@ -327,7 +324,7 @@ export function format(
         'style/member-delimiter-style': ['warn', {
           multiline: { delimiter: 'none', requireLast: false },
           singleline: { requireLast: false },
-          multilineDetection: 'brackets'
+          multilineDetection: 'brackets',
         }],
 
         /** 🔧多余的限定符 */
@@ -341,7 +338,7 @@ export function format(
         // -------------------------------------------------------------
         // 以下为其他规则
         // -------------------------------------------------------------
-        'ziloen/generic-spacing': 'warn'
+        'ziloen/generic-spacing': 'warn',
       },
     },
     {
@@ -356,7 +353,7 @@ export function format(
           closingSlash: 'never',
           beforeSelfClosing: 'proportional-always',
           afterOpening: 'never',
-          beforeClosing: 'never'
+          beforeClosing: 'never',
         }],
 
         /** 括号内前后空格 */
@@ -364,9 +361,9 @@ export function format(
 
         /** 🔧属性缩进 */
         'style/jsx-indent-props': ['warn', {
-          indentMode: 2
+          indentMode: 2,
         }],
-      }
+      },
     },
   ]
 }

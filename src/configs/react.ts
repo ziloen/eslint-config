@@ -18,9 +18,7 @@ export function react(
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
         react: pluginReact,
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        ...eslintReact.configs.all.plugins as Record<never, never>
+        ...eslintReact.configs.all.plugins
       },
       languageOptions: {
         parserOptions: {

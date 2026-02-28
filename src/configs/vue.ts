@@ -4,16 +4,13 @@ import { cwd } from 'node:process'
 import tseslint from 'typescript-eslint'
 import { typescript } from './typescript'
 
-export function vue(
-  {
-    project,
-    tsconfigRootDir = cwd()
-  }: {
-    project?: string | string[] | true
-    tsconfigRootDir?: string
-  } = {}
-): Config[] {
-
+export function vue({
+  project,
+  tsconfigRootDir = cwd(),
+}: {
+  project?: string | string[] | true
+  tsconfigRootDir?: string
+} = {}): Config[] {
   return [
     ...typescript({ project, tsconfigRootDir }),
     ...pluginVue.configs['flat/essential'],
@@ -25,8 +22,8 @@ export function vue(
           parser: tseslint.parser,
           project: project ? project : undefined,
           projectService: project ? undefined : true,
-          tsconfigRootDir
-        }
+          tsconfigRootDir,
+        },
       },
       rules: {
         /** allow ununed vars */
@@ -38,7 +35,7 @@ export function vue(
         'vue/require-default-prop': 'off',
         'vue/require-prop-types': 'off',
         'vue/singleline-html-element-content-newline': 'off',
-      }
-    }
+      },
+    },
   ]
 }

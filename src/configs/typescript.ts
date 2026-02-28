@@ -9,51 +9,42 @@ import { javascript } from './javascript'
 
 let loaded = false
 
-export function typescript(
-  {
-    project,
-    tsconfigRootDir = cwd()
-  }: {
-    project?: string | string[] | true
-    tsconfigRootDir?: string
-  } = {}
-): Config[] {
+export function typescript({
+  project,
+  tsconfigRootDir = cwd(),
+}: {
+  project?: string | string[] | true
+  tsconfigRootDir?: string
+} = {}): Config[] {
   if (loaded) {
     return []
   }
 
   loaded = true
 
-  const parserOptions: FlatConfig.ParserOptions = project === true
-    ? { projectService: true }
-    : project
-      ? { project }
-      : {
-          projectService: {
-            allowDefaultProject: ['./*.js'],
-            defaultProject: './tsconfig.json',
-          },
-          tsconfigRootDir
-        }
+  const parserOptions: FlatConfig.ParserOptions =
+    project === true
+      ? { projectService: true }
+      : project
+        ? { project }
+        : {
+            projectService: {
+              allowDefaultProject: ['./*.js'],
+              defaultProject: './tsconfig.json',
+            },
+            tsconfigRootDir,
+          }
 
   return defineConfig(
     javascript,
     tseslint.configs.strictTypeChecked,
-    ({
+    {
       name: 'typescript/type-checked/project',
-      languageOptions: { parserOptions }
-    } satisfies FlatConfig.Config),
+      languageOptions: { parserOptions },
+    } satisfies FlatConfig.Config,
     {
       name: 'typescript/overrides',
-      files: [
-        '**/*.js',
-        '**/*.jsx',
-        '**/*.ts',
-        '**/*.tsx',
-        '**/*.mts',
-        '**/*.cts',
-        '**/*.vue'
-      ],
+      files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts', '**/*.vue'],
       languageOptions: {
         parser: tseslint.parser,
         sourceType: 'module',
@@ -63,11 +54,11 @@ export function typescript(
           jsDocParsingMode: 'none',
           extraFileExtensions: ['.vue'],
           ...parserOptions,
-        }
+        },
       },
       rules: {
-      /** ✅禁止不必要的 await */
-      // '@typescript-eslint/await-thenable': 'warn',
+        /** ✅禁止不必要的 await */
+        // '@typescript-eslint/await-thenable': 'warn',
 
         /** 分离 type import */
         '@typescript-eslint/consistent-type-imports': 'warn',
@@ -87,8 +78,8 @@ export function typescript(
         '@typescript-eslint/no-confusing-void-expression': [
           'off',
           {
-            ignoreArrowShorthand: true
-          }
+            ignoreArrowShorthand: true,
+          },
         ],
 
         '@typescript-eslint/no-deprecated': 'off',
@@ -107,11 +98,11 @@ export function typescript(
         '@typescript-eslint/no-floating-promises': 'off',
 
         /**
-       * 以下也会被视为无效 void 类型，故关闭
-       * ```ts
-       * declare function a(): void | number;
-       * ```
-       */
+         * 以下也会被视为无效 void 类型，故关闭
+         * ```ts
+         * declare function a(): void | number;
+         * ```
+         */
         '@typescript-eslint/no-invalid-void-type': 'off',
 
         /** 🔒不允许隐式 eval */
@@ -126,9 +117,9 @@ export function typescript(
         '@typescript-eslint/no-misused-promises': [
           'error',
           {
-          /** 允许快捷写法 */
-            checksVoidReturn: false
-          }
+            /** 允许快捷写法 */
+            checksVoidReturn: false,
+          },
         ],
 
         /** ✅禁止超出精度范围的数字 */
@@ -151,18 +142,18 @@ export function typescript(
         'no-restricted-syntax': [
           'warn',
           /**
-         * 使用 `#private` 替代 `private` 访问修饰符
-         */
+           * 使用 `#private` 替代 `private` 访问修饰符
+           */
           {
             selector: ':matches(PropertyDefinition, MethodDefinition)[accessibility="private"]',
-            message: 'Use `#private` instead '
+            message: 'Use `#private` instead ',
           },
           /**
-         * 多余的 `public` 访问修饰符
-         */
+           * 多余的 `public` 访问修饰符
+           */
           {
             selector: ':matches(PropertyDefinition, MethodDefinition)[accessibility="public"]',
-            message: 'Unnecessary `public` access modifier, just remove it'
+            message: 'Unnecessary `public` access modifier, just remove it',
           },
         ],
 
@@ -172,32 +163,30 @@ export function typescript(
           'error',
           {
             allowThrowingAny: false,
-            allowThrowingUnknown: false
-          }
+            allowThrowingUnknown: false,
+          },
         ],
-
-
 
         /** 禁用默认`no-undef`，eslint 不会检查`*.d.ts`，导致误报全局变量与类型不存在 */
         'no-undef': 'off',
 
         /**
-       * 🔒不必要的条件判断
-       *
-       * 因为有时类型不正确，autofix 会导致运行时错误，故关闭
-       */
+         * 🔒不必要的条件判断
+         *
+         * 因为有时类型不正确，autofix 会导致运行时错误，故关闭
+         */
         '@typescript-eslint/no-unnecessary-condition': 'off',
 
         /**
-       * `function asType<T>(val: any): asserts val is T { }` 也会被被认作多余的类型参数
-       */
+         * `function asType<T>(val: any): asserts val is T { }` 也会被被认作多余的类型参数
+         */
         '@typescript-eslint/no-unnecessary-type-parameters': 'off',
 
         /**
-       * ✅不必要的类型断言
-       *
-       * 因为有时类型不正确，autofix 会导致 TS 错误，故关闭
-       */
+         * ✅不必要的类型断言
+         *
+         * 因为有时类型不正确，autofix 会导致 TS 错误，故关闭
+         */
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
 
         /** `-` 只允许 number | bigint */
@@ -210,7 +199,7 @@ export function typescript(
           {
             allowShortCircuit: true,
             enforceForJSX: true,
-          }
+          },
         ],
 
         /** 允许未使用变量 */
@@ -218,8 +207,19 @@ export function typescript(
         '@typescript-eslint/no-unused-vars': 'off',
 
         /**
-       *
-       */
+         * FIXME: 误报
+         * ```ts
+         * const a = ["", ""] as [string, string] | null;
+         *
+         * const [b = "", c] = a ?? []; // [string, string] | []
+         * //       ^ 这里会被误报 b 的默认值是多余的，但实际上 a 可能是 null，导致 b 是 undefined
+         * ```
+         */
+        '@typescript-eslint/no-useless-default-assignment': ['warn'],
+
+        /**
+         *
+         */
         '@typescript-eslint/prefer-nullish-coalescing': [
           'warn',
           {
@@ -227,46 +227,46 @@ export function typescript(
               bigint: true,
               boolean: true,
               number: true,
-              string: true
-            }
-          }
+              string: true,
+            },
+          },
         ],
 
         /**
-       * 使用可选链`a?.b`替代`a && a.b`
-       *
-       * FIXME:
-       * ```ts
-       * if (!a || !a.b)
-       * //  ^ 也会被要求改成 ?.，降低可读性，且无配置，故关闭
-       * ```
-       */
+         * 使用可选链`a?.b`替代`a && a.b`
+         *
+         * FIXME:
+         * ```ts
+         * if (!a || !a.b)
+         * //  ^ 也会被要求改成 ?.，降低可读性，且无配置，故关闭
+         * ```
+         */
         '@typescript-eslint/prefer-optional-chain': 'off',
 
         /**
-       * 🔒 要求 Promise reject 时传入 Error 对象
-       */
+         * 🔒 要求 Promise reject 时传入 Error 对象
+         */
         'prefer-promise-reject-errors': 'off',
         '@typescript-eslint/prefer-promise-reject-errors': 'error',
 
         /**
-       * 🔧返回 promise 的函数必须有 async 关键字
-       *
-       * 不写也行，不限制此偏好，故关闭
-       */
+         * 🔧返回 promise 的函数必须有 async 关键字
+         *
+         * 不写也行，不限制此偏好，故关闭
+         */
         '@typescript-eslint/promise-function-async': [
           'off',
           {
-            checkArrowFunctions: false
-          }
+            checkArrowFunctions: false,
+          },
         ],
 
         /**
-       * 数组排序需显式指明排序方法，默认行为可能并不是想要的结果
-       * ```ts
-       * [1, 2, 3, 10, 20, 30].sort(); //→ [1, 10, 2, 20, 3, 30]
-       * ```
-       */
+         * 数组排序需显式指明排序方法，默认行为可能并不是想要的结果
+         * ```ts
+         * [1, 2, 3, 10, 20, 30].sort(); //→ [1, 10, 2, 20, 3, 30]
+         * ```
+         */
         '@typescript-eslint/require-array-sort-compare': ['error'],
 
         'require-await': 'off',
@@ -282,12 +282,12 @@ export function typescript(
             allowNullish: false,
             allowNumber: true,
             allowRegExp: false,
-          }
+          },
         ],
 
         /** 允许可合为一个联合类型的函数声明多个函数签名 */
         '@typescript-eslint/unified-signatures': 'off',
-      }
+      },
     },
     {
       name: 'typescript/disable-js-type-check',
@@ -327,7 +327,7 @@ export function typescript(
 
         'require-await': 'off',
         '@typescript-eslint/require-await': 'off',
-      }
+      },
     },
     {
       name: 'typescript/dts-overrides',
@@ -340,7 +340,7 @@ export function typescript(
         '@typescript-eslint/no-invalid-void-type': 'off',
         /** 允许在 d.ts 中重复声明 interface + var */
         '@typescript-eslint/no-redeclare': 'off',
-      }
+      },
     },
   )
 }

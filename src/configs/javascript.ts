@@ -51,9 +51,9 @@ export const javascript: Config[] = [
       /** 派生 class 必须要有 super() */
       'constructor-super': 'error',
 
-      /** 
+      /**
        * 倾向使用全等 ===
-       * 
+       *
        * FIXME: 使用 always 时 autofix 可能导致语义改变，暂时沿用 'smart'，
        * 如果可以取消 autofix，将 option 设置为 'always'
        */
@@ -68,9 +68,9 @@ export const javascript: Config[] = [
       /** for 与 await 一起使用会串行阻塞线程，可以使用 Promise.all() 一次发起多个 Promise */
       'no-await-in-loop': 'warn',
 
-      /** 
-       * 不要嵌套 promise 
-       * 
+      /**
+       * 不要嵌套 promise
+       *
        * 但有时需要 async executor，如：
        * ```js
        * new Promise(async (resolve, reject) => {
@@ -78,7 +78,7 @@ export const javascript: Config[] = [
        *  const result2 = await doSomething2(result);
        *  resolve(result2);
        * })
-       * ``` 
+       * ```
        * 无法配置，故关闭
        */
       'no-async-promise-executor': 'off',
@@ -89,11 +89,11 @@ export const javascript: Config[] = [
       /** 错误使用 */
       'no-constant-binary-expression': 'error',
 
-      /** 
+      /**
        * console.log使用后删除
        */
       'no-console': ['off', {
-        allow: ['warn', 'error']
+        allow: ['warn', 'error'],
       }],
 
       /** `constructor` 中不应有返回值(允许作为控制流使用) */
@@ -110,43 +110,37 @@ export const javascript: Config[] = [
 
       /** 防止`switch case`忘写`break` */
       'no-fallthrough': ['error', {
-        allowEmptyCase: true
+        allowEmptyCase: true,
       }],
 
-      /** 
+      /**
        * 不允许 new Symbol 与 new BigInt 这种错误用法
-       * 
+       *
        * TS 已检查 constructor，故关闭
        */
       'no-new-native-nonconstructor': 'off',
       /** @deprecated deprecated in V9 */
       'no-new-symbol': 'off',
 
-      /** 
-       * Promise 内 return 没有意义，使用 resolve 或 reject 
+      /**
+       * Promise 内 return 没有意义，使用 resolve 或 reject
        * 无法配置允许箭头函数，必须要加 void，故关闭 https://github.com/eslint/eslint/issues/17278
        */
       'no-promise-executor-return': 'off',
 
       /**
        * 警告 export default, 偏好使用命名 export
-       * 
+       *
        * config file 和 pages route 等都会使用 default export, 故关闭
        */
       'no-restricted-exports': ['off', {
         restrictDefaultExports: {
-          direct: true
-        }
+          direct: true,
+        },
       }],
 
       /** 令人混淆的 window 上的变量 */
-      'no-restricted-globals': [
-        'error',
-        'event',
-        'name',
-        'length',
-        'status'
-      ],
+      'no-restricted-globals': ['error', 'event', 'name', 'length', 'status'],
 
       /** @deprecated 禁止不必要的 await */
       'no-return-await': 'off',
@@ -159,7 +153,7 @@ export const javascript: Config[] = [
         {
           allowShortCircuit: true,
           enforceForJSX: true,
-        }
+        },
       ],
 
       /** 允许未使用的变量 */
@@ -173,17 +167,17 @@ export const javascript: Config[] = [
        */
       'no-warning-comments': ['error', {
         terms: ['@debug'],
-        location: 'anywhere'
+        location: 'anywhere',
       }],
 
-      /** 
-       * 优先使用 const 
-       * 
+      /**
+       * 优先使用 const
+       *
        * 有时解构会出现不变的变量也是用 let，autofix 会导致运行时错误，故关闭
        */
       'prefer-const': ['off', {
         destructuring: 'all',
-        ignoreReadBeforeAssign: false
+        ignoreReadBeforeAssign: false,
       }],
 
       /** 使用 `a ** b` 替代 `Math.pow(a, b)` */
@@ -194,22 +188,22 @@ export const javascript: Config[] = [
 
       /** 偏好 reject Error 对象 */
       'prefer-promise-reject-errors': ['warn', {
-        allowEmptyReject: true
+        allowEmptyReject: true,
       }],
 
-      /** 
+      /**
        * 这可能会导致数据竞争
        * ```ts
        * let a: string | undefined
-       * 
+       *
        * async function doSomething() {
        *   const b = a ||= await getA()
        *   //        ^^^^^^^^^^^^^^^^^^确实在多次调用时有数据竞争，但暂未找到两全之法，故关闭
        * }
-       * ``` 
+       * ```
        */
       'require-atomic-updates': 'off',
-    }
+    },
   },
   {
     name: 'unicorn/overrides',
@@ -222,12 +216,12 @@ export const javascript: Config[] = [
     rules: {
       'regexp/no-unused-capturing-group': ['error', {
         fixable: false,
-        allowNamed: false
+        allowNamed: false,
       }],
 
       /** 🔧更好的正则 */
       'unicorn/better-regex': ['warn', {
-        sortCharacterClasses: false
+        sortCharacterClasses: false,
       }],
 
       /** Error 应有错误信息 */
@@ -268,7 +262,7 @@ export const javascript: Config[] = [
 
       /** 使用 var === undefined 来检查 而不是 typeof var === 'undefined'，除了全局变量 */
       'unicorn/no-typeof-undefined': ['warn', {
-        checkGlobalVariables: false
+        checkGlobalVariables: false,
       }],
 
       /** 🔧去除多余的 `await` */
@@ -286,9 +280,9 @@ export const javascript: Config[] = [
       /** 🔧去除多余的 `...` */
       'unicorn/no-useless-spread': 'warn',
 
-      /** 
+      /**
        * 🔧去除多余的 undefined
-       * 
+       *
        * `() => undefined` 时需要显示返回 `undefined`, 也会被警告且无法关闭，故禁用
        */
       'unicorn/no-useless-undefined': ['off', {
@@ -337,7 +331,7 @@ export const javascript: Config[] = [
 
       /** 🔧使用 export...from 如果导入导出未使用 */
       'unicorn/prefer-export-from': ['warn', {
-        ignoreUsedVariables: true
+        ignoreUsedVariables: true,
       }],
 
       /** 🔧使用 Array#includes 代替 indexOf / some 代替存在性检查 */
@@ -367,9 +361,9 @@ export const javascript: Config[] = [
       /** 🔧使用 prototype 上而不是实例上的 prototype */
       'unicorn/prefer-prototype-methods': 'warn',
 
-      /** 
+      /**
        * 🔧使用同一种方法来选择 DOM 元素，避免混淆
-       * 
+       *
        * 禁用：不限制此偏好
        */
       'unicorn/prefer-query-selector': 'off',
@@ -385,7 +379,6 @@ export const javascript: Config[] = [
 
       /** 🔧throw 应使用 new Error */
       'unicorn/throw-new-error': 'warn',
-
-    }
-  }
+    },
+  },
 ]
