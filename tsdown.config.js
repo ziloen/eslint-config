@@ -10,11 +10,16 @@ export default defineConfig({
   dts: {
     oxc: true,
   },
+  deps: {
+    skipNodeModulesBundle: true,
+  },
+  report: {
+    gzip: false,
+  },
   format: ['esm'],
   platform: 'node',
   treeshake: true,
   fixedExtension: false,
-  skipNodeModulesBundle: true,
   sourcemap: false,
   clean: true,
 })
