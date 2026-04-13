@@ -9,33 +9,34 @@ export const javascript: Config[] = [
     name: 'javascript/ignore',
     ignores: [
       // files
-      '**/CHANGELOG*.md',
       '**/*.min.*',
-      '**/LICENSE*',
       '**/auto-import?(s).d.ts',
+      '**/CHANGELOG*.md',
+      '**/LICENSE*',
 
       // lock files
+      '**/bun.lockb',
       '**/package-lock.json',
       '**/pnpm-lock.yaml',
       '**/yarn.lock',
-      '**/bun.lockb',
 
       // directories
-      '**/node_modules',
-      '**/dist',
-      '**/.nuxt',
-      '**/.next',
-      '**/.vercel',
+      '**/.agents',
       '**/.idea',
+      '**/.next',
+      '**/.nuxt',
+      '**/.vercel',
+      '**/dist',
+      '**/node_modules',
 
       // not support yet
       '*.html',
 
       // test artifacts
-      '**/test-results',
-      '**/playwright-report',
       '**/blob-report',
+      '**/playwright-report',
       '**/playwright/.cache',
+      '**/test-results',
     ],
   },
   js.configs.recommended,
