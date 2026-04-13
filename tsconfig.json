@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "strict": true,
     "module": "ESNext",
     "target": "ESNext",
@@ -18,9 +17,12 @@
     ],
     "paths": {
       "~/*": [
-        "src/*"
+        "./src/*"
       ],
-    }
+    },
+    "types": [
+      "node"
+    ]
   },
   "exclude": [
     "node_modules",
