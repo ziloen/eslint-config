@@ -1,6 +1,6 @@
 import eslintReact from '@eslint-react/eslint-plugin'
-import { default as pluginReact } from 'eslint-plugin-react'
 import { defineConfig, type Config } from 'eslint/config'
+import { noInvalidHtmlAttribute } from './no-invalid-html-attribute'
 import { typescript } from './typescript'
 
 
@@ -17,7 +17,11 @@ export function react(
       name: 'react/override',
       files: ['**/*.jsx', '**/*.tsx'],
       plugins: {
-        react: pluginReact,
+        react: {
+          rules: {
+            'no-invalid-html-attribute': noInvalidHtmlAttribute
+          }
+        },
         ...eslintReact.configs.all.plugins
       },
       languageOptions: {
