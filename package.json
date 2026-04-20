@@ -29,7 +29,7 @@
     "eslint-plugin-unicorn": "^64.0.0",
     "eslint-plugin-vue": "^10.8.0",
     "eslint-plugin-ziloen": "^0.1.20",
-    "typescript": "6.0.2",
+    "typescript": "6.0.3",
     "typescript-eslint": "8.58.2"
   },
   "devDependencies": {
@@ -38,9 +38,9 @@
     "@types/react": "^19.2.14",
     "bumpp": "^11.0.1",
     "cross-env": "^10.1.0",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "react": "^19.2.5",
-    "tsdown": "0.21.8",
+    "tsdown": "0.21.9",
     "vue": "^3.5.32"
   },
   "peerDependencies": {
